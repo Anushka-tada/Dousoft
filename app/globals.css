@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+
+:root {
+  --primary-color: rgb(253, 52 ,2);
+  --primary-light: FFD4BD;
+  /* --secondary-color: #07E994;
+  --secondary-light: #C9F1E2; */
+  --paragraph-color: rgb(96 , 96 ,96);
+  --third-color: rgb(232 , 232 , 232);
+  --third-light: rgb(248 , 252 , 250);
+  --dark-text: rgb(51 , 51 , 51);
+}
+
+body {
+  font-family: 'Inter';
+  overflow-x: hidden;
+  padding-right: 0 !important;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.h-7{
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.h-6{
+  font-size: 25px;
+}
+
+.h-8{
+  font-size: 19px;
+}
+
+.small-text{
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.button{
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  padding: 11px 22px !important;
+  box-shadow: 0 0 12px 5px #FFD4BD !important;
+
+}
+/* navbar css */
+
+.nav-links{
+  background-color: var(--third-color);
+  border-radius: 35px;
+  color: var(--paragraph-color);
+}
+
+.who-we-btn{
+  background-color: var(--third-light);
+  box-shadow: 5px 5px 10px 1px #ECE7DB;
+}
+.company_submenu{
+  background-color: var(--third-color);
+  border-radius: 20px;
+  box-shadow:
+  0px 3px 3px rgba(0, 0, 0, 0.15),
+  0px 1px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+.company_submenu .link {
+  border-radius: 10px;
+}
+
+.company_submenu .link:hover{
+   box-shadow:
+    -6px -6px 12px 0px rgba(255, 255, 255, 0.8),
+     6px  6px 12px 0px rgba(190, 190, 190, 0.4);
+}
+
+.company_submenu p {
+  color: var(--dark-text);
+}
