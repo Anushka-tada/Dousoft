@@ -1,5 +1,6 @@
+"use client"
 import React from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { useState } from "react";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -129,16 +130,24 @@ const navItems = [
 ];
 
 const Navbar = () => {
+
+   const [mobileMenu, setMobileMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
+  const [openService, setOpenService] = useState(null);
   return (
     <>
-      <div className="navbar flex justify-between items-center px-10">
+      <div className="navbar relative flex justify-between items-center px-10 z-[1000]">
         <img src="/assets/logo.png" className="nav-logo"></img>
 
-        <ul className="nav-links flex items-center gap-7 list-none px-7 py-3">
+        <button className="lg:hidden text-2xl" onClick={() => setMobileMenu(!mobileMenu)}> ☰ </button>
+
+        {/* desktop menu */}
+
+        <ul className="nav-links hidden lg:flex items-center gap-7 list-none px-7 py-3">
           {navItems.map((item, index) => (
             <li
               key={index}
-              className="relative nav-item flex items-center h-7 group"
+              className="relative nav-item flex items-center heading-7 group"
             >
               {/* Menu Title */}
               <span className="flex items-center cursor-pointer">
@@ -153,7 +162,7 @@ const Navbar = () => {
                 )}
               </span>
 
-              {/* 🔽 Company Submenu */}
+              {/*  Company Submenu */}
               {item.name === "Company" && (
                 <div
                   className="absolute top-full left-[-50%] mt-6 w-[620px]  p-4 
@@ -173,7 +182,7 @@ const Navbar = () => {
                           <p className="h-6">
                             {sub.name}
                           </p>
-                          <p className="small-text mt-3">
+                          <p className="B-3 mt-3">
                             {sub.description}
                           </p>
                         </div>
@@ -206,7 +215,7 @@ const Navbar = () => {
                           <p className="h-6">
                             {sub.name}
                           </p>
-                          <p className="small-text mt-3">
+                          <p className="B-3 mt-3">
                             {sub.description}
                           </p>
                         </div>
@@ -238,8 +247,8 @@ const Navbar = () => {
               <div className="flex items-center gap-4">
                 <img src={sub.image} />
                 <div>
-                  <p className="h-7">{sub.name}</p>
-                  <p className="small-text mt-2">
+                  <p className="heading-7">{sub.name}</p>
+                  <p className="B-3 mt-2">
                     {sub.description}
                   </p>
                 </div>
@@ -280,7 +289,110 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="button rounded-full flex items-center">
+        {/* mobile menu */}
+
+        {/* MOBILE MENU */}
+
+        {mobileMenu && (
+  <div
+    className="fixed inset-0 bg-black/40 z-[999]"
+    onClick={() => setMobileMenu(false)}
+  />
+)}
+
+{mobileMenu && (
+  
+  <div 
+  className={`fixed top-0 right-0 h-full w-[85%] max-w-[360px]
+              bg-white z-[1000] shadow-xl
+              transform transition-transform duration-300
+              ${mobileMenu ? "translate-x-0" : "-translate-x-full"}`}
+>
+
+  <div className="flex items-center justify-between p-4 border-b">
+  <img src="/assets/logo.png" className="h-8" />
+  <button
+    className="text-2xl"
+    onClick={() => setMobileMenu(false)}
+  >
+    ✕
+  </button>
+</div>
+
+
+    <ul className="flex flex-col p-4 space-y-3">
+      {navItems.map((item, i) => (
+        <li key={i}>
+          {/* MAIN ITEM */}
+          <div
+            className="flex justify-between items-center font-medium"
+            onClick={() =>
+              setOpenMenu(openMenu === i ? null : i)
+            }
+          >
+            {item.name}
+            {item.subLinks && <span className="pl-3">
+                    <img
+                    src="/assets/dropdownIcon.png"
+                    className="transition-transform duration-300 group-hover:rotate-180"
+                  />
+                    </span>}
+          </div>
+
+          {/* SUBMENU */}
+          {item.subLinks && openMenu === i && (
+            <div className="pl-1 mt-2 space-y-2 company_submenu_mob">
+              {item.subLinks.map((sub, j) => (
+                <div key={j}>
+                  <div
+                    className="flex justify-between items-center p-2 link "
+                    onHover={() =>
+                      setOpenService(openService === j ? null : j)
+                    }
+                  >
+                                     <div className="flex items-center  gap-4"> 
+                        <img  src={sub.image}   alt={sub.name}  className="" />
+                        <div>
+                          <p className="B-2">
+                            {sub.name}
+                          </p>
+                          <p className="B-4 mt-1">
+                            {sub.description}
+                          </p>
+                        </div>
+                         </div>
+
+                         <img src="/assets/next_red.png"></img>
+                                      </div>
+
+                  {/* INNER SUBMENU */}
+                  {sub.children && openService === j && (
+                    <ul className="pl-4 mt-1 space-y-1 text-sm">
+                      {sub.children.map((child, k) => (
+                        <li key={k}>
+                          <a href={child.link}>
+                            {child.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </li>
+      ))}
+      <button className="button rounded-full flex items-center" style={{width:"fit-content"}}>
+          Get Started
+          <img src="/assets/button_arrow.png" className="ml-2"></img>
+        </button>
+    </ul>
+  </div>
+)}
+
+
+        <button className="button rounded-full   hidden lg:flex items-center">
           Get Started
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>

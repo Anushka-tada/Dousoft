@@ -20,9 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <head>
-         <link href="/dist/styles.css" rel="stylesheet"></link>
-      </head> */}
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/lustria" rel="stylesheet"></link>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
           
