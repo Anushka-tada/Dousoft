@@ -1,6 +1,8 @@
 "use client"
+import { getServiceCategoryServ } from "@/services/serviceCategory.service";
+import { getServiceSubCategoryServ } from "@/services/serviceSubcategory.service";
 import React from "react";
-import { useState } from "react";
+import { useState  , useEffect} from "react";
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -134,6 +136,52 @@ const Navbar = () => {
    const [mobileMenu, setMobileMenu] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
   const [openService, setOpenService] = useState(null);
+
+  const[serviceCategories , setServicecategories] = useState([]);
+  const[serviceSubCategories , setServiceSubcategories] = useState([]);
+
+  const fetchCategories = async () => {
+    try {
+      const res = await getServiceCategoryServ();
+      setServicecategories(res.data.data);
+      console.log("res", res)
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchCategories();
+  }, []);
+
+    const fetchSubCategories = async () => {
+    try {
+      const res = await getServiceSubCategoryServ();
+      setServiceSubcategories(res.data.data);
+      console.log("res", res)
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchSubCategories();
+  }, []);
+
+  const getSubCategoriesByCategory = (categoryId) => {
+  return serviceSubCategories.filter(
+    (sub) => sub.categoryId._id === categoryId
+  );
+};
+
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+
   return (
     <>
       <div className="navbar relative flex justify-between items-center px-10 z-[1000]">
@@ -229,61 +277,99 @@ const Navbar = () => {
                 </div>
               )}
 
-             {item.name === "Services" && (
+             {/* {item.name === "Services" && (
   <div
     className="absolute top-full right-[-500%] mt-6 w-[890px] p-4
                opacity-0 invisible group-hover:opacity-100 group-hover:visible
                transition-all duration-300 company_submenu"
   >
     <div className="grid grid-cols-2 gap-4">
-      {/* LEFT: Services list */}
       <div className="space-y-1">
-        {item.subLinks.map((sub, i) => (
-          <div
-            key={i}
-            className="relative group/service"
+       {serviceCategories.map((service) => (
+          <a
+            key={service._id}
+            href={`/services/${service.name
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+            className="flex items-center justify-between p-3 link"
           >
-            <div className="flex items-center justify-between p-3 link cursor-pointer">
-              <div className="flex items-center gap-4">
-                <img src={sub.image} />
-                <div>
-                  <p className="heading-7">{sub.name}</p>
-                  <p className="B-3 mt-2">
-                    {sub.description}
-                  </p>
-                </div>
+            <div className="flex items-center gap-4">
+              <img src="/assets/healthcare_link.svg" />
+              <div>
+                <p className="heading-7">{service.name}</p>
+                <p className="B-3 mt-2">{service.description}</p>
               </div>
             </div>
 
-            {/* 👉 INNER SUBMENU */}
-            {sub.children && (
-              <div
-                className="absolute top-0 left-full ml-2 w-full bg-white
-                           opacity-0 invisible group-hover/service:opacity-100
-                           group-hover/service:visible transition-all duration-300
-                           shadow-lg rounded-xl p-3"
-              >
-                <ul className="space-y-2">
-                  {sub.children.map((child, j) => (
-                    <li key={j}>
-                      <a
-                        href={child.link}
-                        className="block px-3 py-2 rounded-md
-                                   hover:bg-gray-100 text-sm"
-                      >
-                        {child.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
+            <img src="/assets/next_red.png" />
+          </a>
         ))}
       </div>
     </div>
   </div>
+              )} */}
+
+              {item.name === "Services" && (
+  <div
+    className="absolute top-full right-[-500%] mt-6 w-[890px] p-4
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible
+               transition-all duration-300 company_submenu"
+  >
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-1">
+        {serviceCategories.map((service) => {
+          const subCats = getSubCategoriesByCategory(service._id);
+
+          return (
+            <div
+              key={service._id}
+              className="relative group/service"
+            >
+              {/* CATEGORY */}
+              <div className="flex items-center justify-between p-3 link cursor-pointer">
+                <div className="flex items-center gap-4">
+                  <img src="/assets/healthcare_link.svg" />
+                  <div>
+                    <p className="heading-7">{service.name}</p>
+                    <p className="B-3 mt-2">{service.description}</p>
+                  </div>
+                </div>
+                <img src="/assets/next_red.png" />
+              </div>
+
+              {/* SUBCATEGORIES */}
+              {subCats.length > 0 && (
+                <div
+                  className="absolute top-0 left-full ml-2 w-[340px]
+                             bg-white shadow-lg rounded-xl p-3
+                             opacity-0 invisible
+                             group-hover/service:opacity-100
+                             group-hover/service:visible
+                             transition-all duration-300"
+                >
+                  <ul className="space-y-2">
+                    {subCats.map((sub) => (
+                      <li key={sub._id}>
+                        <a
+                          href={`/services/${slugify(service.name)}/${slugify(sub.name)}`}
+                          className="block px-3 py-2 rounded-md
+                                     hover:bg-gray-100 text-sm"
+                        >
+                          {sub.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
 )}
+
 
             </li>
           ))}
