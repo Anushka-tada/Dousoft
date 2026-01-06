@@ -51,9 +51,9 @@ const Herosection = () => {
       <div className="herosection-outer p-4 pt-2 px-14 mb-5">
         <Swiper
           modules={[Autoplay]}
-          loop={true}
+          loop={false}
           autoplay={{
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           speed={800}
@@ -113,7 +113,7 @@ const Herosection = () => {
                 </div>
 
                 <div className="flex justify-end ">
-                  <div className="hero-teams-2 bg-white p-3 h-fit">
+                  <div className="hero-teams-2 bg-white p-3 h-fit overflow-hidden">
                    <p className="B-1 font-notosans">
                       Trusted by 500+ teams to empower <br /> 2,00,000+ people
                     </p>

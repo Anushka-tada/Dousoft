@@ -308,6 +308,7 @@ color: var(--paragraph-color);
 .hero-teams-2{
  border-bottom-left-radius: 20px;
  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .hero-teams-outer{
   align-items: end;
