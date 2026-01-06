@@ -18,6 +18,7 @@
   --light-text: rgb(210 , 210 , 210);
   --light-text2: rgb(187 , 187 , 187);
   --light-text3: rgb(203 , 215 , 225);
+  --light-text4: rgb(142, 142 , 142);
 
   --font-lustria: 'Lustria';
   --font-notosans: 'Noto Sans';
@@ -54,8 +55,9 @@ html {
   font-size: 46px !important;
   line-height: 69px !important;
 }
-.h-2{
+.heading-2{
   font-size: 56px;
+  line-height: 78px;
 }
 .B-5{
   font-size: 10px;
@@ -72,6 +74,21 @@ html {
 }
 .B-1{
   font-size: 18px;
+  line-height: 27px;
+}
+
+.font-lustria{
+  font-family: var(--font-lustria);
+}
+.font-inter{
+  font-family: var(--font-inter);
+}
+.font-notosans{
+  font-family: var(--font-notosans);
+}
+
+.primary-text{
+  color:  var(--primary-color);
 }
 
 .button{
@@ -82,17 +99,26 @@ html {
   font-family: var(--font-notosans);
 }
 
+.home-page{
+  background-color: var(--third-color);
+  color: #0C1A12;
+}
+
 /* navbar css */
 .nav-links{
   background-color: var(--third-color);
   border-radius: 35px;
   color: var(--paragraph-color);
   font-family: var(--font-lustria);
+   box-shadow: 
+ -6px -6px 12px 0px #ffffffc8,
+6px 6px 12px 0px #bebebe80;
 }
 
 .who-we-btn{
   background-color: var(--third-light);
   box-shadow: 5px 5px 10px 1px #ECE7DB;
+  
 }
 .company_submenu{
   background-color: var(--third-color);
@@ -247,4 +273,45 @@ background: linear-gradient(128deg, rgba(14, 17, 27, 1) 0%, rgba(30, 37, 59, 1) 
 }
 .industries-section .B-1{
 color: var(--paragraph-color);
+}
+
+/* herosection */
+
+.herosection{
+  background-color: var(--light-text2);
+  border-radius: 40px;
+   box-shadow: 
+ -6px -6px 12px 0px #ffffff8b,
+6px 6px 12px 0px #bebebe41;
+
+}
+.herosection-inner{
+  border-radius: 40px;
+}
+.hero-slide-1{
+   background-image: url("/assets/herosection1.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-slide-2{
+   background-image: url("/assets/herosection2.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-teams{
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+}
+.hero-teams-2{
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+.hero-teams-outer{
+  align-items: end;
+}
+.hero-teams > p , .hero-teams-2 > p {
+  color: var(--paragraph-color);
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Herosection from "./components/Herosection";
 
 const futureCards = [
   {
@@ -120,8 +121,10 @@ const industryCards = [
 
 const page = () => {
   return (
-    <>
+    <div className="home-page">
       <Navbar />
+      
+       <Herosection/>
 
       {/* Future ready section */}
 
@@ -246,7 +249,7 @@ solutions that redefine whats possible for your business.</p>
 
         </div> */}
       </div>
-    </>
+    </div>
   );
 };
 

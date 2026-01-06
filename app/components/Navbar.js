@@ -184,7 +184,7 @@ const slugify = (text) =>
 
   return (
     <>
-      <div className="navbar relative flex justify-between items-center px-10 z-[1000]">
+      <div className="navbar relative flex justify-between items-center px-20 z-[1000]">
         <img src="/assets/logo.png" className="nav-logo"></img>
 
         <button className="lg:hidden text-2xl" onClick={() => setMobileMenu(!mobileMenu)}> ☰ </button>
