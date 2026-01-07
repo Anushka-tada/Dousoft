@@ -44,6 +44,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const Herosection = () => {
   return (
@@ -51,13 +52,16 @@ const Herosection = () => {
       <div className="herosection-outer p-4 pt-2 px-14 mb-5">
         <Swiper
           modules={[Autoplay]}
-          loop={false}
+          loop={true}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           speed={800}
           slidesPerView={1}
+          pagination={{
+    clickable: true,
+  }}
         >
           {/* ===== Slide 1 ===== */}
           <SwiperSlide>

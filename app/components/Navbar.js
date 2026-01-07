@@ -200,7 +200,7 @@ const slugify = (text) =>
               className="relative nav-item flex items-center heading-7 group"
             >
               {/* Menu Title */}
-              <span className="flex items-center cursor-pointer">
+              <span className="flex items-center cursor-pointer heading-8">
                 {item.name}
                 {item.subLinks && (
                   <span className="pl-3">
@@ -229,10 +229,10 @@ const slugify = (text) =>
                         <div className="flex items-center  gap-4"> 
                         <img  src={sub.image}   alt={sub.name}  className="" />
                         <div>
-                          <p className="h-6">
+                          <p className="heading-8">
                             {sub.name}
                           </p>
-                          <p className="B-3 mt-3">
+                          <p className="B-3 mt-1">
                             {sub.description}
                           </p>
                         </div>
@@ -262,10 +262,10 @@ const slugify = (text) =>
                         <div className="flex items-center  gap-4"> 
                         <img  src={sub.image}   alt={sub.name}  className="" />
                         <div>
-                          <p className="h-6">
+                          <p className="heading-8">
                             {sub.name}
                           </p>
-                          <p className="B-3 mt-3">
+                          <p className="B-3 mt-1">
                             {sub.description}
                           </p>
                         </div>
@@ -332,8 +332,8 @@ const slugify = (text) =>
                 <div className="flex items-center gap-4">
                   <img src="/assets/healthcare_link.svg" />
                   <div>
-                    <p className="heading-7">{service.name}</p>
-                    <p className="B-3 mt-2">{service.description}</p>
+                    <p className="heading-8">{service.name}</p>
+                    <p className="B-3 mt-1">{service.description}</p>
                   </div>
                 </div>
                 <img src="/assets/next_red.png" />
@@ -523,7 +523,7 @@ const slugify = (text) =>
 
         </li>
       ))}
-      <button className="button rounded-full flex items-center" style={{width:"fit-content"}}>
+      <button className="button rounded-full flex items-center B-1" style={{width:"fit-content"}}>
           Get Started
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>
@@ -532,7 +532,7 @@ const slugify = (text) =>
 )}
 
 
-        <button className="button rounded-full   hidden lg:flex items-center">
+        <button className="button rounded-full   hidden lg:flex items-center B-1">
           Get Started
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>

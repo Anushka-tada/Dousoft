@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Herosection from "./components/Herosection";
+import WhoWeAre from "./components/WhoWeAre";
 
 const futureCards = [
   {
@@ -87,7 +88,7 @@ const futureCards = [
 
 const industryCards = [
   {
-    img:"",
+    img:"/assets/healthcare_card.svg",
     name: "Healthcare",
     para: "We build secure and reliable healthcare software solutions that prioritize performance...",
   },
@@ -119,6 +120,16 @@ const industryCards = [
   
 ]
 
+const services = [
+  "WEBSITE DESIGN & DEVELOPMENT",
+  "MOBILE APP DEVELOPMENT",
+  "DIGITAL MARKETTING",
+  "WEB DESIGN",
+  "AI SOLUTIONS",
+  "AUTOMATED TESTING SERVICES",
+  "IOT SOLUTIONS"
+]
+
 const page = () => {
   return (
     <div className="home-page">
@@ -126,7 +137,65 @@ const page = () => {
       
        <Herosection/>
 
+       <div className="herosection-bottom py-5 px-8 overflow-hidden">
+          <div className="marquee">
+    <div className="marquee-track">
+      {[...services, ...services].map((service, index) => (
+        <span
+          key={index}
+          className="marquee-item font-lustria heading-5 text-white"
+        >
+          ✨ {service} 
+        </span>
+      ))}
+    </div>
+  </div>
+       </div>
+
       {/* Future ready section */}
+
+      {/* who we are section */}
+      {/* <div className="who-we-are">
+        <div className="w-1/2 main py-20 p-10">
+           <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center">
+            <img src="/assets/red_dot.png" className="h-fit" ></img>
+            Who We Are
+           </button>
+
+             <h2 className="heading-2 font-lustria mb-5">
+                   Your <span className="primary-text">Reliable Partne</span> in Digital Transformation
+                  </h2>
+
+                  <p className="mb-5 font-notosans B-1">
+                    In Dousoft IT, we combine the expertise of technology with business knowledge to create customized software solutions that promote the growth of your business, increase efficiency and competitive advantages. Our skilled team of developers and testers, designers, and digital strategists collaborate to deliver tangible outcomes.
+                  </p>
+
+                  <div className="flex gap-4 mb-7">
+                     <button className="btn rounded-full flex items-center p-3 px-4" style={{ width: "fit-content" }}>
+                      <img src="/assets/ai_red.svg" className="ml-2" />
+                   AI Solutions
+
+                  </button>
+                   <button className="btn rounded-full flex items-center p-3 px-4" style={{ width: "fit-content" }}>
+                      <img src="/assets/rocket_red.svg" className="ml-2" />
+                   Digital Strategy
+
+                  </button>
+                   <button className="btn rounded-full flex items-center p-3 px-4" style={{ width: "fit-content" }}>
+                      <img src="/assets/growth_red.svg" className="ml-2" />
+                   Business Growth
+
+                  </button>
+                  </div>
+
+                   <button className="button rounded-full flex items-center" style={{ width: "fit-content" }}>
+                    Explore Our Mission
+                    <img src="/assets/button_arrow.png" className="ml-2" />
+                  </button>
+        </div>
+      </div> */}
+
+      <WhoWeAre/>
 
       <div className="future-ready py-20 px-14">
         <div className="flex justify-center items-center mb-5">
@@ -236,18 +305,37 @@ solutions that redefine whats possible for your business.</p>
           <p className="B-1 max-w-[650px] flex justify-self-center mb-14">We provide tailored digital and marketing solutions for diverse industries ensuring measurable growth and scalability</p>
         </div>
 
-        {/* <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-3 gap-10 ">
           {
           industryCards.map((card , i) => (
-            <div key={i}>
-              <img src={card.img}></img>
-              <p>{card.name}</p>
-              <p>{card.para}</p>
+            <div key={i} className="industry-card p-4">
+              <img src={card.img} className="mb-4" style={{width:"-webkit-fill-available"}}></img>
+              <p className="mb-4 heading-7 font-lustria">{card.name}</p>
+              <p className="B-3 pb-4 mb-2">{card.para}</p>
+
+              <div className="flex gap-1 mb-3">
+               
+                <p className="B-3 read-more">Read More</p>
+                 <img src="/assets/next_icon_red.svg"></img>
+                </div>
             </div>
           ))
         }
 
-        </div> */}
+        </div>
+
+        <div className="flex gap-5 p-3 start-project-section py-12 mt-14 justify-self-center">
+          <div className="ps-8">
+            <p className="heading-7 font-lustria mb-2">Ready to scale your vision?</p>
+            <p className="B-3">Let&apos;s discuss how our AI solutions can optimize  your
+business.</p>
+          </div>
+          <button className="button rounded-full flex items-center B-1 gap-3" style={{width:"fit-content", borderRadius:"12px"}}>
+          Start Your Project
+          <img src="/assets/rocket_icon.svg" className="ml-2"></img>
+        </button>
+
+        </div>
       </div>
     </div>
   );
