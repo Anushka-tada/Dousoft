@@ -136,6 +136,8 @@ const Navbar = () => {
    const [mobileMenu, setMobileMenu] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
   const [openService, setOpenService] = useState(null);
+  const [openMobileService, setOpenMobileService] = useState(null);
+
 
   const[serviceCategories , setServicecategories] = useState([]);
   const[serviceSubCategories , setServiceSubcategories] = useState([]);
@@ -417,12 +419,61 @@ const slugify = (text) =>
             }
           >
             {item.name}
-            {item.subLinks && <span className="pl-3">
+            {/* {item.subLinks && <span className="pl-3">
                     <img
                     src="/assets/dropdownIcon.png"
                     className="transition-transform duration-300 group-hover:rotate-180"
                   />
-                    </span>}
+                    </span>} */}
+                    {item.name === "Services" && openMenu === i && (
+  <div className="pl-2 mt-2 space-y-2">
+    {serviceCategories.map((service, sIndex) => {
+      const subCats = getSubCategoriesByCategory(service._id);
+
+      return (
+        <div key={service._id}>
+          {/* CATEGORY */}
+          <div
+            className="flex justify-between items-center p-2 link"
+            onClick={() =>
+              setOpenMobileService(
+                openMobileService === sIndex ? null : sIndex
+              )
+            }
+          >
+            <div className="flex items-center gap-3">
+              <img src="/assets/healthcare_link.svg" />
+              <div>
+                <p className="B-2">{service.name}</p>
+                <p className="B-4">{service.description}</p>
+              </div>
+            </div>
+            <img src="/assets/dropdownIcon.png" />
+          </div>
+
+          {/* SUBCATEGORIES */}
+          {openMobileService === sIndex && subCats.length > 0 && (
+            <ul className="pl-6 mt-1 space-y-1 text-sm">
+              {subCats.map((sub) => (
+                <li key={sub._id}>
+                  <a
+                    href={`/services/${slugify(service.name)}/${slugify(
+                      sub.name
+                    )}`}
+                    className="block py-1"
+                  >
+                    {sub.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      );
+    })}
+  </div>
+)}
+
           </div>
 
           {/* SUBMENU */}
@@ -467,6 +518,9 @@ const slugify = (text) =>
               ))}
             </div>
           )}
+
+          
+
         </li>
       ))}
       <button className="button rounded-full flex items-center" style={{width:"fit-content"}}>
