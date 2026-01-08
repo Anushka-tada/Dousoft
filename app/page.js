@@ -606,10 +606,14 @@ business.</p>
               onClick={() => toggleFaq(index)}
             >
               <img
-                src="/assets/white_plus.png"
-                className={`p-3 rounded-full transition-transform duration-300`}
-                alt="toggle"
-              />
+    src={
+      openIndex === index
+        ? "/assets/minus.png"
+        : "/assets/white_plus.png"
+    }
+    className="p-3 rounded-full"
+    alt="toggle"
+  />
             </button>
           </div>
 
@@ -621,7 +625,7 @@ business.</p>
               {faq.ans}
             </h3>
 
-            <button
+            {/* <button
               className="icon"
               onClick={() => toggleFaq(index)}
             >
@@ -630,7 +634,7 @@ business.</p>
                 className={`p-3 rounded-full transition-transform duration-300 `}
                 alt="toggle"
               />
-            </button>
+            </button> */}
             </div>
           )}
           <hr className="text-white"></hr>
