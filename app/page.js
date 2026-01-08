@@ -1,7 +1,10 @@
+"use client"
 import React from "react";
 import Navbar from "./components/Navbar";
 import Herosection from "./components/Herosection";
 import WhoWeAre from "./components/WhoWeAre";
+import Testimonial from "./components/Testimonial";
+import { useState } from "react";
 
 const futureCards = [
   {
@@ -130,7 +133,42 @@ const services = [
   "IOT SOLUTIONS"
 ]
 
+const faqs = [
+  {
+    que:"What makes Dousoft IT a top software development company?",
+    ans:"Dousoft IT combines technical expertise, affordable pricing, and a client-centric approach to deliver reliable and scalable software solutions.",
+
+  },
+   {
+    que:"Do you offer custom software development services?",
+    ans:"Dousoft IT combines technical expertise, affordable pricing, and a client-centric approach to deliver reliable and scalable software solutions.",
+
+  },
+   {
+    que:"Is Dousoft IT suitable for startups and small businesses?",
+    ans:"Dousoft IT combines technical expertise, affordable pricing, and a client-centric approach to deliver reliable and scalable software solutions.",
+
+  },
+   {
+    que:"Do you provide ongoing support and maintenance?",
+    ans:"Dousoft IT combines technical expertise, affordable pricing, and a client-centric approach to deliver reliable and scalable software solutions.",
+
+  },
+   {
+    que:"How can I start a project with Dousoft IT?",
+    ans:"Dousoft IT combines technical expertise, affordable pricing, and a client-centric approach to deliver reliable and scalable software solutions.",
+
+  },
+]
+
 const page = () => {
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div className="home-page">
       <Navbar />
@@ -196,6 +234,62 @@ const page = () => {
       </div> */}
 
       <WhoWeAre/>
+
+      {/* why choose dousoft IT */}
+      <div className="why-choose-us py-9 px-16">
+          <h2 className="heading-3 font-lustria mb-5 text-center">
+             Why Choose Dousoft IT?
+            </h2>
+
+            <p className="mb-6 font-notosans B-1 text-center">Our approach combines futuristic tech with human-centric design. </p>
+
+            <div className="grid grid-cols-3 gap-14 items-center">
+             <div>
+              <div className="p-7 py-8 card card-1 mb-12">
+               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
+                <img src="/assets/red_bulb.svg"></img>
+               </div>
+               <p className="heading-7 font-lustria mb-2">Best-in-Class Expertise</p>
+               <p className="B-3 ">We bring years of experience in delivering top-quality software solutions across industries.</p>
+              </div>
+              <div className="p-7 py-8 card card-2">
+               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
+                <img src="/assets/clients_red.svg"></img>
+               </div>
+               <p className="heading-7 font-lustria mb-2">Trusted by Global Clients</p>
+               <p className="B-3 ">We are a trusted technology partner with a strong focus on long-term client relationships.</p>
+              </div>
+             </div>
+
+             <div  className="card-3 p-8   flex justify-center items-center align-middle relative" style={{borderRadius:"40px"}}>
+               <img src="/assets/why_choose_main.svg"></img>
+
+                  <button className="btn rounded-full flex items-center p-2 px-3 gap-2 absolute bg-white B-3" style={{ width: "fit-content" }}>
+                      <img src="/assets/green_dot.svg" className="ml-2" />
+                   System Optimized  </button>
+             </div>
+
+             <div>
+              <div className="p-7 py-8 card card-1 mb-12">
+               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
+                <img src="/assets/growth_red.svg"></img>
+               </div>
+               <p className="heading-7 font-lustria mb-2">Affordable & Transparent Pricing</p>
+               <p className="B-3 ">Our pricing models are designed to be cost-effective without compromising quality.</p>
+              </div>
+              <div className="p-7 py-8 card card-2">
+               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
+                <img src="/assets/support_red.svg"></img>
+               </div>
+               <p className="heading-7 font-lustria mb-2">End-to-End Support</p>
+               <p className="B-3 ">From ideation to deployment and ongoing support, we handle the complete development lifecycle.</p>
+              </div>
+             </div>
+            </div>
+
+      </div>
+
+      {/* future ready section */}
 
       <div className="future-ready py-20 px-14">
         <div className="flex justify-center items-center mb-5">
@@ -337,6 +431,214 @@ business.</p>
 
         </div>
       </div>
+
+      {/* technology section */}
+
+     <div className=" py-20 px-14 technology-section">
+          <div className="flex justify-center items-center mb-5">
+          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3">
+            <img src="/assets/green_dot.svg" className="me-2"></img>
+            Technologies
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h3 className="heading-3 text-white mb-7 font-lustria">
+            Accelerating Growth with <br></br>
+            <span className="green">Cutting-Edge Technologies</span>
+          </h3>
+
+          <p className="B-1  flex justify-self-center mb-14">We leverage modern frameworks, tools, and platforms to build scalable, secure, and high-performance digital solutions.</p>
+        </div>
+
+        <div className="flex gap-7 justify-center mb-20">
+           <div className="flex futute_ready_btn-active rounded-full py-2 px-4 heading-6 ">
+            {/* <img src="/assets/green_dot.svg" className="me-2"></img> */}
+            Frontend
+          </div>
+           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
+            Backend
+          </div>
+           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6">
+           Mobile App
+          </div>
+           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
+            Web App
+          </div>
+           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
+            Database
+          </div>
+        </div>
+
+<div className="circle-wrapper">
+  <div className="circle-1">
+
+    <div className="orbit">
+  <div className="orbit-item" style={{ "--i": 0 }}>
+    <img src="/assets/react.png" alt="React" />
+  </div>
+
+  <div className="orbit-item" style={{ "--i": 1 }}>
+    <img src="/assets/javascript.png" alt="JavaScript" />
+  </div>
+
+  <div className="orbit-item" style={{ "--i": 2 }}>
+    <img src="/assets/angular.png" alt="Angular" />
+  </div>
+
+  <div className="orbit-item" style={{ "--i": 3 }}>
+    <img src="/assets/jquery.png" alt="jQuery" />
+  </div>
+
+  <div className="orbit-item" style={{ "--i": 4 }}>
+    <img src="/assets/vue.png" alt="Vue" />
+  </div>
+</div>
+
+
+    <div className="middle-circle">
+      <div className="inner-circle">
+        <div className="circle-4 flex justify-center items-center">
+          <img src="/assets/figma.png" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+     </div>
+
+     {/* testimonial  */}
+
+     <div className="testimonial-section py-10 px-14" >
+        <div className="grid grid-cols-[1fr_1fr_1fr_1.3fr_1fr_1fr_1fr] gap-5 items-center">
+          <div className=" pt-44">
+            <img src="/assets/top_testimonial.png" className="mb-4"></img>
+             <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+
+           <div>
+            <img src="/assets/top_testimonial.png" className="mb-4"></img>
+             <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+
+           <div className="">
+            <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+
+          <div className="">
+            <img src="/assets/top_testimonial.png" className="h-auto w-100"></img>
+          </div>
+
+          <div>
+            <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+
+           <div >
+            <img src="/assets/top_testimonial.png" className="mb-4"></img>
+             <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+
+           <div className=" mt-44">
+            <img src="/assets/top_testimonial.png" className="mb-4"></img>
+             <img src="/assets/top_testimonial.png" className=""></img>
+          </div>
+        </div>
+
+        
+          <div className="flex justify-center items-center mb-16">
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" style={{marginTop:"-5%"}}>
+            <img src="/assets/red_dot.png" className="me-2"></img>
+           Testimonials
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h3 className="heading-3  mb-7 font-lustria">
+           Trusted by leaders  <br></br>
+            <span className="grey pb-2">from various indursties</span>
+          </h3>
+
+          <p className="B-1  flex justify-self-center mb-10 font-notosans">Leam why professionals trust our solutions to complete their customer journeys</p>
+        </div>
+
+         <button className="button rounded-full flex items-center B-1 justify-self-center" style={{width:"fit-content"}}>
+          Read all Success Stories
+          <img src="/assets/button_arrow.png" className="ml-2"></img>
+        </button>
+
+        <Testimonial/>
+     </div>
+
+     {/* Faq */}
+
+     <div className="faq-section py-20 px-14 bg-white">
+         <div className="flex justify-center items-center mb-10">
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" >
+            <img src="/assets/red_dot.png" className="me-2"></img>
+           FAQ&apos;S
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h3 className="heading-3  mb-16 font-lustria">
+          Have a question? Look here
+          </h3>
+          </div>
+
+          <div className="faq-outer">
+      {faqs.map((faq, index) => (
+        <div key={index} className="">
+
+          {/* Question Row */}
+          <div className="faq p-6 py-7 flex justify-between items-center">
+            <h3 className="heading-6">
+              <span className="font-lustria me-4">
+                {"0"}{index + 1}_
+              </span>{" "}
+              {faq.que}
+            </h3>
+
+            <button
+              className="icon"
+              onClick={() => toggleFaq(index)}
+            >
+              <img
+                src="/assets/white_plus.png"
+                className={`p-3 rounded-full transition-transform duration-300`}
+                alt="toggle"
+              />
+            </button>
+          </div>
+
+          {/* Answer */}
+          {openIndex === index && (
+            <div className="bg-white p-6 py-7 flex justify-between items-center ">
+             <h3 className="B-1 font-notosans">
+             
+              {faq.ans}
+            </h3>
+
+            <button
+              className="icon"
+              onClick={() => toggleFaq(index)}
+            >
+              <img
+                src="/assets/minus.png"
+                className={`p-3 rounded-full transition-transform duration-300 `}
+                alt="toggle"
+              />
+            </button>
+            </div>
+          )}
+          <hr className="text-white"></hr>
+        </div>
+      ))}
+    </div>
+     </div>
+
     </div>
   );
 };

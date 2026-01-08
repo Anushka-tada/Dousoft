@@ -9,6 +9,8 @@
   --primary-light: #FFD4BD;
   --secondary-color: rgb(21, 43 , 30);
   --secondary-dark: rgb(21, 43 , 30);
+  --green-dark: rgb(16 , 34 , 23);
+  --green-light: rgb(25 ,51 , 36);
   --secondary-light: rgb(43, 238 , 121);
   --secondary-light2: rgba(31, 193, 107, 0.100);
   --paragraph-color: rgb(96 , 96 ,96);
@@ -19,6 +21,7 @@
   --light-text2: rgb(187 , 187 , 187);
   --light-text3: rgb(203 , 215 , 225);
   --light-text4: rgb(142, 142 , 142);
+  --light-text5: rgb(197 , 197 , 197);
 
   --font-lustria: 'Lustria';
   --font-notosans: 'Noto Sans';
@@ -43,8 +46,9 @@ html {
   font-size: 22px;
   line-height: 33px;
 }
-.h-6{
+.heading-6{
   font-size: 25px;
+  line-height: 39px;
 }
 .heading-5{
   font-size: 32px;
@@ -160,7 +164,7 @@ html {
 
 /* Future ready section{ */
 
-.future-ready{
+.future-ready , .technology-section{
   background-color: var(--secondary-color);
 }
 .futute_ready_btn{
@@ -175,7 +179,7 @@ html {
 font-family: var(--font-lustria);
 }
 
-.future-ready .green {
+.future-ready .green , .technology-section .green {
   background: linear-gradient(
     88deg,
     rgba(43, 238, 121, 1) 0%,
@@ -188,7 +192,7 @@ font-family: var(--font-lustria);
   color: rgba(43, 238, 121, 1);
 }
 
-.future-ready .B-1{
+.future-ready .B-1 , .technology-section .B-1{
   font-family: var(--font-notosans);
   color: var(--light-text);
 }
@@ -506,4 +510,247 @@ color: var(--paragraph-color);
   /* .scroll-filler {
     height: 100vh;
   } */
+}
+
+/* why choose us  */
+
+.why-choose-us{
+  background-color: var(--third-light);
+}
+.why-choose-us .B-1{
+  color: var(--paragraph-color);
+}
+.why-choose-us .card{
+  border-radius: 48px;
+    box-shadow: 
+  8px 8px 16px 0 #DBECE2,
+  -8px -8px  16px 0 #FFFFFF;
+}
+.why-choose-us .card-1{
+  background-color: rgb(255 , 92 ,2 , 0.1);
+}
+.why-choose-us .card-2{
+  background-color: rgb(31 , 193 ,107 , 0.1);
+}
+.why-choose-us .icon{
+   box-shadow: 
+  5px 5px 10px 0 #DBECE2,
+  -5px -5px  10px 0 #FFFFFF;
+}
+.why-choose-us .card .B-3{
+  color: var(--paragraph-color);
+}
+.why-choose-us .card-3{
+    box-shadow: 
+ inset 5px 5px 10px 0 #DBECE2,
+ inset -5px -5px  10px 0 #FFFFFF;
+ background: RGB(240 , 253 , 244);
+background: linear-gradient(128deg, rgba(240, 253, 244, 1) 0%, rgba(220, 252, 231, 1) 100%);
+height: 77%;
+}
+
+.why-choose-us .card-3 .btn{
+  box-shadow: 0px 10 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+right: 8%;
+bottom: 8%;
+color: #0C1A12;
+} 
+
+/* technology section */
+
+.technology-section .futute_ready_btn-active {
+ border: 3px solid var(--secondary-light) !important;
+ color: var(--secondary-light);
+   box-shadow: 
+  5px 5px 10px 0 #0B1710,
+  -5px -5px 10px 0 #152D1E;
+}
+
+
+ .circle-wrapper {
+  height: 100vh;
+  overflow: hidden !important;
+  margin: 0 auto;
+
+  display: flex;  
+  justify-content: center;    
+}
+
+.circle-1 {
+  width: 155vh;
+  height: 150vh;
+  background-color: var(--green-dark);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.middle-circle {
+  width: 70%;  
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--secondary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.inner-circle {
+  width: 65%;  
+  height: 65%;
+  border-radius: 50%;
+  background-color: var(--green-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-4 {
+  width: 35%;
+  height: 35%;
+  background-color: var(--green-dark);
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 10px 1 #0B1710,
+  inset -5px -5px 10px 1 #162F22,
+  0px 0px 4px 7px #2BEE79;
+
+}
+
+.orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+color: #153121
+;
+/* animation: orbitMove 15s steps(5) infinite; */
+    animation: orbitSmooth 15s infinite;
+    
+}
+
+
+@keyframes orbitSmooth {
+  0%   { transform: rotate(0deg); }
+  14%  { transform: rotate(72deg); }
+  20%  { transform: rotate(72deg); }
+
+  34%  { transform: rotate(144deg); }
+  40%  { transform: rotate(144deg); }
+
+  54%  { transform: rotate(216deg); }
+  60%  { transform: rotate(216deg); }
+
+  74%  { transform: rotate(288deg); }
+  80%  { transform: rotate(288deg); }
+
+  94%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.orbit-item {
+  background: var(--green-dark);
+    width: 140px;
+    height: 140px;
+    transform: rotate(calc(var(--i) * 45deg)) translate(calc(-78% + -57vh)) rotate(calc(var(--i) * -44deg));
+    transform-origin: center;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 46%;
+     box-shadow: inset 5px 5px 10px 1 #0B1710,
+  inset -5px -5px 10px 1 #162F22,
+  0px 0px 4px 7px #2BEE79;
+
+ 
+}
+
+
+
+@keyframes orbitMove {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* testimonial-section */
+
+.testimonial-section{
+  background-color: var(--third-color);
+}
+
+.testimonial-section .grey{
+  color: var(--light-text4);
+}
+.testimonial-section > .B-1{
+color: var(--paragraph-color);
+}
+.testimonial-section .card{
+  background-color: var(--light-text5);
+  border-radius: 16px;
+  box-shadow: 
+  0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+  0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  min-height: 570px;
+}
+
+.testimonial-section .card2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35%; /* half card */
+  background: #00000071;
+  z-index: 1;
+}
+
+
+.testimonial-section .card2 > div {
+  z-index: 2;
+  color: white;
+}
+.swiper-pagination-bullet{
+ background-color: white !important;
+ font-size: 30px;
+  height: 30px !important ;
+ width: 30px !important;
+  box-shadow: 
+  0px 4px 8px 3px rgba(0, 0, 0, 0.15) ,
+  0px 1px 3px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: grey !important;
+ height: 30px  !important;
+ width: 30px !important;
+}
+
+/* faq section */
+
+.faq-section .faq{
+ background-color: var(--third-color);
+}
+.faq-section .icon{
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.faq-outer{
+  overflow: hidden;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
 }
