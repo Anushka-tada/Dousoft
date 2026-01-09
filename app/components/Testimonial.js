@@ -48,11 +48,20 @@ const Testimonial = () => {
     delay: 3000,              // 3 sec
     disableOnInteraction: false,
   }}
-  pagination={{ clickable: true }}   // 🔵 dots ON
-  breakpoints={{
-    320: { slidesPerView: 1 },
-    640: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
+  pagination={{ clickable: true }}   
+ breakpoints={{
+    320: {
+      slidesPerView: 2,
+      pagination: false,  
+    },
+    640: {
+      slidesPerView: 2,
+      pagination: false,
+    },
+    1024: {
+      slidesPerView: 3,
+      pagination: { clickable: true }, 
+    },
   }}
 >
 

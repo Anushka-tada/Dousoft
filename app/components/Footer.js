@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer px-14 pt-14 ">
-      <div className="footer-main grid grid-cols-2 items-center justify-between px-8 gap-8 py-10 pb-14 mb-14">
+    <div className="footer px-3 sm:px-6 md:px-10 lg:px-14 md:pt-14 sm:pt-10  pt-3">
+      <div className="footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
         <div>
-          <div className="flex gap-2 mb-8">
+          <div className="flex gap-2 sm:mb-8 mb-4">
             <img src="/assets/footer_bulb.png"></img>
             <p className="B-1 font-notosans red">Future Ready</p>
           </div>
 
-          <h3 className="heading-3 font-lustria text-white ">
+          <h3 className="heading-3 font-lustria text-white footer-heading ">
             Stay ahead of the curve
           </h3>
           <p className="B-1 font-notosans para">
@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-         <div className="relative mb-5 flex justify-end w-fit justify-self-end">
+         <div className="relative mb-5 flex justify-end lg:w-fit lg:justify-self-end justify-self-center input-outer">
   <img
     src="/assets/email_black.png" 
     alt="mail"
@@ -40,21 +40,21 @@ const Footer = () => {
             <img src="/assets/button_arrow.png" className="mr-2"></img>
           </button>
 
-          <p className="B-3 text-end me-16 para ">
+          <p className="B-3 lg:text-end text-center lg:me-16 para ">
             No spam. Unsubscribe anytime.
           </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-4 px-9 pb-5 gap-7">
+      <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7">
         <div>
           <img src="/assets/footer_logo.png" className="mb-4"></img>
-          <p className="B-3 text-white ">
+          <p className="B-3 text-white max-w-[327] ">
             Engineered for growth. We build the digital infrastructure that
             powers the next generation of AI-driven businesses.
           </p>
         </div>
-
+        <div className="flex md:justify-center justify-between lg:gap-32  md:gap-18 gap-8">
         <div className="flex flex-col items-center">
           <p className="heading-7 pb-2 mb-4 font-lustria text-white w-fit">
             Solutions
@@ -75,7 +75,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="ps-5">
+        <div className="">
           <p className="heading-7 pb-2 mb-4 font-lustria text-white w-fit">
             Company
           </p>
@@ -93,6 +93,7 @@ const Footer = () => {
               <a>Partners</a>
             </li>
           </ul>
+        </div>
         </div>
 
         <div>
@@ -122,7 +123,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between py-8 " style={{borderTop:"1px solid #264f3663"}}>
+      <div className="flex justify-between py-8  flex-wrap gap-3 " style={{borderTop:"1px solid #264f3663"}}>
        <p className="B-3 text-white">© 2026 Dousoft IT Solution Pvt. Ltd. </p>
 
        <div className="flex gap-5">

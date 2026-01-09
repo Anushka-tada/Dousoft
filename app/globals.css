@@ -56,6 +56,7 @@ html {
 }
 .heading-4{
   font-size: 38px;
+  line-height: 57px;
 }
 .heading-3{
   font-size: 46px !important;
@@ -110,6 +111,54 @@ html {
   color: #0C1A12;
 }
 
+@media (max-width:900px) {
+  
+.heading-8{
+  font-size: 19px !important;
+  line-height: 28px;
+}
+.heading-7{
+  font-size: 22px;
+  line-height: 33px;
+}
+.heading-6{
+   font-size: 19px !important;
+  line-height: 28px !important;
+}
+.heading-5{
+  font-size: 32px;
+  line-height: 48px;
+}
+.heading-4{
+  font-size: 38px;
+}
+.heading-3{
+ font-size: 32px !important;
+  line-height: 48px !important;
+}
+.heading-2{
+   font-size: 38px !important;
+  line-height: 57px !important;
+}
+.B-5{
+  font-size: 10px;
+}
+.B-4{
+  font-size: 12px;
+}
+.B-3{
+  font-size: 14px;
+  line-height: 20px;
+}
+.B-2{
+  font-size: 16px;
+}
+.B-1{
+ font-size: 14px !important;
+  line-height: 20px !important;
+}
+}
+
 @media (max-width:600px) {
   
 .heading-8{
@@ -136,8 +185,8 @@ html {
   line-height: 48px !important;
 }
 .heading-2{
-  font-size: 56px;
-  line-height: 78px;
+ font-size: 32px !important;
+  line-height: 48px !important;
 }
 .B-5{
   font-size: 10px;
@@ -459,6 +508,41 @@ color: var(--paragraph-color);
   }
 }
 
+@media (max-width:1100px) {
+    .herosection-inner{
+  border-radius: 40px;
+  height: 100%;
+}
+.hero-teams{
+ border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+}
+.hero-teams-2{
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+}
+
+}
+
+@media (max-width:578px) {
+ .hero-slide-1{
+   background-image: url("/assets/mobile-hero-1.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-slide-2{
+   background-image: url("/assets/mobile-hero-2.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+}
+
 
 /* who-we-are */
 
@@ -612,7 +696,28 @@ color: #0C1A12;
 .why-choose-us .card-3{
 height: 100%;
 }
+/* .content-section {
+ 
+  height: 100%;
+  padding: 1rem;
+  padding-top:  55px;
 }
+.content-wrapper{
+  width:100% ;
+} */
+
+}
+
+/* .mobile-hero-image{
+  width: 90%;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 8px 8px 16px 0 #DBECE2,
+  -8px -8px 16px 0 #FFFFFF;
+  border-radius: 48px;
+} */
 
 /* technology section */
 
@@ -760,7 +865,7 @@ color: var(--paragraph-color);
   box-shadow: 
   0px 4px 8px 3px rgba(0, 0, 0, 0.15),
   0px 1px 3px 0 rgba(0, 0, 0, 0.3);
-  min-height: 570px;
+  height: 570px;
 }
 
 .testimonial-section .card2::after {
@@ -795,6 +900,41 @@ color: var(--paragraph-color);
  width: 30px !important;
 }
 
+@media (max-width: 768px) {
+   .testimonial-section .card{
+  height: 400px;
+
+   }
+  .swiper-pagination-bullet{
+  height: 20px !important ;
+ width: 20px !important;
+}
+
+.swiper-pagination-bullet-active{
+ height: 20px  !important;
+ width: 20px !important;
+}
+}
+
+@media (max-width: 578px) {
+   .testimonial-section .card{
+  background-color: var(--light-text5);
+  border-radius: 16px;
+  box-shadow: 
+  0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+  0px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  height: 320px;
+}
+ .swiper-pagination-bullet{
+  height: 10px !important ;
+ width: 10px !important;
+}
+
+.swiper-pagination-bullet-active{
+ height: 10px  !important;
+ width: 10px !important;
+}
+}
 /* faq section */
 
 .faq-section .faq{
@@ -900,91 +1040,89 @@ color: var(--paragraph-color);
   width: 41px;
 }
 
+@media (max-width:852px) {
+  .footer .btn{
+  min-width: 230px;
+  justify-self: center;
+}
+.footer .input{
+  width: 230px;
+}
+}
+
+@media (max-width:552px) {
+  .footer .btn{
+  min-width: 240px;
+  width: 100% !important;
+  justify-self: center;
+  align-items: center;
+}
+.footer .input{
+  width: 100% !important;
+  width: 240px;
+}
+.input-outer{
+  width: -webkit-fill-available;
+}
+
+.footer-heading{
+  font-size: 22px !important;
+  line-height: 33px !important;
+}
+}
+
 /* roadmap section */
+/* ROADMAP WRAPPER */
 .roadmap-section {
   position: relative;
-  height: 1700px;
-  background: #f8faf8;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  height: 2050px;
+  margin: auto;
+  background-color: white;
 }
 
-/* ROAD */
+/* SVG ROAD */
 .road-svg {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
   width: 100%;
-  height: 1700px;
-  z-index: 1;
+  height: 100%;
+  pointer-events: none;
 }
 
-/* MILESTONE BASE */
+/* NODE CONTAINER (EXACT SVG POSITION) */
 .milestone {
   position: absolute;
-  left: 50%;
-  z-index: 3;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
 }
 
-.milestone.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* DOT */
+/* DOT (REFERENCE POINT ON ROAD) */
 .dot {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-}
-
-.dot.green {
-  background: #22c55e;
+  flex-shrink: 0;
 }
 
 .dot.orange {
-  background: #f97316;
+  background: #ff6a00;
 }
 
-/* CONNECTOR */
-.connector {
-  width: 2px;
-  height: 40px;
-  border-left: 2px dotted #cfcfcf;
+.dot.green {
+  background: #00c48c;
 }
 
-/* CARD */
+/* LABEL / PILL (DESIGN TUM KAROGI) */
 .pill {
-  background: white;
-  padding: 12px 22px;
+  background: #fff;
+  padding: 8px 14px;
   border-radius: 999px;
-  font-size: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   white-space: nowrap;
-}
-
-/* LEFT RIGHT */
-.milestone.left {
-  transform: translateX(-220px);
-}
-
-.milestone.right {
-  transform: translateX(220px);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .milestone.left,
-  .milestone.right {
-    transform: translateX(-50%);
-  }
-
-  .pill {
-    font-size: 13px;
-  }
+  font-size: 14px;
+  margin-left: 10px; /* default right side */
 }

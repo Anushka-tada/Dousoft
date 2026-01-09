@@ -482,7 +482,7 @@ business.</p>
 
       {/* technology section */}
 
-     <div className=" py-20 px-14 technology-section">
+     <div className=" pt-20 px-14 technology-section">
           <div className="flex justify-center items-center mb-5">
           <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3">
             <img src="/assets/green_dot.svg" className="me-2"></img>
@@ -582,8 +582,8 @@ business.</p>
 
      {/* testimonial  */}
 
-     <div className="testimonial-section py-10 px-14" >
-        <div className="grid grid-cols-[1fr_1fr_1fr_1.3fr_1fr_1fr_1fr] gap-5 items-center">
+     <div className="testimonial-section sm:py-10 py-9 px-3 sm:px-6 md:px-10 lg:px-14 " >
+        <div className="grid grid-cols-[1fr_1fr_1fr_1.3fr_1fr_1fr_1fr] gap-5 items-center md:flex hidden ">
           <div className=" pt-44">
             <img src="/assets/top_testimonial.png" className="mb-4"></img>
              <img src="/assets/top_testimonial.png" className=""></img>
@@ -618,7 +618,7 @@ business.</p>
         </div>
 
         
-          <div className="flex justify-center items-center mb-16">
+          <div className="flex justify-center items-center sm:mb-16 mb-6">
           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" style={{marginTop:"-5%"}}>
             <img src="/assets/red_dot.png" className="me-2"></img>
            Testimonials
@@ -631,15 +631,20 @@ business.</p>
             <span className="grey pb-2">from various indursties</span>
           </h3>
 
-          <p className="B-1  flex justify-self-center mb-10 font-notosans">Leam why professionals trust our solutions to complete their customer journeys</p>
+          <p className="B-1  flex justify-self-center sm:mb-10 mb-7 font-notosans">Leam why professionals trust our solutions to complete their customer journeys</p>
         </div>
 
-         <button className="button rounded-full flex items-center B-1 justify-self-center" style={{width:"fit-content"}}>
+         <button className="button rounded-full flex items-center B-1 justify-self-center md:block hidden" style={{width:"fit-content"}}>
           Read all Success Stories
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>
 
         <Testimonial/>
+
+          <button className="button rounded-full flex items-center B-1 justify-self-center md:hidden  block" style={{width:"fit-content"}}>
+          Read all Success Stories
+          <img src="/assets/button_arrow.png" className="ml-2"></img>
+        </button>
      </div>
 
      {/* Faq */}
