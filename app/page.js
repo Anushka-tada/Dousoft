@@ -5,6 +5,8 @@ import Herosection from "./components/Herosection";
 import WhoWeAre from "./components/WhoWeAre";
 import Testimonial from "./components/Testimonial";
 import { useState } from "react";
+import Footer from "./components/Footer";
+import Roadmap from "./components/Roadmap";
 
 const futureCards = [
   {
@@ -161,8 +163,54 @@ const faqs = [
   },
 ]
 
+const footerlinks = [
+  {
+    name:"WEB DEVELOPMENT",
+    links: [
+      "web-development-company-india",
+      "custom-web-development-india",
+      "website-development-services-india",
+      "enterprise-web-development-india",
+      "web-development-in-india"
+    ]
+  },
+  {
+    name:"WEB DESIGN",
+    links: [
+      "web-design-services-india",
+      "website-design-company-india",
+      "custom-web-design-india",
+      "professional-web-design-services-india",
+      "responsive-web-design-india"
+    ]
+  }
+  ,
+  {
+    name:"APP DEVELOPMENT",
+    links: [
+      "mobile-app-development-company-india",
+      "mobile-app-development-services-india",
+      "custom-mobile-app-development-india",
+      "enterprise-mobile-app-development-india",
+      "best-mobile-app-developers-india"
+    ]
+  }
+  ,
+  {
+    name:"DIGITAL MARKETING",
+    links: [
+      "digital-marketing-company-india",
+      "digital-marketing-services-india",
+      "online-marketing-company-india",
+      "nternet-marketing-services-india",
+      "best-digital-marketing-agency-india"
+    ]
+  }
+]
+
 const page = () => {
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFaq = (index) => {
@@ -236,23 +284,23 @@ const page = () => {
       <WhoWeAre/>
 
       {/* why choose dousoft IT */}
-      <div className="why-choose-us py-9 px-16">
-          <h2 className="heading-3 font-lustria mb-5 text-center">
+      <div className="why-choose-us py-9 px-3 sm:px-6 md:px-10 lg:px-16">
+          <h2 className="heading-3 font-lustria sm:mb-5 mb-4 text-center">
              Why Choose Dousoft IT?
             </h2>
 
             <p className="mb-6 font-notosans B-1 text-center">Our approach combines futuristic tech with human-centric design. </p>
 
-            <div className="grid grid-cols-3 gap-14 items-center">
-             <div>
-              <div className="p-7 py-8 card card-1 mb-12">
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-14 sm:gap-5 gap-3  items-center">
+             <div className="flex lg:flex-col flex-row lg:gap-12 sm:gap-8 gap-3 sm:flex-nowrap flex-wrap">
+              <div className="sm:p-7 sm:py-8 p-5 card card-1 ">
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/red_bulb.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">Best-in-Class Expertise</p>
                <p className="B-3 ">We bring years of experience in delivering top-quality software solutions across industries.</p>
               </div>
-              <div className="p-7 py-8 card card-2">
+              <div className="sm:p-7 sm:py-8 p-5 card card-2">
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/clients_red.svg"></img>
                </div>
@@ -261,7 +309,7 @@ const page = () => {
               </div>
              </div>
 
-             <div  className="card-3 p-8   flex justify-center items-center align-middle relative" style={{borderRadius:"40px"}}>
+             <div  className="card-3 sm:p-8 p-6   flex justify-center items-center align-middle relative" style={{borderRadius:"40px"}}>
                <img src="/assets/why_choose_main.svg"></img>
 
                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2 absolute bg-white B-3" style={{ width: "fit-content" }}>
@@ -269,15 +317,15 @@ const page = () => {
                    System Optimized  </button>
              </div>
 
-             <div>
-              <div className="p-7 py-8 card card-1 mb-12">
+                <div className="flex lg:flex-col flex-row lg:gap-12 sm:gap-8 gap-3 sm:flex-nowrap flex-wrap">
+              <div className="sm:p-7 sm:py-8 p-5 card card-1 ">
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/growth_red.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">Affordable & Transparent Pricing</p>
                <p className="B-3 ">Our pricing models are designed to be cost-effective without compromising quality.</p>
               </div>
-              <div className="p-7 py-8 card card-2">
+              <div className="sm:p-7 sm:py-8 p-5 card card-2">
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/support_red.svg"></img>
                </div>
@@ -291,7 +339,7 @@ const page = () => {
 
       {/* future ready section */}
 
-      <div className="future-ready py-20 px-14">
+      <div className="future-ready sm:py-20 py-8 px-3 sm:px-6 md:px-10 lg:px-14">
         <div className="flex justify-center items-center mb-5">
           <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3">
             <img src="/assets/green_dot.svg" className="me-2"></img>
@@ -305,13 +353,13 @@ const page = () => {
             <span className="green">Intelligent Solutions</span>
           </h3>
 
-          <p className="B-1 max-w-[650px] flex justify-self-center mb-14">We blend AI innovation with robust engineering to deliver scalable digital
+          <p className="B-1 max-w-[650px] flex justify-self-center md:mb-14 mb-5">We blend AI innovation with robust engineering to deliver scalable digital
 solutions that redefine whats possible for your business.</p>
         </div>
 
-         <div className="grid  grid-cols-3 gap-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-10 gap-3">
          {futureCards.map((card , i) => (
-  <div key={i} className="service_card p-8 rounded-3xl">
+  <div key={i} className="service_card sm:p-8 p-6 rounded-3xl">
     <div className="flex justify-between items-center">
         <div>
           <img src="/assets/future_point.svg" className="card_icon p-4"></img>
@@ -360,28 +408,28 @@ solutions that redefine whats possible for your business.</p>
       </div>
 
       {/* number section */}
-      <div className="bg-black py-12 grid grid-cols-4 number_section">
-          <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white mb-3"> 98%</h3>
+      <div className="bg-black py-12 grid md:grid-cols-4 grid-cols-2 number_section">
+          <div className="flex flex-col justify-center align-middle text-center md:mb-0 mb-5">
+            <h3 className="heading-3 text-white md:mb-3 mb-0"> 98%</h3>
             <p className="B-3 text-white">Client Satisfaction</p>
           </div>
-           <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white mb-3"> 250+</h3>
+           <div className="flex flex-col justify-center align-middle text-center md:mb-0 mb-5">
+            <h3 className="heading-3 text-white md:mb-3 mb-0"> 250+</h3>
             <p className="B-3 text-white">Projects Delivered</p>
           </div>
            <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white mb-3">15+</h3>
+            <h3 className="heading-3 text-white md:mb-3 mb-0">15+</h3>
             <p className="B-3 text-white">Years experience</p>
           </div>
            <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white mb-3">24/7</h3>
+            <h3 className="heading-3 text-white md:mb-3 mb-0">24/7</h3>
             <p className="B-3 text-white">Support Active</p>
           </div>
       </div>
 
       {/* industries we serve section */}
 
-      <div className="py-16 px-14 industries-section">
+      <div className="sm:py-16 py-8 px-3 sm:px-6 md:px-10 lg:px-14 industries-section">
          
           <div className="flex justify-center items-center mb-5">
           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3">
@@ -399,7 +447,7 @@ solutions that redefine whats possible for your business.</p>
           <p className="B-1 max-w-[650px] flex justify-self-center mb-14">We provide tailored digital and marketing solutions for diverse industries ensuring measurable growth and scalability</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 ">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-3 ">
           {
           industryCards.map((card , i) => (
             <div key={i} className="industry-card p-4">
@@ -418,8 +466,8 @@ solutions that redefine whats possible for your business.</p>
 
         </div>
 
-        <div className="flex gap-5 p-3 start-project-section py-12 mt-14 justify-self-center">
-          <div className="ps-8">
+        <div className="flex gap-5 md:flex-nowrap flex-wrap md:justify-between justify-center p-3 start-project-section sm:py-12 py-5 sm:mt-14 mt-6 justify-self-center">
+          <div className="ps-8 md:text-left text-center">
             <p className="heading-7 font-lustria mb-2">Ready to scale your vision?</p>
             <p className="B-3">Let&apos;s discuss how our AI solutions can optimize  your
 business.</p>
@@ -453,7 +501,6 @@ business.</p>
 
         <div className="flex gap-7 justify-center mb-20">
            <div className="flex futute_ready_btn-active rounded-full py-2 px-4 heading-6 ">
-            {/* <img src="/assets/green_dot.svg" className="me-2"></img> */}
             Frontend
           </div>
            <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
@@ -470,7 +517,7 @@ business.</p>
           </div>
         </div>
 
-<div className="circle-wrapper">
+<div className="circle-wrapper pt-32 pb-5">
   <div className="circle-1">
 
     <div className="orbit">
@@ -507,6 +554,29 @@ business.</p>
   </div>
 </div>
 
+
+     </div>
+
+     {/* agile process section */}
+
+     <div className="agile-section py-8 px-14">
+       <div className="flex justify-center items-center mb-5">
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3">
+            <img src="/assets/red_dot.png" className="me-2"></img>
+            Agile Process
+          </div>
+        </div>
+
+        <div className=" text-center">
+          <h3 className="heading-3  mb-7 font-lustria">
+           Agile Development Process We Follow <br></br>
+            <span className="red pb-2">at Dousoft IT</span>
+          </h3>
+
+          <p className="B-1 flex justify-self-center mb-14 font-notosans">A Proven, Agile Driven Delivery Model for Scalable Solutions</p>
+        </div>
+
+        <Roadmap/>
 
      </div>
 
@@ -574,8 +644,8 @@ business.</p>
 
      {/* Faq */}
 
-     <div className="faq-section py-20 px-14 bg-white">
-         <div className="flex justify-center items-center mb-10">
+     <div className="faq-section sm:py-20 py-8 px-3 sm:px-6 md:px-10 lg:px-14 bg-white">
+         <div className="flex justify-center items-center sm:mb-10 mb-6">
           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" >
             <img src="/assets/red_dot.png" className="me-2"></img>
            FAQ&apos;S
@@ -583,7 +653,7 @@ business.</p>
         </div>
 
         <div className=" text-center">
-          <h3 className="heading-3  mb-16 font-lustria">
+          <h3 className="heading-3  sm:mb-16 mb-8 font-lustria">
           Have a question? Look here
           </h3>
           </div>
@@ -593,7 +663,7 @@ business.</p>
         <div key={index} className="">
 
           {/* Question Row */}
-          <div className="faq p-6 py-7 flex justify-between items-center">
+          <div className="faq sm:p-6 sm:py-7  p-4 flex justify-between items-center">
             <h3 className="heading-6">
               <span className="font-lustria me-4">
                 {"0"}{index + 1}_
@@ -611,7 +681,7 @@ business.</p>
         ? "/assets/minus.png"
         : "/assets/white_plus.png"
     }
-    className="p-3 rounded-full"
+    className="sm:p-3 p-1 rounded-full"
     alt="toggle"
   />
             </button>
@@ -619,7 +689,7 @@ business.</p>
 
           {/* Answer */}
           {openIndex === index && (
-            <div className="bg-white p-6 py-7 flex justify-between items-center ">
+            <div className="bg-white sm:p-6 sm:py-7  p-4 flex justify-between items-center ">
              <h3 className="B-1 font-notosans">
              
               {faq.ans}
@@ -642,6 +712,78 @@ business.</p>
       ))}
     </div>
      </div>
+
+     {/* start your journey sectiion */}
+
+     <div className="journey-section sm:py-12 py-8 px-3 sm:px-6 md:px-10 lg:px-14 bg-black">
+
+      <div className="journey-inner flex flex-col justify-center items-center md:py-1 py-4" style={{border:"1px solid #264f3663"}}>
+        <div>
+          <img src="/assets/rocket-green.png" className="icon sm:mb-12 mb-8 rounded-full p-4"></img>
+        </div>
+       <div classname="text-center">
+         <h2 className="heading-3 text-white mb-7 font-lustria text-center">Start Your Digital Journey with <br></br> <span className="green"> Dousoft IT</span></h2>
+
+          <p className="max-w-[700px] B-1 text-center sm:mb-14 mb-8 para">Looking for a 
+            <span className="green-para"> reliable software development company </span>
+             to bring your idea to life? Dousoft IT is here to help you build future-ready digital solutions</p>
+             </div>
+
+             <div className="flex justify-center items-center sm:gap-12 gap-7 md:mb-18 sm:mb-8 mb-6 sm:flex-nowrap flex-wrap">
+                  <button className="py-3 px-5 rounded-full B- btn-1  flex gap-2 font-notosans" style={{color:"black"}}>
+              Launch Your Project
+              <img src="/assets/next_black.png"></img>
+             </button>
+
+              <button className="py-3 px-5 rounded-full B-1 btn-2  flex gap-2 text-white" >
+             Explore Services
+                <img src="/assets/service_black.png"></img>
+             </button>
+                
+             </div>
+
+
+             <div className="flex gap-5 justify-center w-fit px-16 sm:pt-12 pt-4 sm:flex-nowrap flex-wrap" style={{borderTop:"1px solid #264f3663"}}>
+              <div className="flex gap-2 items-center">
+                <img src="\assets\check.svg"></img>
+                <p className="B-3 text-white">AI-Driven Strategy</p>
+              </div>
+               <div className="flex gap-2 items-center">
+                <img src="\assets\check.svg"></img>
+                <p className="B-3 text-white">Scalable Architecture</p>
+              </div>
+               <div className="flex gap-2 items-center">
+                <img src="\assets\check.svg"></img>
+                <p className="B-3 text-white">24/7 Support</p>
+              </div>
+             </div>
+
+      
+      </div>
+     </div>
+
+     {/* footer top */}
+
+   <div className="footer-top lg:p-14 p-10">
+     <div className="grid lg:grid-cols-4 sm:grid-cols-2  md:gap-12 sm:gap-10 gap-9">
+       {footerlinks.map((section, index) => (
+  <div key={index} >
+    <h4 className="heading-6 uppercase sm:mb-5 mb-4 font-bold" style={{fontWeight:500}}>{section.name}</h4>
+
+    <ul>
+      {section.links.map((link, i) => (
+        <li key={i}>
+          <p className="B-3 sm:mb-4 mb-3">{link}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
+
+     </div>
+   </div>
+
+   <Footer/>
 
     </div>
   );

@@ -110,6 +110,53 @@ html {
   color: #0C1A12;
 }
 
+@media (max-width:600px) {
+  
+.heading-8{
+  font-size: 19px !important;
+  line-height: 28px;
+}
+.heading-7{
+  font-size: 22px;
+  line-height: 33px;
+}
+.heading-6{
+   font-size: 19px !important;
+  line-height: 28px !important;
+}
+.heading-5{
+  font-size: 32px;
+  line-height: 48px;
+}
+.heading-4{
+  font-size: 38px;
+}
+.heading-3{
+ font-size: 32px !important;
+  line-height: 48px !important;
+}
+.heading-2{
+  font-size: 56px;
+  line-height: 78px;
+}
+.B-5{
+  font-size: 10px;
+}
+.B-4{
+  font-size: 12px;
+}
+.B-3{
+  font-size: 14px;
+  line-height: 20px;
+}
+.B-2{
+  font-size: 16px;
+}
+.B-1{
+ font-size: 14px !important;
+  line-height: 20px !important;
+}
+}
 /* navbar css */
 .nav-links{
   background-color: var(--third-color);
@@ -179,7 +226,7 @@ html {
 font-family: var(--font-lustria);
 }
 
-.future-ready .green , .technology-section .green {
+.future-ready .green , .technology-section .green  , .journey-inner .green{
   background: linear-gradient(
     88deg,
     rgba(43, 238, 121, 1) 0%,
@@ -269,16 +316,17 @@ inset -5px -5px 10px 1px #162F22;
  background: #0E111B;
 background: linear-gradient(128deg, rgba(14, 17, 27, 1) 0%, rgba(30, 37, 59, 1) 100%);
 }
-.industries-section .heading-3{
+.industries-section .heading-3 , .agile-section .heading-3{
    color: var(--dark-text);
    font-family: var(--font-lustria);
 }
-.industries-section .red {
+.industries-section .red  , .agile-section .red{
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
-.industries-section .B-1{
+.industries-section .B-1 , .agile-section .B-1{
 color: var(--paragraph-color);
+
 }
 
 .industry-card{
@@ -483,9 +531,6 @@ color: var(--paragraph-color);
   width: auto;
 }
 
-/* .scroll-filler {
-  height: 300vh;
-} */
 
 /* Mobile */
 @media (max-width: 992px) {
@@ -557,6 +602,18 @@ bottom: 8%;
 color: #0C1A12;
 } 
 
+@media (max-width: 700px) {
+  .why-choose-us .card-1{
+  background-color: rgb(255, 255, 255);
+}
+.why-choose-us .card-2{
+  background-color: rgb(255, 255, 255);
+}
+.why-choose-us .card-3{
+height: 100%;
+}
+}
+
 /* technology section */
 
 .technology-section .futute_ready_btn-active {
@@ -569,12 +626,13 @@ color: #0C1A12;
 
 
  .circle-wrapper {
-  height: 100vh;
+  height: 112vh;
   overflow: hidden !important;
   margin: 0 auto;
 
   display: flex;  
-  justify-content: center;    
+  justify-content: center;  
+  position: relative;  
 }
 
 .circle-1 {
@@ -627,8 +685,7 @@ color: #0C1A12;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-color: #153121
-;
+
 /* animation: orbitMove 15s steps(5) infinite; */
     animation: orbitSmooth 15s infinite;
     
@@ -675,7 +732,7 @@ color: #153121
 }
 
 
-
+/* 
 @keyframes orbitMove {
   from {
     transform: rotate(0deg);
@@ -683,7 +740,7 @@ color: #153121
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 /* testimonial-section */
 
@@ -746,11 +803,188 @@ color: var(--paragraph-color);
 .faq-section .icon{
   background-color: var(--primary-color);
   border-radius: 50%;
+  /* height: 48px;
+  width: 48px; */
 }
 
 .faq-outer{
   overflow: hidden;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+}
 
+@media (max-width:600px) {
+  .faq-outer{
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+/* .faq-section .icon{
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+} */
+}
+
+/* .journey section */
+
+.journey-inner{
+  background-color: var(--green-dark);
+  border-radius: 48px;
+}
+.journey-inner .green-para{
+  color: var(--secondary-light);
+}
+.journey-inner .para , .footer .para {
+  color: var(--third-color);
+}
+
+.journey-inner .icon{
+  box-shadow: 
+  inset 4px 4px 8px 0px #0B1716,
+  inset -4px -4px 8px 0px #152D2C;
+}
+
+.journey-inner .btn-1{
+  background-color: var(--secondary-light);
+   box-shadow: 0px 0px 20px 0px #2BEE79 !important;
+}
+.journey-inner .btn-2{
+  background-color: var(--secondary-color);
+   box-shadow: 
+    8px 8px 16px 0px #102217,
+    -8px -8px 16px 0px #102217;
+    border: 1px solid #27342c;
+
+}
+
+/* footer section */
+
+.footer{
+  background-color: var(--secondary-color);
+}
+.footer .red{
+  color: var(--primary-color)
+}
+.footer-main{
+  background-color: var(--green-light);
+  box-shadow:
+   -6px -6px 12px 0 #0B1710,
+  6px 6px 12px 0 #162F22;
+  border-radius: 16px;
+}
+.footer .btn{
+  background-color: var(--primary-color);
+  color: white;
+  min-width: 370px;
+  justify-self: end;
+}
+.footer .input{
+  width: 370px;
+  justify-self: end;
+}
+
+.footer .heading-7{
+  border-bottom: 1px solid #264f3663;
+  
+}
+.footer .icon {
+  border:  1px solid rgb(255 , 201 , 171);
+  height: 41px;
+  width: 41px;
+}
+
+/* roadmap section */
+.roadmap-section {
+  position: relative;
+  height: 1700px;
+  background: #f8faf8;
+  overflow: hidden;
+}
+
+/* ROAD */
+.road-svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 1700px;
+  z-index: 1;
+}
+
+/* MILESTONE BASE */
+.milestone {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.milestone.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DOT */
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.dot.orange {
+  background: #f97316;
+}
+
+/* CONNECTOR */
+.connector {
+  width: 2px;
+  height: 40px;
+  border-left: 2px dotted #cfcfcf;
+}
+
+/* CARD */
+.pill {
+  background: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+/* LEFT RIGHT */
+.milestone.left {
+  transform: translateX(-220px);
+}
+
+.milestone.right {
+  transform: translateX(220px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .milestone.left,
+  .milestone.right {
+    transform: translateX(-50%);
+  }
+
+  .pill {
+    font-size: 13px;
+  }
 }
