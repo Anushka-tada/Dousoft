@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client"
 import React from "react";
 import Navbar from "./components/Navbar";
@@ -208,6 +209,40 @@ const footerlinks = [
   }
 ]
 
+const technologies = {
+  frontend: [
+    { src: "/assets/react.png", alt: "React" },
+    { src: "/assets/javascript.png", alt: "JavaScript" },
+    { src: "/assets/angular.png", alt: "Angular" },
+    { src: "/assets/jquery.png", alt: "jQuery" },
+    { src: "/assets/vue.png", alt: "Vue" },
+  ],
+  backend: [
+    { src: "/assets/node.png", alt: "Node.js" },
+    // { src: "/assets/express.png", alt: "Express" },
+    { src: "/assets/python.png", alt: "Python" },
+    { src: "/assets/django.svg", alt: "Django" },
+    { src: "/assets/java.png", alt: "Java" },
+  ],
+  mobile: [
+    { src: "/assets/react_native.png", alt: "React Native" },
+    { src: "/assets/flutter.png", alt: "Flutter" },
+    // { src: "/assets/swift.png", alt: "Swift" },
+    // { src: "/assets/kotlin.png", alt: "Kotlin" },
+  ],
+  webapp: [
+    // { src: "/assets/nextjs.png", alt: "Next.js" },
+    // { src: "/assets/nuxt.png", alt: "Nuxt.js" },
+    // { src: "/assets/laravel.png", alt: "Laravel" },
+  ],
+  database: [
+    { src: "/assets/mysql.png", alt: "MySQL" },
+    { src: "/assets/mongodb.svg", alt: "MongoDB" },
+    { src: "/assets/postgresql.png", alt: "PostgreSQL" },
+  ],
+};
+
+
 const page = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -216,6 +251,8 @@ const page = () => {
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const [activeTab, setActiveTab] = useState("frontend"); 
 
   return (
     <div className="home-page">
@@ -482,45 +519,72 @@ business.</p>
 
       {/* technology section */}
 
-     <div className=" pt-20 px-14 technology-section">
+     <div className=" lg:pt-20 pt-5 lg:pb-0 pb-5 px-0 lg:px-14  technology-section">
+
+      <div className="mobile-orbit-wrapper bg-white p-3 overflow-hidden lg:hidden block">
+  <div className="mobile-orbit-track flex gap-4">
+    {[...technologies[activeTab], ...technologies[activeTab]].map(
+      (tech, index) => (
+        <div
+          key={index}
+          className="orbit-item-mobile p-5 flex-shrink-0"
+        >
+          <img src={tech.src} alt={tech.alt} />
+        </div>
+      )
+    )}
+  </div>
+</div>
           <div className="flex justify-center items-center mb-5">
-          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3">
+          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3 lg:mt-0 mt-5">
             <img src="/assets/green_dot.svg" className="me-2"></img>
             Technologies
           </div>
         </div>
 
-        <div className=" text-center">
-          <h3 className="heading-3 text-white mb-7 font-lustria">
+        <div className=" text-center md:px-0 sm:px-7 px-3">
+          <h3 className="heading-3 text-white sm:mb-7 mb-4 font-lustria">
             Accelerating Growth with <br></br>
             <span className="green">Cutting-Edge Technologies</span>
           </h3>
 
-          <p className="B-1  flex justify-self-center mb-14">We leverage modern frameworks, tools, and platforms to build scalable, secure, and high-performance digital solutions.</p>
+          <p className="B-1  flex justify-self-center md:mb-14 mb-5">We leverage modern frameworks, tools, and platforms to build scalable, secure, and high-performance digital solutions.</p>
         </div>
 
-        <div className="flex gap-7 justify-center mb-20">
-           <div className="flex futute_ready_btn-active rounded-full py-2 px-4 heading-6 ">
-            Frontend
+      <div className="flex md:flex-nowrap flex-wrap md:gap-7 gap-4 justify-center md:pt-0 pt-5 md:pb-20 pb-8 md:px-0 sm:px-7 px-3">
+        {["frontend", "backend", "mobile", "webapp", "database"].map((tab) => (
+          <div
+            key={tab}
+            className={`flex rounded-full py-2 px-4 heading-6 cursor-pointer w-fit ${
+              activeTab === tab ? "futute_ready_btn-active" : "futute_ready_btn"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </div>
-           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
-            Backend
-          </div>
-           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6">
-           Mobile App
-          </div>
-           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
-            Web App
-          </div>
-           <div className="flex futute_ready_btn rounded-full py-2 px-4 heading-6 ">
-            Database
-          </div>
+        ))}
+      </div>
+
+     <div className="mobile-orbit-wrapper bg-white p-3 overflow-hidden lg:hidden block">
+  <div className="mobile-orbit-track flex gap-4">
+    {[...technologies[activeTab], ...technologies[activeTab]].map(
+      (tech, index) => (
+        <div
+          key={index}
+          className="orbit-item-mobile p-5 flex-shrink-0"
+        >
+          <img src={tech.src} alt={tech.alt} />
         </div>
+      )
+    )}
+  </div>
+</div>
+
 
 <div className="circle-wrapper pt-32 pb-5">
   <div className="circle-1">
 
-    <div className="orbit">
+    {/* <div className="orbit">
   <div className="orbit-item" style={{ "--i": 0 }}>
     <img src="/assets/react.png" alt="React" />
   </div>
@@ -540,8 +604,19 @@ business.</p>
   <div className="orbit-item" style={{ "--i": 4 }}>
     <img src="/assets/vue.png" alt="Vue" />
   </div>
-</div>
+</div> */}
 
+<div className="orbit">
+            {technologies[activeTab].map((tech, index) => (
+              <div
+                key={index}
+                className="orbit-item"
+                style={{ "--i": index }}
+              >
+                <img src={tech.src} alt={tech.alt} />
+              </div>
+            ))}
+          </div>
 
     <div className="middle-circle">
       <div className="inner-circle">
@@ -559,7 +634,7 @@ business.</p>
 
      {/* agile process section */}
 
-     <div className="agile-section py-8 px-14">
+     <div className="agile-section pt-8 px-3 sm:px-6 md:px-10 lg:px-14">
        <div className="flex justify-center items-center mb-5">
           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3">
             <img src="/assets/red_dot.png" className="me-2"></img>
@@ -634,14 +709,14 @@ business.</p>
           <p className="B-1  flex justify-self-center sm:mb-10 mb-7 font-notosans">Leam why professionals trust our solutions to complete their customer journeys</p>
         </div>
 
-         <button className="button rounded-full flex items-center B-1 justify-self-center md:block hidden" style={{width:"fit-content"}}>
+         <button className="button rounded-full flex items-center B-1 justify-self-center md:flex hidden" style={{width:"fit-content"}}>
           Read all Success Stories
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>
 
         <Testimonial/>
 
-          <button className="button rounded-full flex items-center B-1 justify-self-center md:hidden  block" style={{width:"fit-content"}}>
+          <button className="button rounded-full flex items-center B-1 justify-self-center md:hidden flex" style={{width:"fit-content"}}>
           Read all Success Stories
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>

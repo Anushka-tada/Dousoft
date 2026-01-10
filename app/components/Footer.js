@@ -54,7 +54,7 @@ const Footer = () => {
             powers the next generation of AI-driven businesses.
           </p>
         </div>
-        <div className="flex md:justify-center justify-between lg:gap-32  md:gap-18 gap-8">
+        <div className="flex md:justify-center justify-between xl:gap-30  lg:gap-18  md:gap-18 gap-8">
         <div className="flex flex-col items-center">
           <p className="heading-7 pb-2 mb-4 font-lustria text-white w-fit">
             Solutions
