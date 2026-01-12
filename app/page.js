@@ -519,7 +519,7 @@ business.</p>
 
       {/* technology section */}
 
-     <div className=" lg:pt-20 pt-5 lg:pb-0 pb-5 px-0 lg:px-14  technology-section">
+     <div className=" lg:pt-20 pt-5 lg:pb-0 pb-5 px-0 lg:px-4  technology-section">
 
       <div className="mobile-orbit-wrapper bg-white p-3 overflow-hidden lg:hidden block">
   <div className="mobile-orbit-track flex gap-4">

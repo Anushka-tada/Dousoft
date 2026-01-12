@@ -295,11 +295,13 @@ const WhoWeAreParallax = () => {
                   </div>
 
                     <div  className="image-wrapper-mobile p-3">
-         <img
+       <div className="image-wrapper-mobile-inner">
+          <img
              src="/assets/2nd_section.svg"
              alt="Dousoft IT"
              className=" mobile-hero-image"
            />
+       </div>
          </div>
 
             <button className="button rounded-full flex items-center mt-5 justify-self-center">
