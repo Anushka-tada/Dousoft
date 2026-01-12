@@ -380,6 +380,10 @@ inset -5px -5px 10px 1px #162F22;
   font-family: var(--font-lustria);
 } 
 
+.number_section{
+  background: url("/assets/Counter_bg.gif");
+}
+
 /* industries section */
 
 .industries-section{
@@ -613,7 +617,7 @@ color: var(--paragraph-color);
   overflow: hidden;
 }
 
-.image-wrapper {
+.who-we-are .image-wrapper {
   width: 100%;
   height: 100vh;
   flex-shrink: 0;
@@ -1131,6 +1135,10 @@ color: var(--paragraph-color);
 
 /* .journey section */
 
+.journey-section{
+  background: url("/assets/journey_bg.gif");
+}
+
 .journey-inner{
   background-color: var(--green-dark);
   border-radius: 48px;
@@ -1379,4 +1387,193 @@ color: var(--paragraph-color);
   box-shadow: -4px -4px 10px 0 #F8F8F866,
   6px 6px 12px 0 #BEBEBE44;
   border: 1px solid rgba(246, 246, 246, 0.711);
+}
+
+/* About page herosection */
+
+.about-herosection {
+  height: 58vh;
+  width: 100%;
+  background-color: white; /* page background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* HALF CIRCLE */
+.about-herosection-circle {
+  position: absolute;
+  bottom: 0;   /* circle ka aadha part niche chala jayega */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 200vw;
+  height: 210vh;
+  background-color: var(--third-color);
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.about-herosection-content {
+  position: relative;
+  z-index: 3 !important;
+  text-align: center;
+  padding: 0 16px;
+  bottom: 5%;
+}
+.about-herosection-content .btn{
+  border-radius: 10px;
+  box-shadow:  0 4px 8px 3px #00000016,
+  0 1px 3px 0 #0000003a
+}
+
+/* mission vision section */
+
+.mission-vison , .growth-section{
+  background-color: var(--third-color);
+}
+
+.mission-vison .btns{
+  box-shadow:  -6px -6px 12px 0 rgb(255 , 255 ,255 , 80),
+  6px 6px 12px 0 rgb(190 , 190 , 190, 40);
+}
+
+.mission-vison .btn-active{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.mission-vison .red{
+  color: var(--primary-color);
+}
+.mission-vison .para{
+  color: var(--paragraph-color);
+}
+.mission-image-left{
+  box-shadow: inset 1px 1px 2px 0 rgb(255 , 255 ,255 , 30%),
+  -6px -6px 12px 0 rgb(255 , 255 , 255 , 80),
+  6px 6px 12px 0 rgb(181 , 181 , 181 , 40);
+  border-radius: 16px;
+}
+
+.mission-image-left img {
+  /* box-shadow: inset 5px 5px 10px 0 #0E111B,
+  inset -5px -5px 10px 0 #1E253B; */
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.mission-image-left .image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline;
+    align-self: start;
+}
+
+.mission-image-left .image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+ box-shadow: inset 5px 5px 10px 0 #0E111B,
+  inset -5px -5px 10px 0 #1E253B;
+}
+
+ /* grow and innovation section */
+
+ .growth_btn{
+   box-shadow: inset 5px 5px 10px 1px #ECE7DB,
+       inset -5px -5px 10px 1px #FFFFFF;
+ }
+ .growth-btn2{
+  background-color: var(--primary-color);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+ }
+
+ .side-btn{
+      height: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .timeline-wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Horizontal Line */
+.timeline-line {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ff3c00;
+}
+
+/* Red Dots */
+.timeline-dots {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+.red-dot {
+  width: 20px;
+  height: 20px;
+  background: #ff3c00;
+  border-radius: 50%;
+}
+
+/* Slider */
+.cards-slider {
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.cards-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Card */
+.timeline-card {
+  width: 33.33%;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  margin: 0 10px;
+  position: relative;
+}
+
+/* White Dot */
+.white-dot {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2px solid #ff3c00;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: 20px;
+  z-index: 3;
+}
+
+/* Dotted Line */
+.dotted-line {
+  position: absolute;
+  top: -45px;
+  left: 26px;
+  height: 40px;
 }

@@ -5,9 +5,12 @@ import Navbar from "./components/Navbar";
 import Herosection from "./components/Herosection";
 import WhoWeAre from "./components/WhoWeAre";
 import Testimonial from "./components/Testimonial";
-import { useState } from "react";
+import { useState , useEffect , useRef } from "react";
 import Footer from "./components/Footer";
 import Roadmap from "./components/Roadmap";
+import Counter from "./components/Counter"
+import { motion } from "framer-motion";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 const futureCards = [
   {
@@ -254,6 +257,9 @@ const page = () => {
 
   const [activeTab, setActiveTab] = useState("frontend"); 
 
+ 
+
+
   return (
     <div className="home-page">
       <Navbar />
@@ -321,7 +327,7 @@ const page = () => {
       <WhoWeAre/>
 
       {/* why choose dousoft IT */}
-      <div className="why-choose-us py-9 px-3 sm:px-6 md:px-10 lg:px-16">
+      {/* <div className="why-choose-us py-9 px-3 sm:px-6 md:px-10 lg:px-16">
           <h2 className="heading-3 font-lustria sm:mb-5 mb-4 text-center">
              Why Choose Dousoft IT?
             </h2>
@@ -330,49 +336,70 @@ const page = () => {
 
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-14 sm:gap-5 gap-3  items-center">
              <div className="flex lg:flex-col flex-row lg:gap-12 sm:gap-8 gap-3 sm:flex-nowrap flex-wrap">
-              <div className="sm:p-7 sm:py-8 p-5 card card-1 ">
+              <motion.div className="sm:p-7 sm:py-8 p-5 card card-1"   initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{ duration: 0.7, ease: "easeOut" }}
+  variants={leftCard}>
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/red_bulb.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">Best-in-Class Expertise</p>
                <p className="B-3 ">We bring years of experience in delivering top-quality software solutions across industries.</p>
-              </div>
-              <div className="sm:p-7 sm:py-8 p-5 card card-2">
+              </motion.div>
+              <motion.div className="sm:p-7 sm:py-8 p-5 card card-2"  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+  variants={leftCard}>
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/clients_red.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">Trusted by Global Clients</p>
                <p className="B-3 ">We are a trusted technology partner with a strong focus on long-term client relationships.</p>
-              </div>
+              </motion.div>
              </div>
 
-             <div  className="card-3 sm:p-8 p-6   flex justify-center items-center align-middle relative" style={{borderRadius:"40px"}}>
+             <motion.div  className="card-3 sm:p-8 p-6   flex justify-center items-center align-middle relative" style={{borderRadius:"40px"}}
+              initial={{ scale: 0.9, opacity: 0 }}
+  whileInView={{ scale: 1, opacity: 1 }}
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}>
                <img src="/assets/why_choose_main.svg"></img>
 
                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2 absolute bg-white B-3" style={{ width: "fit-content" }}>
                       <img src="/assets/green_dot.svg" className="ml-2" />
                    System Optimized  </button>
-             </div>
+             </motion.div>
 
                 <div className="flex lg:flex-col flex-row lg:gap-12 sm:gap-8 gap-3 sm:flex-nowrap flex-wrap">
-              <div className="sm:p-7 sm:py-8 p-5 card card-1 ">
+              <motion.div className="sm:p-7 sm:py-8 p-5 card card-1 "  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{ duration: 0.7, ease: "easeOut" }}
+  variants={rightCard}>
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/growth_red.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">Affordable & Transparent Pricing</p>
                <p className="B-3 ">Our pricing models are designed to be cost-effective without compromising quality.</p>
-              </div>
-              <div className="sm:p-7 sm:py-8 p-5 card card-2">
+              </motion.div>
+              <motion.div className="sm:p-7 sm:py-8 p-5 card card-2"  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+  variants={rightCard}>
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/support_red.svg"></img>
                </div>
                <p className="heading-7 font-lustria mb-2">End-to-End Support</p>
                <p className="B-3 ">From ideation to deployment and ongoing support, we handle the complete development lifecycle.</p>
-              </div>
+              </motion.div>
              </div>
             </div>
 
-      </div>
+      </div> */}
+      <WhyChooseUs/>
 
       {/* future ready section */}
 
@@ -445,24 +472,30 @@ solutions that redefine whats possible for your business.</p>
       </div>
 
       {/* number section */}
-      <div className="bg-black py-12 grid md:grid-cols-4 grid-cols-2 number_section">
-          <div className="flex flex-col justify-center align-middle text-center md:mb-0 mb-5">
-            <h3 className="heading-3 text-white md:mb-3 mb-0"> 98%</h3>
-            <p className="B-3 text-white">Client Satisfaction</p>
-          </div>
-           <div className="flex flex-col justify-center align-middle text-center md:mb-0 mb-5">
-            <h3 className="heading-3 text-white md:mb-3 mb-0"> 250+</h3>
-            <p className="B-3 text-white">Projects Delivered</p>
-          </div>
-           <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white md:mb-3 mb-0">15+</h3>
-            <p className="B-3 text-white">Years experience</p>
-          </div>
-           <div className="flex flex-col justify-center align-middle text-center">
-            <h3 className="heading-3 text-white md:mb-3 mb-0">24/7</h3>
-            <p className="B-3 text-white">Support Active</p>
-          </div>
-      </div>
+     <div className=" py-12 grid md:grid-cols-4 grid-cols-2 number_section">
+
+  <div className="flex flex-col text-center md:mb-0 mb-5">
+    <Counter end={98} suffix="%" />
+    <p className="B-3 text-white">Client Satisfaction</p>
+  </div>
+
+  <div className="flex flex-col text-center md:mb-0 mb-5">
+    <Counter end={250} suffix="+" />
+    <p className="B-3 text-white">Projects Delivered</p>
+  </div>
+
+  <div className="flex flex-col text-center">
+    <Counter end={15} suffix="+" />
+    <p className="B-3 text-white">Years Experience</p>
+  </div>
+
+  <div className="flex flex-col text-center">
+    <Counter end={24} suffix="/7" />
+    <p className="B-3 text-white">Support Active</p>
+  </div>
+
+</div>
+
 
       {/* industries we serve section */}
 
@@ -795,7 +828,7 @@ business.</p>
 
      {/* start your journey sectiion */}
 
-     <div className="journey-section sm:py-12 py-8 px-3 sm:px-6 md:px-10 lg:px-14 bg-black">
+     <div className="journey-section sm:py-12 py-8 px-3 sm:px-6 md:px-10 lg:px-14">
 
       <div className="journey-inner flex flex-col justify-center items-center md:py-1 py-4" style={{border:"1px solid #264f3663"}}>
         <div>
