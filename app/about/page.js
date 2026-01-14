@@ -5,10 +5,12 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Counter from '../components/Counter'
 import WhyChooseUs from '../components/WhyChooseUs'
-import { useState } from "react";
+import { useState , useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import HeroSection from '../components/Herosection2'
+import FooterTop from '../components/FooterTop'
 
 const missions = [
     {
@@ -185,18 +187,21 @@ const page = () => {
 
 const currentData = dataMap[activeTab];
 
+const swiperRef = useRef(null);
 
-const [index, setIndex] = useState(0);
+
+const [currentIndex, setCurrentIndex] = useState(0);
+const visibleCards = 3;
 
 const nextSlide = () => {
-  if (index < data.length - 3) {
-    setIndex(index + 1);
+  if (currentIndex + visibleCards < timelineData.length) {
+    setCurrentIndex(currentIndex + 1);
   }
 };
 
 const prevSlide = () => {
-  if (index > 0) {
-    setIndex(index - 1);
+  if (currentIndex > 0) {
+    setCurrentIndex(currentIndex - 1);
   }
 };
 
@@ -207,24 +212,31 @@ const prevSlide = () => {
 
         {/* herosection */}
 
-        <div className='about-herosection mb-5'>
-         <div className='about-herosection-circle'>
+        {/* <div className='about-herosection mb-5'>
+         <div className='about-herosection-circle' style={{border:"8px solid #D1D1D1"}}>
            <div className="about-herosection-content">
-    <h3 className="heading-2 font-lustria mb-3">About Us</h3>
-    <p className="B-1 font-notosans mb-5">
+    <h3 className="heading-2 font-lustria mb-3 about-heading ">About Us</h3>
+   <div className='about-hero-p'>
+     <p className="B-1 font-notosans mb-5 ">
       Read more about us. Our mission, our vision, our success and many other you might love
     </p>
+   </div>
 
-    <p className="heading-7 font-lustria bg-white p-3 inline-block btn" >
+    <p className="heading-7 font-lustria bg-white sm:p-3 p-2 inline-block btn" >
       Home {">"} About
     </p>
   </div>
          </div>
-        </div>
+        </div> */}
+        <HeroSection
+         title="About Us"
+        description="Read more about us. Our mission, our vision, our success and many other you might love"
+        breadcrumb="Home > About"
+        />
 
-        <div className='px-3 sm:px-6 md:px-10 lg:px-14  who-we-about grid grid-cols-2 gap-5 py-6'>
+        <div className='px-3 sm:px-6 md:px-10 lg:px-14  who-we-about grid lg:grid-cols-2 gap-5 py-6'>
 
-            <div className="content-wrapper who-we-are">
+            <div className=" who-we-are min-w-full" style={{minWidth: "100%"}}>
            <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-4">
             <img src="/assets/red_dot.png" className="h-fit" ></img>
             Who We Are
@@ -248,7 +260,7 @@ const prevSlide = () => {
             </p>
 
 
-            <div className="flex gap-4 mb-7">
+            <div className="flex gap-4 mb-7 overflow-y-scroll" >
                      <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
                       <img src="/assets/ai_red.svg" className="ml-2" />
                    AI Solutions
@@ -267,7 +279,7 @@ const prevSlide = () => {
 
           </div>
 
-          <div>
+          <div className='flex lg:justify-start justify-center'>
             <img src='/assets/who-we-2nd.png'></img>
           </div>
         </div>
@@ -302,28 +314,28 @@ const prevSlide = () => {
         {/* mission vision section */}
 
         <div className='mission-vison px-3 sm:px-6 md:px-10 lg:px-14 py-5'>
-            <div className='btns flex gap-2 p-2 justify-center w-fit rounded-full justify-self-center'>
+            <div className='btns flex sm:gap-2 p-2 justify-center w-fit rounded-full justify-self-center'>
               <div  onClick={() => setActiveTab("mission")}
-    className={`px-4 py-2 rounded-full cursor-pointer ${
+    className={` sm:px-4 px-2 py-2 rounded-full cursor-pointer ${
       activeTab === "mission" ? "btn-active" : ""
     }`}>
-                <p className='heading-5 font-lustria'>Our Mission</p>
+                <p className='heading-5 font-lustria vision-btn'>Our Mission</p>
               </div>
                <div  onClick={() => setActiveTab("vision")}
-    className={`px-4 py-2 rounded-full cursor-pointer ${
+    className={` sm:px-4 px-2 py-2 rounded-full cursor-pointer ${
       activeTab === "vision" ? "btn-active" : ""
     }`}>
-                <p className='heading-5 font-lustria'>Our Vision</p>
+                <p className='heading-5 font-lustria vision-btn'>Our Vision</p>
               </div>
                <div onClick={() => setActiveTab("about")}
-    className={`px-4 py-2 rounded-full cursor-pointer ${
+    className={` sm:px-4 px-2 py-2 rounded-full cursor-pointer ${
       activeTab === "about" ? "btn-active" : ""
     }`}>
-                <p className='heading-5 font-lustria'>Our value</p>
+                <p className='heading-5 font-lustria vision-btn'>Our value</p>
               </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-5 mt-9 mb-12'>
+            <div className='grid lg:grid-cols-2 gap-5 mt-9 mb-12'>
                 <div>
                    <h3 className='heading-3 font-lustria mb-4 text-center'>Our Mission at <span className='red'>Dousoft IT Solution</span></h3>
                    <p className='B-1 font-notosans text-center para'>We are Dousoft IT Solutions, our goal is to provide businesses of all sizes with secure affordable, scalable, and cost-effective digital solutions that promote the growth, efficiency and long-term growth and success. We strive to become a dependable technology partner for small and medium-sized businesses, startups and large enterprises by turning concepts into high-quality, secure software solutions utilizing the latest technology and well-tested development practices</p>
@@ -340,14 +352,14 @@ const prevSlide = () => {
     <div key={index} >
 
       {isImageLeft ? (
-  <div className="mission-image-left grid grid-cols-2 gap-9 p-5 items-start mb-7">
+  <div className="mission-image-left grid lg:grid-cols-2 sm:gap-9 gap-4 sm:p-5 p-3 items-start mb-7">
 
      <div className='image-wrapper h-auto'>
                <img src={item.img} ></img>
             </div>
     
-    <div className='me-4'>
-        <h5 className='heading-5 font-lustria mb-6'>
+    <div className='sm:me-4'>
+        <h5 className='heading-5 font-lustria sm:mb-6 mb-4'>
       {item.heading}
     </h5>
 
@@ -360,10 +372,13 @@ const prevSlide = () => {
             </div>
   </div>
 ) : (
-  <div className="mission-image-left grid grid-cols-2 gap-9 p-5 items-start mb-7"> 
+  <div className="mission-image-left flex flex-col lg:flex-row sm:gap-9 gap-4 sm:p-5 p-3 items-start mb-7"> 
+      <div className='image-wrapper  h-auto order-1 lg:order-2 w-full lg:w-1/2'>
+               <img src={item.img} ></img>
+            </div>
     
-    <div className='me-4'>
-        <h5 className='heading-5 font-lustria mb-6'>
+    <div className='me-4 order-2 lg:order-1 w-full lg:w-1/2'>
+        <h5 className='heading-5 font-lustria sm:mb-6 mb-4'>
       {item.heading}
     </h5>
 
@@ -372,9 +387,7 @@ const prevSlide = () => {
         ))}
         </div>
       
-       <div className='image-wrapper  h-auto'>
-               <img src={item.img} ></img>
-            </div>
+   
 
         <div>
         
@@ -388,96 +401,109 @@ const prevSlide = () => {
 })}
 
 
-        </div>
+        </div>     
 
         {/* grow and innovation section */}
 
-       <div className='growth-section px-3 sm:px-6 md:px-10 lg:px-14 pt-8'>
+       <div className='growth-section sm:pt-8 pt-3'>
             <div className="flex flex-col justify-center items-center mb-10">
           <div className="flex growth_btn items-center rounded-full py-3 px-5 B-3 bg-white mb-5">
             <img src="/assets/red_dot.png" className="me-2"></img>
            Journey So Far
           </div>
 
-          <h5 className='heading-5 font-lustria'>A timeline of growth and innovation</h5>
+          <h5 className='heading-5 font-lustria growth-heading'>A timeline of growth and innovation</h5>
 
 
             </div>
 
-           <section className="w-full py-16 px-4 bg-[#f4f3ef]">
-  <div className="relative max-w-7xl mx-auto">
+         {/* timeline slider */}
 
-    {/* TOP ZONE (line + dots) */}
-    <div className="relative h-[80px]">
+          <div className="relative">
+        <div className="absolute top-6 left-0 w-full h-[3px] horizontal-line"></div>
 
-      {/* Horizontal Line */}
-      <div className="absolute top-[40px] left-0 right-0 h-[2px] bg-[#ff3c00]" />
+        <Swiper
+          modules={[Navigation]}
+          slidesPerView={3}
+          spaceBetween={30}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          className="pb-20 " style={{marginLeft:"5%" , marginRight:"5%"}}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }}
+          loop={true}
+loopFillGroupWithBlank={true}
+        >
+          {timelineData.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative sm:pb-20 pb-7">
 
-      {/* Red Dots */}
-      <div className="absolute top-[30px] left-0 right-0 flex justify-between px-[12%] z-10">
-        {[1, 2, 3].map((_, i) => (
-          <span key={i} className="w-5 h-5 bg-[#ff3c00] rounded-full" />
-        ))}
+                {/* Red Dot on Line */}
+                <div className="flex justify-start mb-18 " style={{marginLeft:"14%" , marginTop:"1%"}}>
+                  <div className="w-10 h-10 red-circle rounded-full z-10"></div>
+                </div>
+
+                {/* Card */}
+                <div className="relative timeline-card shadow-md p-6 ">
+
+                  {/* White Dot */}
+                  <div className="absolute left-6 w-6 h-6 bg-white  rounded-full" style={{top:"3%"}}></div>
+
+                  {/* Dotted Line Image */}
+                  <img
+                    src="/assets/dotted_line.png"
+                    className="absolute "
+                    alt=""
+                    style={{top:"-30%"}}
+                  />
+
+              <div className='flex gap-3 items-center'>
+                <div style={{width:"90%"}}>
+                <img src='/assets/timeline_card.png'></img>
+                </div>
+                <div>
+                     <div className='flex justify-between'>
+                   <h4 className="heading-6 ">
+                    {item.year}
+                  </h4>
+                  <div className='bg-white sm:px-3 sm:py-2.5 px-2 py-1.5 rounded-full red-top-arrow'>
+                    <img src='/assets/red_top_arrow.png'></img>
+                  </div>
+                 </div>
+                  <h5 className="heading-7 font-lustria timeline-title">{item.title}</h5>
+                  <p className="B-3 mt-2 time-line-desc">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+                </div>
+
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
-    </div>
-
-    {/* SLIDER (STARTS AFTER LINE) */}
-    <Swiper
-      modules={[Navigation]}
-      navigation={{
-        nextEl: ".next-btn",
-        prevEl: ".prev-btn",
-      }}
-      slidesPerView={1}
-      spaceBetween={24}
-      breakpoints={{
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-      className="mt-4"
-    >
-      {[1, 2, 3, 4, 5].map((_, i) => (
-        <SwiperSlide key={i}>
-          <div className="relative bg-white rounded-xl h-[220px]">
-
-            {/* White Dot */}
-            <span className="absolute -top-3 left-8 w-4 h-4 bg-white border-2 border-[#ff3c00] rounded-full z-20" />
-
-            {/* Connector (ONLY this goes upward) */}
-            <img
-              src="/assets/dotted-line.png"
-              className="absolute -top-[48px] left-[34px] h-[44px]"
-            />
-
-            <div className="p-6">{/* your content */}</div>
-
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-
-  </div>
-
-
-</section>
-
-
            <div className='flex justify-center justify-self-center items-center growth-btn2 px-2'>
-         <div className="px-2 ps-6 pe-4 py-2 side-btn" style={{borderRight:"1px solid white"}} onClick={prevSlide}>
+         <div className="px-2 sm:ps-6 ps-3 sm:pe-4 pe-3 py-2 side-btn" style={{borderRight:"1px solid white"}}  onClick={() => swiperRef.current.slidePrev()}>
             <img src='/assets/white_prev.png'></img>
          </div>
-         <div className="px-8 py-2">
-            <h4 className='heading-4 font-lustria text-white'>Our Story in Motion</h4>
+         <div className="sm:px-8 px-3 py-2">
+            <h4 className='heading-5 font-lustria text-white '>Our Story in Motion</h4>
          </div>
-          <div className="px-2 pe-6 ps-4 py-2 side-btn" style={{borderLeft:"1px solid white"}} onClick={nextSlide}>
+          <div className="px-2 sm:pe-6 pe-3 sm:ps-4 ps-3 py-2 side-btn" style={{borderLeft:"1px solid white"}} onClick={() => swiperRef.current.slideNext()}>
             <img src='/assets/white_next.png'></img>
          </div>
            </div>
        </div>
 
-       
 
+      
+      
+       
+        <FooterTop/>
 
         <Footer/>
       

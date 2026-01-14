@@ -81,6 +81,10 @@ html {
   font-size: 56px;
   line-height: 78px;
 }
+.heading-1{
+  font-size: 68px;
+  line-height: 102px;
+}
 .B-5{
   font-size: 10px;
 }
@@ -195,8 +199,8 @@ html {
   line-height: 28px !important;
 }
 .heading-5{
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 22px;
+  line-height: 33px;
 }
 .heading-4{
   font-size: 38px;
@@ -300,7 +304,7 @@ html {
 font-family: var(--font-lustria);
 }
 
-.future-ready .green , .technology-section .green  , .journey-inner .green{
+.future-ready .green , .technology-section .green  , .journey-inner .green , .service-page .green{
   background: linear-gradient(
     88deg,
     rgba(43, 238, 121, 1) 0%,
@@ -313,7 +317,7 @@ font-family: var(--font-lustria);
   color: rgba(43, 238, 121, 1);
 }
 
-.future-ready .B-1 , .technology-section .B-1{
+.future-ready .B-1 , .technology-section .B-1 , .service-page .light-text{
   font-family: var(--font-notosans);
   color: var(--light-text);
 }
@@ -654,7 +658,7 @@ color: var(--paragraph-color);
     height: auto;
   }
 
-  .image-wrapper {
+  .who-we-are .image-wrapper {
     height: 45vh;
     width: 100%;
   }
@@ -1484,6 +1488,35 @@ color: var(--paragraph-color);
   inset -5px -5px 10px 0 #1E253B;
 }
 
+@media (max-width:600px) {
+  .vision-btn{
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+}
+@media (max-width:400px) {
+  .vision-btn{
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+}
+@media (max-width:600px) {
+.growth-heading , .about-heading{
+   font-size: 18px !important;
+    line-height: 28px !important;
+    text-align: center;
+}
+.about-hero-p {
+  max-width: 300px !important;
+  font-size: 14px !important;
+  line-height: 21px !important;
+}
+.about-herosection-content .btn{
+ font-size: 12px;
+ line-height: 18px;
+}
+}
+
  /* grow and innovation section */
 
  .growth_btn{
@@ -1509,71 +1542,198 @@ color: var(--paragraph-color);
   margin-top: 40px;
 }
 
-/* Horizontal Line */
-.timeline-line {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #ff3c00;
+.red-circle{
+  outline: 5px solid #ffffff7d;
+}
+.horizontal-line , .red-circle{
+  background-color: var(--primary-color);
+}
+.timeline-card {
+  box-shadow: -6px -6px 12px  0 rgba(248, 248, 248, 0.71),
+  6px 6px 12px 0 rgba(190, 190, 190, 0.403);
+  border-radius: 10px;
+}
+.red-top-arrow{
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.151),
+  0 1px 3px 0 rgba(0, 0, 0, 0.286);
+}
+.timeline-title{
+  color: var(--primary-color);
+}
+.timeline-card {
+  min-height: 275px
+}
+@media (max-width:1300px) {
+ .timeline-card {
+  min-height: 360px
+}
+}
+@media (max-width:1024px) {
+ .timeline-card {
+  min-height: 275px
+}
+}
+@media (max-width:900px) {
+ .timeline-card {
+  min-height: 314px
+}
+}
+@media (max-width:810px) {
+ .timeline-card {
+  min-height: 334px
+}
+}
+@media (max-width:768px) {
+ .timeline-card {
+  min-height: 275px
+}
+}
+@media (max-width:450px) {
+ .timeline-card {
+  min-height: 390px
+}
+.timeline-card .B-3{
+   font-size: 13px;
+   line-height: 18px;
+}
+.timeline-card .heading-7{
+   font-size: 20px;
+   line-height: 28px;
+}
+}
+@media (max-width:578px) {
+  .growth-btn2 .heading-5{
+    font-size: 17px;
+    line-height: 21px;
+  }
+  .growth-btn2 img{
+    height: 18px;
+    width: 18px;
+  }
 }
 
-/* Red Dots */
-.timeline-dots {
-  position: absolute;
-  top: 30px;
+/* service page css */
+
+.service-page .para{
+   color: var(--paragraph-color);
+}
+
+.service_card_image{
+   display: block;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  border-radius: 12px;
+}
+.service_image_wrapper{
+    position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline;
+    align-self: start;
+}
+.service_image_wrapper::after{
+   content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+ box-shadow: inset 5px 5px 10px 0 #0E111B,
+  inset -5px -5px 10px 0 #1E253B;
+}
+.topCompanyCards{
+  background-color: var(--primary-color);
+  border-radius: 40px;
+}
+.service-page .red{
+  color: var(--primary-color);
+}
+.web-dev-process{
+  background-color: var(--secondary-dark);
+}
+.process-card {
+flex: 1 1 0;
+  height: 480px;
+  cursor: pointer;
+  border-radius: 24px;
+  transition: flex 0.45s ease, transform 0.45s ease;
+   box-shadow: 10px 10px 20px 0 #0B1710,
+  -10px -10px 20px 0 #162F22;
+  background: #112419;
+background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 100%);
+
+  position: relative;
+  overflow: hidden;
+}
+.process-card:hover{
+  flex-grow: 2.2;
+}
+
+.process-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.process-card:hover::after {
+  opacity: 1;
+}
+
+.process-wrapper:hover .process-card:not(:hover) {
+  flex-grow: 0.8;
+}
+
+
+.process-card:hover::before {
+  opacity: 1;
+}
+
+.process-card * {
+  position: relative;
   z-index: 2;
 }
 
-.red-dot {
-  width: 20px;
-  height: 20px;
-  background: #ff3c00;
-  border-radius: 50%;
+.process-card .index-no{
+  color: rgba(31, 193, 107, 0.119);
 }
-
-/* Slider */
-.cards-slider {
-  overflow: hidden;
-  margin-top: 80px;
+.process-card .heading-6{
+  color: var(--secondary-light);
 }
-
-.cards-track {
+.process-wrapper {
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  gap: 15px;
+  transition: all 0.4s ease;
+}
+@media (max-width: 900px) {
+  .process-wrapper {
+    flex-direction: column;
+  }
+
+  /* Base mobile card height */
+  .process-card {
+    flex: none;
+    height: 260px;
+    transition: height 0.45s ease, transform 0.45s ease;
+  }
+
+  /* Hovered card height grow */
+  .process-card:hover {
+    height: 300px;
+  }
+
+  /* Other cards shrink slightly */
+  .process-wrapper:hover .process-card:not(:hover) {
+    height: 221px;
+  }
 }
 
-/* Card */
-.timeline-card {
-  width: 33.33%;
-  padding: 20px;
-  background: #f5f5f5;
-  border-radius: 16px;
-  margin: 0 10px;
-  position: relative;
-}
+@media (max-width:500px) {
+   .process-card:hover {
+    height: 200px;
+  }
 
-/* White Dot */
-.white-dot {
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border: 2px solid #ff3c00;
-  border-radius: 50%;
-  position: absolute;
-  top: -7px;
-  left: 20px;
-  z-index: 3;
-}
-
-/* Dotted Line */
-.dotted-line {
-  position: absolute;
-  top: -45px;
-  left: 26px;
-  height: 40px;
 }

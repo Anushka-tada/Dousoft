@@ -918,16 +918,20 @@ const getCurrentItems = () => {
               className="relative group/service"
             >
               {/* CATEGORY */}
-              <div className="flex items-center justify-between p-3 link cursor-pointer">
-                <div className="flex items-center gap-4">
-                  <img src="/assets/healthcare_link.svg" />
-                  <div>
-                    <p className="heading-8">{service.name}</p>
-                    <p className="B-3 mt-1">{service.description}</p>
-                  </div>
-                </div>
-                <img src="/assets/next_red.png" />
-              </div>
+          <a
+  href={`/service/${slugify(service.name)}-in-india`}
+  className="flex items-center justify-between p-3 link cursor-pointer"
+>
+  <div className="flex items-center gap-4">
+    <img src="/assets/healthcare_link.svg" />
+    <div>
+      <p className="heading-8">{service.name}</p>
+      <p className="B-3 mt-1">{service.description}</p>
+    </div>
+  </div>
+  <img src="/assets/next_red.png" />
+</a>
+
 
               {/* SUBCATEGORIES */}
               {subCats.length > 0 && (
@@ -943,7 +947,8 @@ const getCurrentItems = () => {
                     {subCats.map((sub) => (
                       <li key={sub._id}>
                         <a
-                          href={`/services/${slugify(service.name)}/${slugify(sub.name)}`}
+                          // href={`/services/${slugify(service.name)}/${slugify(sub.name)}`}
+                           href={`/services/${slugify(sub.name)}`}
                           className="block px-3 py-2 rounded-md
                                      hover:bg-gray-100 text-sm"
                         >
