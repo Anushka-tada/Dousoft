@@ -52,12 +52,12 @@ const FooterTop = () => {
      <div className="grid lg:grid-cols-4 sm:grid-cols-2  md:gap-12 sm:gap-10 gap-9">
        {footerlinks.map((section, index) => (
   <div key={index} >
-    <h4 className="heading-6 uppercase sm:mb-5 mb-4 font-bold" style={{fontWeight:500}}>{section.name}</h4>
+    <h4 className="heading-6 uppercase sm:pb-5 pb-4 font-bold font-inter " style={{fontWeight:500}}>{section.name}</h4>
 
     <ul>
       {section.links.map((link, i) => (
         <li key={i}>
-          <p className="B-3 sm:mb-4 mb-3">{link}</p>
+          <p className="B-3 sm:pb-4 pb-3">{link}</p>
         </li>
       ))}
     </ul>

@@ -569,7 +569,7 @@ const navItems = [
         name: "Careers ",
         description: "Happy to help you",
         image: "/assets/career_link.png",
-        link: "/careers",
+        link: "/career",
       },
     ],
   },
@@ -637,13 +637,13 @@ const navItems = [
       name: "Healthcare",
       description: "Streamlined Pricing",
       image: "/assets/healthcare_link.svg",
-      link: "/ecommerce",
+      link: "/healthcare",
     },
     {
       name: "E-Commerce & Retail",
        description: "Streamlined Pricing",
       image: "/assets/healthcare_link.svg",
-      link: "/saas",
+      link: "/e-commerce",
     },
     {
       name: "Education & E-Learning",
@@ -920,13 +920,13 @@ const getCurrentItems = () => {
               {/* CATEGORY */}
           <a
   href={`/service/${slugify(service.name)}-in-india`}
-  className="flex items-center justify-between p-3 link cursor-pointer"
+  className="flex items-center justify-between p-2 link cursor-pointer"
 >
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-3">
     <img src="/assets/healthcare_link.svg" />
     <div>
-      <p className="heading-8">{service.name}</p>
-      <p className="B-3 mt-1">{service.description}</p>
+      <p className="B-1">{service.name}</p>
+      <p className="B-4 mt-1">{service.description}</p>
     </div>
   </div>
   <img src="/assets/next_red.png" />
