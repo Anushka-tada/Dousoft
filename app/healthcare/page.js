@@ -333,7 +333,8 @@ const page = () => {
    <section className="industry ind-5">
     {/* Heading */}
     <h3 className="heading-3 font-lustria mb-10">
-        Our Approach to <span>Healthcare Solutions</span> at Dousoft
+        {/* Our Approach to <span>Healthcare Solutions</span> at Dousoft */}
+        Healthcare Solutions We Offer
     </h3>
 
     {/* Row 1 */}

@@ -2295,3 +2295,627 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
     margin-bottom: 0px !important;
     color: black;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- 2. Hover Effects for Cards --- */
+
+/* Strategy & Compliance Cards */
+.industry-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Why Choose/Benefits Cards */
+.why-card {
+    transition: all 0.3s ease;
+}
+
+.why-card:hover {
+    background-color: #f0fff4; /* Light green tint */
+    transform: scale(1.03);
+    border-left: 5px solid var(--secondary-light);
+}
+
+/* Framework Boxes (Dark Green) */
+.framework-box {
+    transition: all 0.4s ease;
+}
+
+.framework-box:hover {
+    background: linear-gradient(to bottom, #162f22 0%, #1a3a28 100%);
+    box-shadow: 0px 0px 25px 5px rgba(43, 238, 121, 0.2);
+    transform: translateY(-5px);
+        border: 1px solid #2bee79;
+}
+
+/* --- 3. Icon Animations --- */
+.industry-card .icon, .why-icon, .f-icon {
+    transition: transform 0.5s ease;
+}
+
+.industry-card:hover .icon, 
+.why-card:hover .why-icon,
+.framework-box:hover .f-icon {
+    transform: rotateY(360deg);
+}
+
+/* --- 4. Button (CTA) Animation --- */
+.cta-btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px #2BEE79;
+    background: #24d16a;
+}
+
+.cta-btn:active {
+    transform: scale(0.95);
+}
+
+/* Button Icon Animation */
+.btn-icon img {
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover .btn-icon img {
+    transform: translateX(5px);
+}
+
+/* --- 5. Image Overlay Scale Effect --- */
+.overlay-shadow, .overlay-shadow-2 {
+    transition: all 0.5s ease;
+    overflow: hidden;
+    background-size: 100% !important; /* Start size */
+}
+
+.industry-card:hover .overlay-shadow,
+.col-lg-6:hover .overlay-shadow-2 {
+    background-size: 110% !important; /* Zoom in effect */
+}
+
+/* --- 6. Scroll Entrance Animation (Fade-In Up) --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.industry {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+@keyframes pulseArrow {
+    0% { transform: translateX(0); opacity: 0.5; }
+    50% { transform: translateX(10px); opacity: 1; }
+    100% { transform: translateX(0); opacity: 0.5; }
+}
+
+/* ecom */
+.Background-Shadow-2{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/ecom/1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.ecom-ind-3{
+    background: url(https://www.xsellco.com/resources/wp-content/uploads/2018/04/What-is-Order-Fulfillment.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.ecom-ind-5-picture-1{
+    background: url("/assets/images/ecom/8.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.ecom-ind-5-picture-2{
+    background: url("/assets/images/ecom/4.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.ecom-ind-5-picture-3{
+    background: url("/assets/images/ecom/7.avif");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.ecom-ind-5-picture-4{
+    background: url("/assets/images/ecom/6.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.ecom-ind-5-picture-5{
+    background: url("/assets/images/ecom/7.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+/* education */
+
+.Background-Shadow-3{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/education/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.edu-ind-3{
+    background: url("/assets/images/education/2.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.edu-ind-5-picture-1{
+    background: url("/assets/images/education/3.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.edu-ind-5-picture-2{
+    background: url("/assets/images/education/4.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.edu-ind-5-picture-3{
+    background: url("/assets/images/education/5.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.edu-ind-5-picture-4{
+    background: url("/assets/images/education/6.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.edu-5-picture-5{
+    background: url("/assets/images/education/9.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* finance */
+
+.Background-Shadow-4{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/finance/1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.fin-ind-3{
+    background: url(https://www.gstatic.com/bricks/image/7a65b5df-83bb-4aa2-b2ee-81384b354841.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.fin-ind-5-picture-1{
+    background: url("/assets/images/finance/3.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.fin-ind-5-picture-2{
+    background: url("/assets/images/finance/4.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.fin-ind-5-picture-3{
+    background: url("/assets/images/finance/5.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.fin-ind-5-picture-4{
+    background: url("/assets/images/finance/6.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.fin-5-picture-5{
+    background: url(https://modefin.com/wp-content/uploads/2023/09/android-banking-infographic-1.png);
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* real estate */
+
+.Background-Shadow-5{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/real-estate/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.real-ind-3{
+    background: url("/assets/images/real-estate/2.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.real-ind-5-picture-1{
+    background: url("/assets/images/real-estate/3.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.real-ind-5-picture-2{
+    background: url("/assets/images/real-estate/4.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.real-ind-5-picture-3{
+    background: url("/assets/images/real-estate/6.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.real-ind-5-picture-4{
+    background: url("/assets/images/real-estate/7.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.real-5-picture-5{
+    background: url("/assets/images/real-estate/8.gif");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* travel */
+.Background-Shadow-6{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/travel/1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.travel-ind-3{
+    background: url("/assets/images/travel/2.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.travel-ind-5-picture-1{
+    background: url("/assets/images/travel/3.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.travel-ind-5-picture-2{
+    background: url("/assets/images/travel/4.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.travel-ind-5-picture-3{
+    background: url("/assets/images/travel/5.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.travel-ind-5-picture-4{
+    background: url("/assets/images/travel/6.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.travel-5-picture-5{
+    background: url("/assets/images/travel/9.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/* home solution */
+
+.Background-Shadow-7{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/home/1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.home-ind-3{
+    background: url("/assets/images/home/2.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.home-ind-5-picture-1{
+    background: url("/assets/images/home/3.avif");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.home-ind-5-picture-2{
+    background: url("/assets/images/home/4.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.home-ind-5-picture-3{
+    background: url("/assets/images/home/5.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.home-ind-5-picture-4{
+    background: url("/assets/images/home/6.jpeg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.home-5-picture-5{
+    background: url("/assets/images/home/8.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+
+/* taxi booking */
+.Background-Shadow-8{
+    border-radius: 40px;
+      box-shadow:
+        inset -5px -5px 10px #ffffff,
+        inset 5px 5px 10px #DBECE2;
+    background: url("/assets/images/taxi/9.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.taxi-ind-3{
+    background: url("/assets/images/taxi/3.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 16px;
+   
+    height: 453px;
+   
+    margin: 60px;
+
+}
+
+
+.taxi-ind-5-picture-1{
+    background: url("/assets/images/taxi/4.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.taxi-ind-5-picture-2{
+    background: url("/assets/images/taxi/5.webp");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.taxi-ind-5-picture-3{
+    background: url("/assets/images/taxi/6.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.taxi-ind-5-picture-4{
+    background: url("/assets/images/taxi/7.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.taxi-5-picture-5{
+    background: url("/assets/images/taxi/8.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+
+/* career page css */
+
+.career-why-us{
+  background-color: var(--third-color);
+}
+.career-5-picture-2{
+   background: url("/assets/career_card_!.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.career-5-picture-1{
+   background: url("/assets/career_card_!.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.career-5-picture-3{
+   background: url("/assets/career_card_!.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.career-5-picture-4{
+   background: url("/assets/career_card_!.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.career-card-3{
+  background: url("/assets/career_card_bg.png") !important;
+  height: 90% !important;
+}
