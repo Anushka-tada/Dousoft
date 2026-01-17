@@ -1,12 +1,99 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client"
 import React from 'react'
 import Navbar from '../components/Navbar'
 import FooterTop from '../components/FooterTop'
 import Footer from '../components/Footer'
 import HeroSection from '../components/Herosection2'
+import { useState } from "react";
+import CareerFaq from '../components/CareerFaq'
+
+const frameworks = [
+  {
+    name: "Frontend frameworks",
+    key: "frontend",
+  },
+  {
+    name: "Backend frameworks",
+    key: "backend",
+  },
+  {
+    name: "Mobile app development frameworks",
+    key: "mobile",
+  },
+  {
+    name: "Cloud platforms and DevOps tools",
+    key: "devops",
+  },
+  {
+    name: "Database management systems",
+    key: "database",
+  },
+  {
+    name: "API-based and microservice architectures",
+    key: "api",
+  },
+];
+
+const technologiesMap  = {
+ frontend:[
+   {
+    img:"/assets/angular.png"
+  },
+    {
+    img:"/assets/javascript.png"
+  },
+    {
+    img:"/assets/jquery.png"
+  },
+    {
+    img:"/assets/react.png"
+  },
+    {
+    img:"/assets/vue.png"
+  },
+    {
+    img:"/assets/figma2.png"
+  },
+    {
+    img:"/assets/html.png"
+  },
+    {
+    img:"/assets/bootstrap.png"
+  },
+    {
+    img:"/assets/css.png"
+  },
+    {
+    img:"/assets/tailwind.png"
+  },
+ ],
+
+  backend: [
+    { img: "/assets/node.png" },
+    { img: "/assets/php.png" },
+    { img: "/assets/java.png" },
+  ],
+  mobile: [
+    { img: "/assets/flutter.png" },
+    { img: "/assets/react-native.png" },
+  ],
+  devops: [
+    { img: "/assets/aws.png" },
+    { img: "/assets/docker.png" },
+  ],
+  database: [
+    { img: "/assets/mysql.png" },
+    { img: "/assets/mongodb.png" },
+  ],
+  
+}
 
 const page = () => {
+   const [activeFramework, setActiveFramework] = useState("frontend");
+
   return (
-    <div>
+    <div className='career-page'>
       <Navbar/>
       <HeroSection
        title="Careers at Dousoft IT"
@@ -37,9 +124,9 @@ const page = () => {
          
       </div>
 
-      <div className='career-why-us grid grid-cols-2 gap-5 '>
+      <div className='career-why-us grid lg:grid-cols-2 sm:gap-5 '>
       
-        <div className='ps-14 py-10'>
+        <div className='md:ps-14 px-3 py-10'>
             <h3 className='mb-7 font-lustria heading-3'>Why Work at Dousoft IT?</h3>
         <div className='ul'>
            <li className='flex gap-4 mb-6'>
@@ -76,7 +163,7 @@ const page = () => {
       </div>
 
 
-       <div className="why-choose-us py-9 px-3 sm:px-6 md:px-10 lg:px-16">
+       <div className="why-choose-us py-9 px-3 sm:px-6 md:px-10 lg:px-14">
          
         <h2 className="heading-3 font-lustria sm:mb-5 mb-4 text-center">
            
@@ -157,6 +244,60 @@ const page = () => {
         </div> 
       </div>
 
+      <CareerFaq/>
+
+      {/* framework and technologies */}
+
+      <div className='py-9 px-3 sm:px-6 md:px-10 lg:px-14'>
+
+         <div className=" text-center">
+          <h3 className="heading-3  mb-5 font-lustria">
+         Frameworks & Technologies We Work With
+          </h3>
+
+          <p className="B-1 flex justify-self-center sm:mb-14 mb-5 para">At Dousoft IT, we work with modern, scalable, and industry-standard technologies, including</p>
+        </div>
+
+<div className="grid lg:grid-cols-[28%_72%] sm:gap-14 gap-5">
+
+<div>
+  {frameworks.map((frame, i) => (
+    <p
+      key={i}
+      onClick={() => setActiveFramework(frame.key)}
+      className={`heading-8 font-lustria ps-2 py-2 mb-1 cursor-pointer
+        ${activeFramework === frame.key ? "active-frame" : " "}`}
+    >
+      {frame.name}
+    </p>
+  ))}
+</div>
+
+
+<div className="flex flex-wrap justify-center  md:gap-12 sm:gap-5 gap-1">
+  {technologiesMap[activeFramework]?.map((tech, i) => (
+    <div
+      key={i}
+      className="tech-image-wrap sm:p-4 p-3 flex justify-center items-center"
+      // style={{ width: "130px", height:"130px" }}
+    >
+      <div className="wrap sm:p-6 p-5 rounded-full">
+        <img
+          src={tech.img}
+          className="max-w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  ))}
+</div>
+
+        </div>
+
+      </div>
+
+
+     {/* sop and work process we follow     */}
+ 
        <section className="industry ind-5">
     {/* Heading */}
     <h3 className="heading-3 font-lustria mb-4">
@@ -242,8 +383,80 @@ const page = () => {
             </div>
         </div>
     </div>
+
+    <p className='red heading-9 font-lustria text-center my-5'>These SOPs ensure predictable delivery, high quality, and long-term maintainability</p>
 </section>
 
+ {/* learning cand career growth */}
+      
+        <section className="industry py-8">
+    <div className="container px-3 sm:px-6 md:px-10 lg:px-14">
+        <div className="row flex flex-wrap -mx-3">
+            <div className="col-md-6 w-full md:w-1/2 px-3">
+                <h3 className="heading-3 font-lustria">
+                   Learning & Career Growth
+                </h3>
+                <p className="B-1 font-notosans mb-10 para">
+                  We strongly believe in career progression and continuous learning
+                </p>
+
+                <ul>
+                  <li><p className='B-1 font-notosans mb-2 para'>On-the-job training and Mentorship</p></li>
+                    <li><p className='B-1 font-notosans mb-2 para'>Exposure to diverse projects and industries</p></li>
+                      <li><p className='B-1 font-notosans mb-2 para'>Skill enhancement through tools and certifications</p></li>
+                        <li><p className='B-1 font-notosans mb-5 para'>Leadership opportunities for high performers</p></li>
+                </ul>
+
+                <p className='B-1 font-notosans mb-5 red'>Your growth is aligned with the company’s growth.</p>
+                
+            </div>
+
+            <div className="col-md-6 w-full md:w-1/2 px-3">
+               <img src="/assets/career_growth.png"></img>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{/* join our team */}
+
+        <section className="industry py-5 px-3 sm:px-6 md:px-10 lg:px-14">
+    <div className="container join-our-team  p-4 ">
+        <div className="row flex flex-wrap -mx-3">
+            <div className="col-md-6 w-full md:w-1/2 px-3">
+                <h3 className="heading-3 font-lustria mb-5">Join Our Team </h3>
+                <p className="B-1 font-notosans mb-8 para">If you are passionate about technology and want to work in a professional, growth-driven environment, explore career opportunities at Dousoft IT </p>
+
+                <div className='flex gap-2 items-center mb-6'>
+                 <img src='/assets/mail-fill.png' className='join-icon p-2 rounded-full' ></img>
+
+                 <div >
+                  <p className='B-1 font-notosans para '>Send your resume to:</p>
+                  <p className='B-1 font-notosans para'>dousoftit@gmail.com</p>
+                 </div>
+                </div>
+                  <div className='flex gap-2 items-center mb-8'>
+                 <img src='/assets/location-fill.png' className='join-icon p-2 rounded-full' ></img>
+
+                 <div >
+                  <p className='B-1 font-notosans para '>Location</p>
+                  <p className='B-1 font-notosans para'>9/132, , Akruti Apartments, Near Akshardham Temple, Chitrakoot, Vaishali Nagar-302021</p>
+                 </div>
+                </div>
+
+                <p className='B-1 font-notosans mb-5 red'>Let’s build innovative solutions and successful careers together</p>
+                
+            </div>
+
+            <div className="col-md-6 w-full md:w-1/2 px-3">
+               <img src="/assets/join_team.svg" className='join-team-img'></img>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
 
       <FooterTop/>
       <Footer/>

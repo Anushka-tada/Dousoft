@@ -127,8 +127,8 @@ const Footer = () => {
        <p className="B-3 text-white">© 2026 Dousoft IT Solution Pvt. Ltd. </p>
 
        <div className="flex gap-5">
-       <p className="B-3 text-white">Privacy Policy</p>
-       <p className="B-3 text-white">Terms of Service</p>
+      <a href="/privacy-policy" > <p className="B-3 text-white">Privacy Policy</p></a>
+      <a href="/terms-conditions"> <p className="B-3 text-white">Terms of Service</p></a>
        </div>
       </div>
     </div>
