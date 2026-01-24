@@ -777,7 +777,7 @@ const getCurrentItems = () => {
   return (
     <>
       <div className="navbar fixed top-0 left-0 w-full  flex justify-between items-center md:px-20 sm:px-10 px-3  z-[1000]">
-        <img src="/assets/logo.png" className="nav-logo sm:h-auto h-20"></img>
+        <img src="/assets/new-logo.svg" className="nav-logo sm:h-auto h-20"></img>
 
        <img
   src={mobileMenu ? "/assets/nav_close.png" : "/assets/nav-toggle.png"}
@@ -1009,7 +1009,7 @@ const getCurrentItems = () => {
 
       {/* HEADER */}
       <div className="flex items-center justify-between p-4 bg-white">
-        <img src="/assets/logo.png" className="h-14" />
+        <img src="/assets/new-log.svg" className="h-14" />
         <img
           src="/assets/nav_close.png"
           className="h-6 cursor-pointer"

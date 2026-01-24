@@ -49,7 +49,7 @@ import "swiper/css/pagination";
 const Herosection = () => {
   return (
     <>
-      <div className="herosection-outer md:p-4 p-3 pt-2 px-3 sm:px-6 md:px-10 lg:px-14 mb-5">
+      <div className="herosection-outer md:p-4 mt-2 p-3 pt-2 px-3 sm:px-6 md:px-10 lg:px-14 mb-5">
         <Swiper
           modules={[Autoplay]}
           loop={true}

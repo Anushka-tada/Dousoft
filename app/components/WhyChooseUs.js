@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
           </div>{" "}
           <div className="flex lg:flex-col flex-row lg:gap-12 sm:gap-8 gap-3 sm:flex-nowrap flex-wrap">
             {" "}
-            <div className="sm:p-7 sm:py-8 p-5 card card-1 ">
+            <div className="sm:p-7 sm:py-8 p-5 card card-2 ">
               {" "}
               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 {" "}
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
                 compromising quality.
               </p>{" "}
             </div>{" "}
-            <div className="sm:p-7 sm:py-8 p-5 card card-2">
+            <div className="sm:p-7 sm:py-8 p-5 card card-1">
               {" "}
               <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 {" "}

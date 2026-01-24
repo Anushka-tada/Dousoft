@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import localFont from "next/font/local";
+// import "../public/font/KonexyPersonalUse.otf"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +11,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// 👉 Konexy local font
+const konexy = localFont({
+  src: "../public/font/KonexyPersonalUse.otf",
+  variable: "--font-konexy",
+  weight: "400",
 });
 
 export const metadata = {
@@ -23,7 +31,7 @@ export default function RootLayout({ children }) {
       <head>
         <link href="https://fonts.cdnfonts.com/css/lustria" rel="stylesheet"></link>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${konexy.variable}`}>
         {children}
           
       </body>
