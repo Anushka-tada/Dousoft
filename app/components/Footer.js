@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer px-3 sm:px-6 md:px-10 lg:px-14 md:pt-14 sm:pt-10  pt-3">
-      <div className="footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
+      <div className="service-card footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
         <div>
           <div className="flex gap-2 sm:mb-8 mb-4">
             <img src="/assets/footer_bulb.png"></img>
@@ -48,7 +48,7 @@ const Footer = () => {
 
       <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7">
         <div>
-          <img src="/assets/footer_logo.png" className="mb-4"></img>
+          <img src="/assets/new-logo.svg" className="mb-4"></img>
           <p className="B-3 text-white max-w-[327] ">
             Engineered for growth. We build the digital infrastructure that
             powers the next generation of AI-driven businesses.

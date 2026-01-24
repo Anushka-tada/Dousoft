@@ -85,8 +85,8 @@ import { motion } from "framer-motion";
 /* ---------------- COLOR MAP (TAILWIND SAFE) ---------------- */
 const colorMap = {
   blue: {
-    gradient: "bg-blue-500",
-    bar: "bg-blue-500",
+    gradient: "bg-green-700",
+    bar: "bg-green-700",
   },
   green: {
     gradient: "bg-green-500",
@@ -123,21 +123,21 @@ const data = [
   },
   {
     title: "UI/UX Design & Prototyping",
-    color: "yellow",
+    color: "blue",
     description:
       "Wireframes, user flows, design system and high-fidelity UI screens.",
     progress: 0.30,
   },
   {
     title: "Iterative Development",
-    color: "purple",
+    color: "green",
     description:
       "Frontend & backend development with continuous integration.",
     progress: 0.42,
   },
   {
     title: "Quality Assurance",
-    color: "red",
+    color: "blue",
     description:
       "Manual & automated testing, bug fixing and performance checks.",
     progress: 0.55,
@@ -158,7 +158,7 @@ const data = [
   },
   {
     title: "Post-Launch Support",
-    color: "purple",
+    color: "green",
     description:
       "Ongoing support, updates and optimizations.",
     progress: 0.95,

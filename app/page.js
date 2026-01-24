@@ -460,8 +460,8 @@ solutions that redefine whats possible for your business.</p>
       <div className="sm:py-16 py-8 px-3 sm:px-6 md:px-10 lg:px-14 industries-section">
          
           <div className="flex justify-center items-center mb-5">
-          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3">
-            <img src="/assets/red_dot.png" className="me-2"></img>
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow">
+            <img src="/assets/green_dot.svg" className="me-2"></img>
             INDUSTRY WE SERVE
           </div>
         </div>
@@ -480,8 +480,8 @@ solutions that redefine whats possible for your business.</p>
           industryCards.map((card , i) => (
             <div key={i} className="industry-card p-4">
               <img src={card.img} className="mb-4" style={{width:"-webkit-fill-available"}}></img>
-              <p className="mb-4 heading-7 font-lustria">{card.name}</p>
-              <p className="B-3 pb-4 mb-2">{card.para}</p>
+              <p className="mb-4 heading-7 font-lustria green-text " style={{fontWeight:"600"}}>{card.name}</p>
+              <p className="B-3 pb-4 mb-2  ">{card.para}</p>
 
               <div className="flex gap-1 mb-3">
                
@@ -494,7 +494,9 @@ solutions that redefine whats possible for your business.</p>
 
         </div>
 
-        <div className="flex gap-5 md:flex-nowrap flex-wrap md:justify-between justify-center p-3 start-project-section sm:py-12 py-5 sm:mt-14 mt-6 justify-self-center">
+        <div className="flex gap-5 md:flex-nowrap flex-wrap md:justify-between justify-center p-3 start-project-section sm:py-12 py-5 sm:mt-14 mt-6 justify-self-center"
+         style={{border:"1px solid #0B6F1E"}}
+        >
           <div className="ps-8 md:text-left text-center">
             <p className="heading-7 font-lustria mb-2">Ready to scale your vision?</p>
             <p className="B-3">Let&apos;s discuss how our AI solutions can optimize  your
@@ -527,7 +529,7 @@ business.</p>
   </div>
 </div>
           <div className="flex justify-center items-center mb-5">
-          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3 lg:mt-0 mt-5">
+          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3 lg:mt-0 mt-5 service-card">
             <img src="/assets/green_dot.svg" className="me-2"></img>
             Technologies
           </div>
@@ -546,7 +548,7 @@ business.</p>
         {["frontend", "backend", "mobile", "webapp", "database"].map((tab) => (
           <div
             key={tab}
-            className={`flex rounded-full py-2 px-4 heading-6 cursor-pointer w-fit ${
+            className={`flex rounded-full py-2 px-4 heading-6 cursor-pointer w-fit service-inner-shadow ${
               activeTab === tab ? "futute_ready_btn-active" : "futute_ready_btn"
             }`}
             onClick={() => setActiveTab(tab)}
@@ -627,8 +629,8 @@ business.</p>
 
      <div className="agile-section pt-8 px-3 sm:px-6 md:px-10 lg:px-14">
        <div className="flex justify-center items-center mb-5">
-          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3">
-            <img src="/assets/red_dot.png" className="me-2"></img>
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow ">
+            <img src="/assets/green_dot.svg" className="me-2"></img>
             Agile Process
           </div>
         </div>
@@ -685,8 +687,8 @@ business.</p>
 
         
           <div className="flex justify-center items-center sm:mb-16 mb-6">
-          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" style={{marginTop:"-5%"}}>
-            <img src="/assets/red_dot.png" className="me-2"></img>
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow" style={{marginTop:"-5%"}}>
+            <img src="/assets/green_dot.svg" className="me-2"></img>
            Testimonials
           </div>
         </div>
@@ -718,7 +720,7 @@ business.</p>
      <div className="faq-section sm:py-20 py-8 px-3 sm:px-6 md:px-10 lg:px-14 bg-white">
          <div className="flex justify-center items-center sm:mb-10 mb-6">
           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3" >
-            <img src="/assets/red_dot.png" className="me-2"></img>
+            <img src="/assets/green_dot.svg" className="me-2"></img>
            FAQ&apos;S
           </div>
         </div>
@@ -788,9 +790,9 @@ business.</p>
 
      <div className="journey-section sm:py-12 py-8 px-3 sm:px-6 md:px-10 lg:px-14">
 
-      <div className="journey-inner flex flex-col justify-center items-center md:py-1 py-4" style={{border:"1px solid #264f3663"}}>
-        <div>
-          <img src="/assets/rocket-green.png" className="icon sm:mb-12 mb-8 rounded-full p-4"></img>
+      <div className="journey-inner service-card flex flex-col justify-center items-center md:py-1 py-4" style={{border:"1px solid #264f3663"}}>
+        <div className="">
+          <img src="/assets/rocket-green.png" className="icon sm:mb-12 mb-8 rounded-full p-4 px-4.5 service-inner-shadow"></img>
         </div>
        <div classname="text-center">
          <h2 className="heading-3 text-white mb-7 font-lustria text-center">Start Your Digital Journey with <br></br> <span className="green"> Dousoft IT</span></h2>
@@ -806,7 +808,7 @@ business.</p>
               <img src="/assets/next_black.png"></img>
              </button>
 
-              <button className="py-3 px-5 rounded-full B-1 btn-2  flex gap-2 text-white" >
+              <button className="py-3 px-5 rounded-full B-1 btn-2  flex gap-2 text-white service-card" >
              Explore Services
                 <img src="/assets/service_black.png"></img>
              </button>

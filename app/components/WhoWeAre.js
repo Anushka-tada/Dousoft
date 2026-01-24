@@ -264,7 +264,7 @@ const WhoWeAreParallax = () => {
         <div  className="py-3 sm:px-8 px-3 bg-white">
           <div className="content-wrapper who-we-are">
            <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-3">
-            <img src="/assets/red_dot.png" className="h-fit" ></img>
+            <img src="/assets/green_dot.svg" className="h-fit" ></img>
             Who We Are
            </button>
 
