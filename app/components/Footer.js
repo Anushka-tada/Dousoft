@@ -6,14 +6,14 @@ const Footer = () => {
       <div className="service-card footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
         <div>
           <div className="flex gap-2 sm:mb-8 mb-4">
-            <img src="/assets/footer_bulb.png"></img>
-            <p className="B-1 font-notosans red">Future Ready</p>
+            <img src="/assets/green_bulb.png"></img>
+            <p className="B-1 font-notosans" style={{color:"#C8A23D"}}>Future Ready</p>
           </div>
 
-          <h3 className="heading-3 font-lustria text-white footer-heading ">
+          <h3 className="heading-3 font-lustria text-white footer-heading mb-3 ">
             Stay ahead of the curve
           </h3>
-          <p className="B-1 font-notosans para">
+          <p className="B-1 font-notosans text-white">
             Join our newsletter for the latest in AI trends, digital
             transformation insights, and growth strategies delivered straight to
             your inbox.
@@ -35,12 +35,12 @@ const Footer = () => {
 </div>
 
 
-          <button className="py-3 px-5 rounded-full B-1 btn  flex justify-between gap-2 font-notosans mb-4 ">
+          <button className="py-3 px-5 rounded-full B-1 btn  flex justify-between gap-2 font-notosans mb-4  service-card">
             Subscribe Now
             <img src="/assets/button_arrow.png" className="mr-2"></img>
           </button>
 
-          <p className="B-3 lg:text-end text-center lg:me-16 para ">
+          <p className="B-3 lg:text-end text-center lg:me-16 text-white">
             No spam. Unsubscribe anytime.
           </p>
         </div>
@@ -48,7 +48,7 @@ const Footer = () => {
 
       <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7">
         <div>
-          <img src="/assets/new-logo.svg" className="mb-4"></img>
+          <img src="/assets/footer-new-logo.png" className="mb-4"></img>
           <p className="B-3 text-white max-w-[327] ">
             Engineered for growth. We build the digital infrastructure that
             powers the next generation of AI-driven businesses.
@@ -102,18 +102,18 @@ const Footer = () => {
           </p>
           <ul>
             <li className="B-3 text-white mb-5 flex  gap-3">
-               <img src="/assets/location.png" className="p-2.5 px-3 bg-white icon rounded-full"></img>
+               <img src="/assets/location_green.svg" className="p-2.5 px-3 bg-white icon rounded-full"></img>
               <p>9/132, , Akruti Apartments, Near Akshardham Temple, Chitrakoot, Vaishali Nagar-302021</p>
             </li>
              <li className=" text-white mb-5 flex gap-3">
-               <img src="/assets/email_red.png" className="p-2.5 px-3 bg-white icon rounded-full"></img>
+               <img src="/assets/mail_green.svg" className="p-2.5 px-3 bg-white icon rounded-full"></img>
              <div>
                   <p className="B-1 font-notosans">Email Us</p>
               <p className="B-3">info@dousoftit.com</p>
              </div>
             </li>
            <li className=" text-white mb-4 flex gap-3">
-               <img src="/assets/call_red.png" className="p-2.5 px-3 bg-white icon rounded-full"></img>
+               <img src="/assets/call_green.svg" className="p-2.5 px-3 bg-white icon rounded-full"></img>
              <div>
                   <p className="B-1 font-notosans">Call Us</p>
               <p className="B-3">+91 77349 96636</p>

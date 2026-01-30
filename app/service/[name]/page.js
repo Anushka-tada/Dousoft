@@ -218,7 +218,7 @@ export default function page() {
           {data?.process.steps.map((card, i) => (
             <div
               key={i}
-              className="process-card p-4 flex flex-col justify-between"
+              className="process-card service-card p-4 flex flex-col justify-between"
               style={{ "--bg-img": `url(${card.img})` }}
             >
               <div className="flex justify-end">

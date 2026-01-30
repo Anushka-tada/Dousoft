@@ -50,7 +50,7 @@
   --primary-light: #0B6F1E;
   --primary-light2:rgb(255 , 146 ,86);
   --primary-light3: #FFC9AB;
-  --secondary-color: #0B6F1E;
+  --secondary-color: #2DBE60;
   --secondary-dark: #0B6F1E;
   --green-dark: rgb#0B6F1E;
   --green-light: #0B6F1E;
@@ -1755,11 +1755,11 @@ flex: 1 1 0;
   cursor: pointer;
   border-radius: 24px;
   transition: flex 0.45s ease, transform 0.45s ease;
-   box-shadow: 10px 10px 20px 0 #0B1710,
-  -10px -10px 20px 0 #162F22;
-  background: #112419;
-background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 100%);
-
+   /* box-shadow: 10px 10px 20px 0 #0B1710,
+  -10px -10px 20px 0 #162F22; */
+  /* background: #112419;
+background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 100%); */
+  background-color: var(--primary-color);
   position: relative;
   overflow: hidden;
 }
@@ -1961,10 +1961,10 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
 }
 
 .industry-card .icon{
-      box-shadow:
+      /* box-shadow:
     inset -4px -4px 8px rgba(255, 255, 255, 0.8),
-    inset 4px 4px 8px rgba(0, 0, 0, 0.12);
-    background-color: #FFE6CC;
+    inset 4px 4px 8px rgba(0, 0, 0, 0.12); */
+    background-color: var(--primary-color);
     border-radius: 16px;
     width: 64px;
     height: 64px;
@@ -2042,6 +2042,7 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
 }
 .main-frame{
     padding: 32px 64px;
+    background-color: var(--primary-color);
 }
 
 .ind-4-heading{
@@ -2052,26 +2053,28 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
     
 }
 .framework-box{
-    background: linear-gradient(to bottom, #112419 0%, #152B1E 100%);
+    /* background: linear-gradient(to bottom, #112419 0%, #152B1E 100%); */
+    background-color: var(--primary-color);
     border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 24px;
     padding: 10px 6px;
-     box-shadow:
+     /* box-shadow:
     10px 10px 20px 0px #0B1710,
-    -10px -10px 20px 0px #162F22;
+    -10px -10px 20px 0px #162F22; */
     position: relative;
 
 
 }
 
 .framework-box-2{
-     background: linear-gradient(to bottom, #112419 0%, #152B1E 100%);
+     /* background: linear-gradient(to bottom, #112419 0%, #152B1E 100%); */
+     background-color: var(--primary-color);
     border: 1px solid rgba(255, 255, 255, 0.02);
     border-radius: 24px;
    margin-top: 30px !important;
-     box-shadow:
+     /* box-shadow:
     10px 10px 20px 0px #0B1710,
-    -10px -10px 20px 0px #162F22;
+    -10px -10px 20px 0px #162F22; */
    
    
 }
@@ -2090,10 +2093,11 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
 }
 
 .f-icon{
-    background: linear-gradient(to bottom, #102217 0%, #152B1E 100%);
+    /* background: linear-gradient(to bottom, #102217 0%, #152B1E 100%);
       box-shadow:
     inset -5px -5px 10px #162F22,
-    inset 5px 5px 10px #0B1710;
+    inset 5px 5px 10px #0B1710; */
+    background-color: var(--primary-color);
     width: 64px;
     height: 64px;
     display: flex;
@@ -2277,10 +2281,10 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
 }
 
 .industry-card .icon{
-      box-shadow:
+      /* box-shadow:
     inset -4px -4px 8px rgba(255, 255, 255, 0.8),
-    inset 4px 4px 8px rgba(0, 0, 0, 0.12);
-    background-color: #FFE6CC;
+    inset 4px 4px 8px rgba(0, 0, 0, 0.12); */
+    background-color: var(--primary-color);
     border-radius: 16px;
     width: 64px;
     height: 64px;
@@ -2309,10 +2313,10 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
 }
 
 .ind-7 .icon{
-    box-shadow:
+    /* box-shadow:
     inset -4px -4px 8px rgba(255, 255, 255, 0.8),
-    inset 4px 4px 8px rgba(0, 0, 0, 0.12);
-    background-color: #FFE6CC;
+    inset 4px 4px 8px rgba(0, 0, 0, 0.12); */
+    background-color: var(--primary-color);
     border-radius: 16px;
     width: 64px;
     height: 64px;
@@ -3027,16 +3031,18 @@ html {
   height: 90% !important;
 }
 .tech-image-wrap {
-  background-color: var(--primary-light2);
+  /* background-color: var(--primary-light2); */
+  background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow:  5px 5px 10px 1px #ffffff22,
   -5px -5px 10px 1px #BEBEBE44;
 }
 
 .tech-image-wrap .wrap{
- background-color: var(--primary-light3);
-   box-shadow: inset 5px 5px 10px 1px #3E0C00,
-  inset -5px -5px 10px 1px #3E0C00;
+ /* background-color: var(--primary-light3); */
+ background-color: white;
+   /* box-shadow: inset 5px 5px 10px 1px #3E0C00,
+  inset -5px -5px 10px 1px #3E0C00; */
   width: 90px;
   height: 90px;
   display: flex;
@@ -3065,7 +3071,7 @@ html {
    inset -5px -5px 10px 0 #1E253B;
 }
 .join-icon{
-  background-color: var(--primary-light3);
+  background-color: var(--primary-color);
 }
 .tech-image-wrap{
   height: 130px;

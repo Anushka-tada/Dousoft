@@ -238,7 +238,7 @@ const prevSlide = () => {
 
             <div className=" who-we-are min-w-full" style={{minWidth: "100%"}}>
            <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-4">
-            <img src="/assets/red_dot.png" className="h-fit" ></img>
+            <img src="/assets/green_dot.svg" className="h-fit" ></img>
             Who We Are
            </button>
 
@@ -408,7 +408,7 @@ const prevSlide = () => {
        <div className='growth-section sm:pt-8 pt-3'>
             <div className="flex flex-col justify-center items-center mb-10">
           <div className="flex growth_btn items-center rounded-full py-3 px-5 B-3 bg-white mb-5">
-            <img src="/assets/red_dot.png" className="me-2"></img>
+            <img src="/assets/green_dot.svg" className="me-2"></img>
            Journey So Far
           </div>
 
@@ -453,7 +453,7 @@ loopFillGroupWithBlank={true}
 
                   {/* Dotted Line Image */}
                   <img
-                    src="/assets/dotted_line.png"
+                    src="/assets/dotted_line_green.svg"
                     className="absolute "
                     alt=""
                     style={{top:"-30%"}}

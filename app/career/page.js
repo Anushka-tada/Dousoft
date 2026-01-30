@@ -278,10 +278,10 @@ const page = () => {
   {technologiesMap[activeFramework]?.map((tech, i) => (
     <div
       key={i}
-      className="tech-image-wrap sm:p-4 p-3 flex justify-center items-center"
+      className="tech-image-wrap sm:p-4 p-3 flex justify-center items-center "
       // style={{ width: "130px", height:"130px" }}
     >
-      <div className="wrap sm:p-6 p-5 rounded-full">
+      <div className="wrap sm:p-6 p-5 rounded-full service-inner-shadow">
         <img
           src={tech.img}
           className="max-w-full h-auto object-contain"
@@ -429,7 +429,7 @@ const page = () => {
                 <p className="B-1 font-notosans mb-8 para">If you are passionate about technology and want to work in a professional, growth-driven environment, explore career opportunities at Dousoft IT </p>
 
                 <div className='flex gap-2 items-center mb-6'>
-                 <img src='/assets/mail-fill.png' className='join-icon p-2 rounded-full' ></img>
+                 <img src='/assets/mail_white.svg' className='join-icon p-2 rounded-full' ></img>
 
                  <div >
                   <p className='B-1 font-notosans para '>Send your resume to:</p>
@@ -437,7 +437,7 @@ const page = () => {
                  </div>
                 </div>
                   <div className='flex gap-2 items-center mb-8'>
-                 <img src='/assets/location-fill.png' className='join-icon p-2 rounded-full' ></img>
+                 <img src='/assets/location_white.svg' className='join-icon p-2 rounded-full' ></img>
 
                  <div >
                   <p className='B-1 font-notosans para '>Location</p>
