@@ -1,3 +1,5 @@
+
+
 // "use client";
 
 // import { useEffect, useRef } from "react";
@@ -59,264 +61,200 @@
 //   }, []);
 
 //   return (
-//     <section ref={containerRef} className="parallax-container">
-//       <div ref={pinRef} className="parallax-pin-wrapper">
-//         {/* IMAGE */}
-//         <div ref={imageRef} className="image-wrapper sm:block hidden">
+//     <>
+//     <section ref={containerRef} classNameName="parallax-container lg:block hidden">
+//       <div ref={pinRef} classNameName="parallax-pin-wrapper">
+      
+//         <div ref={imageRef} classNameName="image-wrapper lg:block hidden">
 //           <img
 //             src="/assets/2nd_section.svg"
 //             alt="Dousoft IT"
-//             className="hero-image "
+//             classNameName="hero-image"
 //           />
 //         </div>
 
-//         {/* CONTENT */}
-//         <div ref={contentRef} className="content-section">
-//           <div className="content-wrapper who-we-are">
-//            <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center">
-//             <img src="/assets/red_dot.png" className="h-fit" ></img>
+       
+//         <div ref={contentRef} classNameName="content-section">
+//           <div classNameName="content-wrapper who-we-are">
+//            <button classNameName="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center">
+//             <img src="/assets/red_dot.png" classNameName="h-fit" ></img>
 //             Who We Are
 //            </button>
 
-//             <h2 className="heading-2 font-lustria mb-5">
-//               Your <span className="primary-text">Reliable Partner</span> in
+//             <h2 classNameName="heading-who-we font-lustria mb-5">
+//               Your <span classNameName="primary-text">Reliable Partner</span> in
 //               Digital Transformation
 //             </h2>
 
-//             <p className="mb-6 font-notosans B-1">
+//             <p classNameName="mb-6 font-notosans B-1">
 //              In Dousoft IT, we combine the expertise of technology with business knowledge to create customized software solutions that promote the growth of your business, increase efficiency and competitive advantages. Our skilled team of developers and testers, designers, and digital strategists collaborate to deliver tangible outcomes.
 //             </p>
 
-//             <div className="flex gap-4 mb-7 overflow-scroll">
-//                      <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-//                       <img src="/assets/ai_red.svg" className="ml-2" />
+//             <div classNameName="flex gap-4 mb-7">
+//                      <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
+//                       <img src="/assets/ai_red.svg" classNameName="ml-2" />
 //                    AI Solutions
 
 //                   </button>
-//                    <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-//                       <img src="/assets/rocket_red.svg" className="ml-2" />
+//                    <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
+//                       <img src="/assets/rocket_red.svg" classNameName="ml-2" />
 //                    Digital Strategy
 
 //                   </button>
-//                    <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-//                       <img src="/assets/growth_red.svg" className="ml-2" />
+//                    <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
+//                       <img src="/assets/growth_red.svg" classNameName="ml-2" />
 //                    Business Growth
-
 //                   </button>
 //                   </div>
 
-//                    <div ref={imageRef} className="image-wrapper sm:hidden block">
-//           <img
-//             src="/assets/2nd_section.svg"
-//             alt="Dousoft IT"
-//             className="hero-image  mobile-hero-image"
-//           />
-//         </div>
+//                     {/* <div ref={imageRef} classNameName="image-wrapper-mobile">
+//          <img
+//              src="/assets/2nd_section.svg"
+//              alt="Dousoft IT"
+//              classNameName="hero-image  mobile-hero-image"
+//            />
+//          </div> */}
 
-//             <button className="button rounded-full flex items-center sm:justify-self-start justify-self-center mt-4">
+//             <button classNameName="button rounded-full flex items-center">
 //               Explore Our Mission
-//               <img src="/assets/button_arrow.png" className="ml-2" />
+//               <img src="/assets/button_arrow.png" classNameName="ml-2" />
 //             </button>
 //           </div>
 //         </div>
 //       </div>
 
-//       {/* Scroll filler */}
-//       {/* <div className="scroll-filler"></div> */}
+     
 //     </section>
+
+//      <section classNameName=" lg:hidden block">
+      
+       
+
+       
+//         <div  classNameName="py-3 sm:px-8 px-3 bg-white">
+//           <div classNameName="content-wrapper who-we-are">
+//            <button classNameName="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-3">
+//             <img src="/assets/green_dot.png" classNameName="h-fit" ></img>
+//             Who We Are
+//            </button>
+
+//             <h2 classNameName="heading-who-we font-lustria mb-5">
+//               Your <span classNameName="primary-text">Reliable Partner</span> in
+//               Digital Transformation
+//             </h2>
+
+//             <p classNameName="mb-6 font-notosans B-1">
+//              In Dousoft IT, we combine the expertise of technology with business knowledge to create customized software solutions that promote the growth of your business, increase efficiency and competitive advantages. Our skilled team of developers and testers, designers, and digital strategists collaborate to deliver tangible outcomes.
+//             </p>
+
+//             <div classNameName="flex gap-4 mb-7 overflow-scroll">
+//                      <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
+//                       <img src="/assets/ai_red.svg" classNameName="ml-2" />
+//                    AI Solutions
+
+//                   </button>
+//                    <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
+//                       <img src="/assets/rocket_red.svg" classNameName="ml-2" />
+//                    Digital Strategy
+
+//                   </button>
+//                    <button classNameName="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
+//                       <img src="/assets/growth_red.svg" classNameName="ml-2" />
+//                    Business Growth
+//                   </button>
+//                   </div>
+
+//                     <div  classNameName="image-wrapper-mobile p-3">
+//        <div classNameName="image-wrapper-mobile-inner">
+//           <img
+//              src="/assets/2nd_section.svg"
+//              alt="Dousoft IT"
+//              classNameName=" mobile-hero-image"
+//            />
+//        </div>
+//          </div>
+
+//             <button classNameName="button rounded-full flex items-center mt-5 justify-self-center">
+//               Explore Our Mission
+//               <img src="/assets/button_arrow.png" classNameName="ml-2" />
+//             </button>
+//           </div>
+//         </div>
+     
+
+     
+//     </section>
+
+//  </>
 //   );
 // };
 
 // export default WhoWeAreParallax;
 
-"use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from 'react'
 
-gsap.registerPlugin(ScrollTrigger);
-
-const WhoWeAreParallax = () => {
-  const containerRef = useRef(null);
-  const pinRef = useRef(null);
-  const imageRef = useRef(null);
-  const contentRef = useRef(null);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth <= 992;
-
-    if (!isMobile) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          pin: pinRef.current,
-          start: "top top",
-          end: "+=200%",
-          scrub: 0.6,
-          pinSpacing: true,
-        },
-      });
-
-      tl.to(
-        imageRef.current,
-        {
-          width: "50%",
-          ease: "power2.inOut",
-        },
-        0
-      ).to(
-        contentRef.current,
-        {
-          x: "0%",
-          opacity: 1,
-          ease: "power2.inOut",
-        },
-        0
-      );
-    } else {
-      // Mobile reset
-      gsap.set(imageRef.current, { width: "100%" });
-      gsap.set(contentRef.current, {
-        x: "0%",
-        opacity: 1,
-      });
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
+const WhoWeAre = () => {
   return (
-    <>
-    <section ref={containerRef} className="parallax-container lg:block hidden">
-      <div ref={pinRef} className="parallax-pin-wrapper">
-        {/* IMAGE */}
-        <div ref={imageRef} className="image-wrapper lg:block hidden">
-          <img
-            src="/assets/2nd_section.svg"
-            alt="Dousoft IT"
-            className="hero-image"
-          />
-        </div>
+    <div>
+      <div className="main-container py-16 bg-white">
+        <div className="hero-card">
+          <div className="badge">Who We Are</div>
 
-        {/* CONTENT */}
-        <div ref={contentRef} className="content-section">
-          <div className="content-wrapper who-we-are">
-           <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center">
-            <img src="/assets/red_dot.png" className="h-fit" ></img>
-            Who We Are
-           </button>
+          <h3 className="heading-3">
+            Your Reliable Partner in <br /> Digital Transformation
+          </h3>
 
-            <h2 className="heading-who-we font-lustria mb-5">
-              Your <span className="primary-text">Reliable Partner</span> in
-              Digital Transformation
-            </h2>
+          <p className="B-1">
+            We blend cutting-edge technology with strategic foresight to empower businesses in the digital age,
+            delivering sustainable growth and future-ready solutions.
+          </p>
 
-            <p className="mb-6 font-notosans B-1">
-             In Dousoft IT, we combine the expertise of technology with business knowledge to create customized software solutions that promote the growth of your business, increase efficiency and competitive advantages. Our skilled team of developers and testers, designers, and digital strategists collaborate to deliver tangible outcomes.
-            </p>
+          {/* inline style removed, Tailwind added */}
+          <div className="features-row mt-8">
+            <div className="feature-box">
+              <div className="inner-content">
+                <div className="icon-circle">
+                  <i data-lucide="brain-circuit"></i>
+                </div>
+                <div className="text">
+                  <h6 className="heading-7">AI Solutions</h6>
+                  <p className="B-3">Intelligent automation & predictive analytics.</p>
+                </div>
+              </div>
+            </div>
 
-            <div className="flex gap-4 mb-7">
-                     <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-                      <img src="/assets/ai_red.svg" className="ml-2" />
-                   AI Solutions
+            <div className="feature-box elevated">
+              <div className="inner-content">
+                <div className="icon-circle">
+                  <i data-lucide="compass"></i>
+                </div>
+                <div className="text">
+                  <h6 className="heading-7">Digital Strategy</h6>
+                  <p className="B-3">Future-focused roadmaps & innovation.</p>
+                </div>
+              </div>
+            </div>
 
-                  </button>
-                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-                      <img src="/assets/rocket_red.svg" className="ml-2" />
-                   Digital Strategy
-
-                  </button>
-                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
-                      <img src="/assets/growth_red.svg" className="ml-2" />
-                   Business Growth
-                  </button>
-                  </div>
-
-                    {/* <div ref={imageRef} className="image-wrapper-mobile">
-         <img
-             src="/assets/2nd_section.svg"
-             alt="Dousoft IT"
-             className="hero-image  mobile-hero-image"
-           />
-         </div> */}
-
-            <button className="button rounded-full flex items-center">
-              Explore Our Mission
-              <img src="/assets/button_arrow.png" className="ml-2" />
-            </button>
+            <div className="feature-box">
+              <div className="inner-content">
+                <div className="icon-circle">
+                  <i data-lucide="trending-up"></i>
+                </div>
+                <div className="text">
+                  <h6 className="heading-7">Business Growth</h6>
+                  <p className="B-3">Scalable models & market expansion.</p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <button className="cta-button">Explore Our Mission</button>
         </div>
       </div>
+    </div>
+  )
+}
 
-      {/* Scroll filler */}
-      {/* <div className="scroll-filler"></div> */}
-    </section>
+export default WhoWeAre
 
-     <section className=" lg:hidden block">
-      
-       
-
-        {/* CONTENT */}
-        <div  className="py-3 sm:px-8 px-3 bg-white">
-          <div className="content-wrapper who-we-are">
-           <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-3">
-            <img src="/assets/green_dot.svg" className="h-fit" ></img>
-            Who We Are
-           </button>
-
-            <h2 className="heading-who-we font-lustria mb-5">
-              Your <span className="primary-text">Reliable Partner</span> in
-              Digital Transformation
-            </h2>
-
-            <p className="mb-6 font-notosans B-1">
-             In Dousoft IT, we combine the expertise of technology with business knowledge to create customized software solutions that promote the growth of your business, increase efficiency and competitive advantages. Our skilled team of developers and testers, designers, and digital strategists collaborate to deliver tangible outcomes.
-            </p>
-
-            <div className="flex gap-4 mb-7 overflow-scroll">
-                     <button className="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
-                      <img src="/assets/ai_red.svg" className="ml-2" />
-                   AI Solutions
-
-                  </button>
-                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
-                      <img src="/assets/rocket_red.svg" className="ml-2" />
-                   Digital Strategy
-
-                  </button>
-                   <button className="btn rounded-full flex items-center p-2 px-3 gap-2 whitespace-nowrap" style={{ width: "fit-content" }}>
-                      <img src="/assets/growth_red.svg" className="ml-2" />
-                   Business Growth
-                  </button>
-                  </div>
-
-                    <div  className="image-wrapper-mobile p-3">
-       <div className="image-wrapper-mobile-inner">
-          <img
-             src="/assets/2nd_section.svg"
-             alt="Dousoft IT"
-             className=" mobile-hero-image"
-           />
-       </div>
-         </div>
-
-            <button className="button rounded-full flex items-center mt-5 justify-self-center">
-              Explore Our Mission
-              <img src="/assets/button_arrow.png" className="ml-2" />
-            </button>
-          </div>
-        </div>
-     
-
-     
-    </section>
-
- </>
-  );
-};
-
-export default WhoWeAreParallax;

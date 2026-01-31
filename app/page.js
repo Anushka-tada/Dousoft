@@ -228,11 +228,13 @@ const page = () => {
           <div className="marquee">
     <div className="marquee-track">
       {[...services, ...services].map((service, index) => (
+
         <span
           key={index}
-          className="marquee-item font-lustria heading-5 text-white"
+          className="marquee-item font-lustria heading-5 text-white flex gap-3"
         >
-          ✨ {service} 
+          <img src="/assets/green_star.png"></img>
+           {service} 
         </span>
       ))}
     </div>
@@ -302,7 +304,7 @@ const page = () => {
                <div className="bg-white rounded-full p-2 px-3 mb-4 w-fit icon">
                 <img src="/assets/red_bulb.svg"></img>
                </div>
-               <p className="heading-7 font-lustria mb-2">Best-in-Class Expertise</p>
+               <p className="heading-7 font-lustria mb-2">Best-in-className Expertise</p>
                <p className="B-3 ">We bring years of experience in delivering top-quality software solutions across industries.</p>
               </motion.div>
               <motion.div className="sm:p-7 sm:py-8 p-5 card card-2"  initial="hidden"
@@ -650,7 +652,7 @@ business.</p>
 
      {/* testimonial  */}
 
-     <div className="testimonial-section sm:py-10 py-9 px-3 sm:px-6 md:px-10 lg:px-14 " >
+     {/* <div className="testimonial-section sm:py-10 py-9 px-3 sm:px-6 md:px-10 lg:px-14 " >
         <div className="grid grid-cols-[1fr_1fr_1fr_1.3fr_1fr_1fr_1fr] gap-5 items-center md:flex hidden ">
           <div className=" pt-44">
             <img src="/assets/top_testimonial.png" className="mb-4"></img>
@@ -713,7 +715,140 @@ business.</p>
           Read all Success Stories
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>
-     </div>
+     </div> */}
+
+     <section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    {/* Header */}
+    <div className="text-center mb-12">
+      <span className="text-sm uppercase tracking-widest text-gray-500">
+        Testimonials
+      </span>
+      <h2 className="text-3xl md:text-4xl font-bold mt-2">
+        What Our Clients Say
+      </h2>
+    </div>
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      
+      {/* Left Side */}
+      <div>
+        <div className="swiper leftSwiper">
+          <div className="swiper-wrapper">
+            
+            {/* Slide 1 */}
+            <div className="swiper-slide">
+              <div className="relative rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1000"
+                  alt="Client 1"
+                  className="w-full h-[420px] object-cover"
+                />
+
+                <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-6 text-white">
+                  <div className="text-sm font-semibold mb-2">
+                    Sarah Chen, CTO @ Apex
+                  </div>
+                  <blockquote className="text-lg italic">
+                    “Dousoft’s vision drove our 40% growth in one year.”
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Slide 2 */}
+            <div className="swiper-slide">
+              <div className="relative rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1000"
+                  alt="Client 2"
+                  className="w-full h-[420px] object-cover"
+                />
+
+                <div className="absolute inset-0 bg-black/60 flex flex-col justify-end p-6 text-white">
+                  <div className="text-sm font-semibold mb-2">
+                    James Wilson, CEO @ TechFlow
+                  </div>
+                  <blockquote className="text-lg italic">
+                    “The most reliable engineering team we’ve ever worked with.”
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
+      </div>
+
+      {/* Right Side */}
+      <div>
+        <div className="swiper rightSwiper">
+          <div className="swiper-wrapper">
+
+            {/* Review 1 */}
+            <div className="swiper-slide">
+              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold">Reviews</h3>
+                  <span className="text-green-600 text-sm font-medium">
+                    ✓ Verified
+                  </span>
+                </div>
+
+                <div className="mb-4">
+                  <div className="text-yellow-500 text-lg mb-2">★★★★★</div>
+                  <strong className="block mb-2">Exceptional Delivery</strong>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Working with Dousoft has truly been a game-changer for our
+                    business. Their depth of knowledge, professionalism, and
+                    proactive approach ensured flawless execution and remarkable
+                    results.
+                  </p>
+                </div>
+
+                <p className="text-gray-500 italic text-xs">
+                  “A true partnership that delivered beyond expectations.”
+                </p>
+              </div>
+            </div>
+
+            {/* Review 2 */}
+            <div className="swiper-slide">
+              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold">Reviews</h3>
+                  <span className="text-green-600 text-sm font-medium">
+                    ✓ Verified
+                  </span>
+                </div>
+
+                <div className="mb-4">
+                  <div className="text-yellow-500 text-lg mb-2">★★★★★</div>
+                  <strong className="block mb-2">Future-Ready Tech</strong>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    They didn’t just build what we asked for. They aligned the
+                    solution with our long-term goals, ensuring scalability and
+                    future readiness.
+                  </p>
+                </div>
+
+                <p className="text-gray-500 italic text-xs">
+                  “Technical prowess at its best.”
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div className="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
      {/* Faq */}
 
@@ -794,7 +929,7 @@ business.</p>
         <div className="">
           <img src="/assets/rocket-green.png" className="icon sm:mb-12 mb-8 rounded-full p-4 px-4.5 service-inner-shadow"></img>
         </div>
-       <div classname="text-center">
+       <div className="text-center">
          <h2 className="heading-3 text-white mb-7 font-lustria text-center">Start Your Digital Journey with <br></br> <span className="green"> Dousoft IT</span></h2>
 
           <p className="max-w-[700px] B-1 text-center sm:mb-14 mb-8 para">Looking for a 

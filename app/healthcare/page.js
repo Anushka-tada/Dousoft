@@ -582,3 +582,253 @@ const page = () => {
 }
 
 export default page
+
+
+// import SolutionLayout from "../components/SolutionLayout";
+
+// export default function HealthcarePage() {
+//   return (
+//     <SolutionLayout
+//       hero={{
+//         title: "Healthcare Solutions",
+//         description:
+//           "Building robust automated testing solutions to improve speed, stability, and software reliability.",
+//         breadcrumb: "Home > Healthcare Solutions",
+//       }}
+
+//       intro={{
+//         heading: (
+//           <>
+//             Technology-Driven <span>Healthcare Solutions</span> Designed for Better Patient Outcomes
+//           </>
+//         ),
+//         paragraphs: [
+//           "At Dousoft IT, we understand that healthcare is not just an industry—it is a mission-critical ecosystem where technology must deliver accuracy, security, and reliability. Our Healthcare Solutions are designed to help hospitals, clinics, healthcare startups, and medical service providers modernize operations, enhance patient experiences, and maintain strict regulatory compliance.",
+//           "We approach healthcare technology with a business-first and patient-centric mindset, ensuring every solution aligns with clinical workflows, operational efficiency, and long-term scalability.",
+//         ],
+//       }}
+
+//       approach={{
+//         heading: (
+//           <>
+//             Our Approach to <span>Healthcare Solutions</span> at Dousoft
+//           </>
+//         ),
+//         cards: [
+//           {
+//             icon: "assets/images/healthcare/icon/material-symbols_strategy.png",
+//             title: "Business-Centric & Patient-Focused Strategy",
+//             description:
+//               "We begin by understanding your healthcare business goals, patient journey, and operational challenges. Our team collaborates closely with stakeholders to map workflows, identify inefficiencies, and design solutions that improve both patient outcomes and business performance",
+//             points: [
+//               {
+//                 icon: "assets/images/healthcare/icon/material-symbols_automation.png",
+//                 text: "Reduced administrative burden",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/flowbite_users-solid.png",
+//                 text: "Improved patient engagement",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/material-symbols_shield-lock.png",
+//                 text: "Secure data handling",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/material-symbols_speed.png",
+//                 text: "Faster service delivery",
+//               },
+//             ],
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/mdi_certificate.png",
+//             title: "Domain Expertise & Compliance Awareness",
+//             description:
+//               "Healthcare technology requires deep domain understanding. Our solutions are developed with a strong focus on data privacy, interoperability, and regulatory standards, ensuring compliance with healthcare regulations and best practices.",
+//             points: [
+//               {
+//                 icon: "assets/images/healthcare/icon/ic_baseline-privacy-tip.png",
+//                 text: "Data Privacy",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/streamline-ultimate_checklist-bold.png",
+//                 text: "Compliance",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/material-symbols_integration-instructions.png",
+//                 text: "Interoperability",
+//               },
+//               {
+//                 icon: "assets/images/healthcare/icon/material-symbols_star.png",
+//                 text: "Best Practices",
+//               },
+//             ],
+//           },
+//         ],
+//       }}
+
+//      framework={{
+//   heading: "Dousoft Healthcare Delivery Framework",
+//   subheading:
+//     "We follow a structured framework to deliver consistent, high-quality healthcare solutions:",
+//   steps: [
+//     {
+//       number: "01",
+//       title: "Discover",
+//       icon: "assets/images/healthcare/icon/Vector.png",
+//       points: [
+//         "Requirement analysis",
+//         "Workflow assessment",
+//         "Stakeholder consultation",
+//         "Compliance and risk evaluation",
+//       ],
+//     },
+//     {
+//       number: "02",
+//       title: "Design",
+//       icon: "assets/images/healthcare/icon/Group.png",
+//       points: [
+//         "User-centric UX/UI design",
+//         "Secure system architecture",
+//         "Integration planning with existing systems",
+//       ],
+//     },
+//     {
+//       number: "03",
+//       title: "Develop",
+//       icon: "assets/images/healthcare/icon/mingcute_code-fill.png",
+//       points: [
+//         "Agile-based development",
+//         "Modular and scalable architecture",
+//         "Continuous testing and validation",
+//       ],
+//     },
+//     {
+//       number: "04",
+//       title: "Deploy",
+//       icon: "assets/images/healthcare/icon/Vector2.png",
+//       points: [
+//         "Secure deployment",
+//         "System integration",
+//         "Performance optimization",
+//       ],
+//     },
+//     {
+//       number: "05",
+//       title: "Optimize",
+//       icon: "assets/images/healthcare/icon/material-symbols_analytics.png",
+//       points: [
+//         "Ongoing monitoring",
+//         "Feature enhancements",
+//         "Scalability and performance improvements",
+//       ],
+//     },
+//   ],
+//   footerText:
+//     "This framework allows us to reduce development risks, accelerate delivery, and ensure measurable outcomes",
+// }}
+
+//       offerings={{
+//         heading: "Healthcare Solutions We Offer",
+//         cards: [
+//           {
+//             overlayClass: "overlay-shadow ind-5-picture-1",
+//             title: "Healthcare Software Development",
+//             description:
+//               "Custom-built solutions including hospital management systems, patient portals, appointment scheduling, and medical record management.",
+//           },
+//           {
+//             overlayClass: "overlay-shadow ind-5-picture-2",
+//             title: "Regression Testing",
+//             description:
+//               "Secure telehealth solutions that enable virtual consultations, remote monitoring, and patient engagement across devices.",
+//           },
+//           {
+//             overlayClass: "overlay-shadow ind-5-picture-3",
+//             title: "Mobile & Web Healthcare Applications",
+//             description:
+//               "User-friendly applications for patients and healthcare providers, designed to improve accessibility, communication, and service efficiency.",
+//           },
+//           {
+//             overlayClass: "overlay-shadow ind-5-picture-4",
+//             title: "Healthcare Data & System Integration",
+//             description:
+//               "Seamless integration of healthcare systems, third-party tools, and data platforms to ensure real-time access and interoperability.",
+//           },
+//         ],
+//       }}
+
+//       benefits={{
+//         heading: (
+//           <>
+//             Benefits of <span>Dousoft IT</span> Healthcare Solutions
+//           </>
+//         ),
+//         items: [
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-3.png",
+//             text: "Improved Patient Experience",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-4.png",
+//             text: "Reduced Operational Costs",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-5.png",
+//             text: "Faster Service Delivery",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-6.png",
+//             text: "Enhanced Data Security",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-7.png",
+//             text: "Better Operational Visibility",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-8.png",
+//             text: "Scalable Healthcare Systems",
+//           },
+//         ],
+//       }}
+
+//       whyChoose={{
+//         heading: (
+//           <>
+//             Why Choose <span>Dousoft IT</span> for Healthcare Solutions?
+//           </>
+//         ),
+//         imageClass: "overlay-shadow-2 ind-5-picture-5",
+//         points: [
+//           {
+//             icon: "assets/images/healthcare/icon/bxs_badge-check.png",
+//             text: "Proven expertise in healthcare technology",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector-9.png",
+//             text: "Structured delivery framework",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/material-symbols_check-circle.png",
+//             text: "Focus on efficiency and compliance",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/material-symbols_shield.png",
+//             text: "Scalable and secure solution",
+//           },
+//           {
+//             icon: "assets/images/healthcare/icon/Vector (1).png",
+//             text: "Dedicated support and continuous improvement",
+//           },
+//         ],
+//       }}
+
+//       cta={{
+//         heading: "Transform Your Healthcare Operations with Dousoft",
+//         description:
+//           "Whether you are launching a digital health platform, modernizing hospital systems, or improving patient engagement, Dousoft provides healthcare solutions that are reliable, scalable, and aligned with your business goals.",
+//         buttonText: "Get Started Today",
+//         icon: "assets/images/healthcare/icon/Container.png",
+//       }}
+//     />
+//   );
+// }

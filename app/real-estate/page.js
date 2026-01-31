@@ -51,7 +51,7 @@ const page = () => {
             <div class="industry-card">
                 <div class="box">
                     <div class="icon-heading flex items-center gap-4 mb-4">
-                        <div class="icon">
+                        <div class="icon service-inner-shadow">
                             <img src="assets/images/healthcare/icon/material-symbols_strategy.png" alt=""/>
                         </div>
                         <p class="heading-7 font-lustria">
@@ -115,7 +115,7 @@ const page = () => {
             <div class="industry-card">
                 <div class="box">
                     <div class="icon-heading flex items-center gap-4 mb-4">
-                        <div class="icon">
+                        <div class="icon service-inner-shadow">
                             <img src="assets/images/healthcare/icon/mdi_certificate.png" alt=""/>
                         </div>
                         <p class="heading-7 font-lustria">
@@ -195,10 +195,10 @@ const page = () => {
 
    <div className="framework grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
 
-      <div class="framework-box">
+      <div class="framework-box  service-card">
 
         <div class="framwork-icon-box">
-          <div class="f-icon">
+          <div class="f-icon service-inner-shadow">
             <img src="assets/images/healthcare/icon/Vector.png" alt=""/>
           </div>
           <h4 class="heading-4">01</h4>
@@ -221,10 +221,10 @@ const page = () => {
         </div>
       </div>
 
-      <div class="framework-box">
+      <div class="framework-box  service-card">
 
         <div class="framwork-icon-box">
-          <div class="f-icon">
+          <div class="f-icon service-inner-shadow">
             <img src="assets/images/healthcare/icon/Group.png" alt=""/>
           </div>
           <h4 class="heading-4">02</h4>
@@ -247,10 +247,10 @@ const page = () => {
         </div>
       </div>
 
-      <div class="framework-box">
+      <div class="framework-box  service-card">
 
         <div class="framwork-icon-box">
-          <div class="f-icon">
+          <div class="f-icon service-inner-shadow">
             <img src="assets/images/healthcare/icon/mingcute_code-fill.png" alt=""/>
           </div>
           <h4 class="heading-4">03</h4>
@@ -273,10 +273,10 @@ const page = () => {
         </div>
       </div>
 
-      <div class="framework-box">
+      <div class="framework-box  service-card">
 
         <div class="framwork-icon-box">
-          <div class="f-icon">
+          <div class="f-icon service-inner-shadow">
             <img src="assets/images/healthcare/icon/Vector2.png" alt=""/>
           </div>
           <h4 class="heading-4">04</h4>
@@ -299,10 +299,10 @@ const page = () => {
         </div>
       </div>
 
-      <div class="framework-box">
+      <div class="framework-box  service-card">
 
         <div class="framwork-icon-box">
-          <div class="f-icon">
+          <div class="f-icon service-inner-shadow">
             <img src="assets/images/healthcare/icon/material-symbols_analytics.png" alt=""/>
           </div>
           <h4 class="heading-4">05</h4>
@@ -323,7 +323,7 @@ const page = () => {
       </div>
     </div>
 
-    <div class="framework-box-2">
+    <div class="framework-box-2 service-card">
       <p class="heading-7">
         This framework ensures efficient delivery and long-term platform success.
       </p>
@@ -483,7 +483,7 @@ const page = () => {
 
     <div>
       <div class="icon-heading">
-        <div class="icon">
+        <div class="icon service-inner-shadow">
           <img src="assets/images/healthcare/icon/bxs_badge-check.png" alt=""/>
         </div>
         <p class="heading-7 font-lustria">
@@ -492,7 +492,7 @@ const page = () => {
       </div>
 
       <div class="icon-heading">
-        <div class="icon">
+        <div class="icon  service-inner-shadow">
           <img src="assets/images/healthcare/icon/Vector-9.png" alt=""/>
         </div>
         <p class="heading-7 font-lustria">
@@ -501,7 +501,7 @@ const page = () => {
       </div>
 
       <div class="icon-heading">
-        <div class="icon">
+        <div class="icon  service-inner-shadow">
           <img src="assets/images/healthcare/icon/material-symbols_check-circle.png" alt=""/>
         </div>
         <p class="heading-7 font-lustria">
@@ -510,7 +510,7 @@ const page = () => {
       </div>
 
       <div class="icon-heading">
-        <div class="icon">
+        <div class="icon  service-inner-shadow">
           <img src="assets/images/healthcare/icon/material-symbols_shield.png" alt=""/>
         </div>
         <p class="heading-7 font-lustria">
@@ -519,7 +519,7 @@ const page = () => {
       </div>
 
       <div class="icon-heading">
-        <div class="icon">
+        <div class="icon  service-inner-shadow">
           <img src="assets/images/healthcare/icon/Vector (1).png" alt=""/>
         </div>
         <p class="heading-7 font-lustria">

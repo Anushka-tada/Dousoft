@@ -54,7 +54,7 @@ const page = () => {
             <div class="industry-card">
                 <div class="box">
                     <div class="icon-heading flex items-center gap-4 mb-4">
-                        <div class="icon">
+                        <div class="icon  service-inner-shadow">
                             <img src="assets/images/healthcare/icon/material-symbols_strategy.png" alt=""/>
                         </div>
                        <p class="heading-7 font-lustria ">
@@ -118,7 +118,7 @@ const page = () => {
             <div class="industry-card">
                 <div class="box">
                     <div class="icon-heading flex items-center gap-4 mb-4">
-                        <div class="icon">
+                        <div class="icon  service-inner-shadow">
                             <img src="assets/images/healthcare/icon/mdi_certificate.png" alt=""/>
                         </div>
                         <p class="heading-7 font-lustria">
@@ -200,9 +200,9 @@ const page = () => {
         {/* Framework Grid */}
         <div className="framework grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
             {/* BOX 01 */}
-            <div className="framework-box relative">
+            <div className="framework-box relative service-card">
                 <div className="framwork-icon-box flex items-center justify-between mb-4">
-                    <div className="f-icon">
+                    <div className="f-icon  service-inner-shadow">
                         <img src="assets/images/healthcare/icon/Vector.png" alt="" />
                     </div>
                     <h4 className="heading-4">01</h4>
@@ -228,9 +228,9 @@ const page = () => {
             </div>
 
             {/* BOX 02 */}
-            <div className="framework-box relative">
+            <div className="framework-box relative service-card">
                 <div className="framwork-icon-box flex items-center justify-between mb-4">
-                    <div className="f-icon">
+                    <div className="f-icon  service-inner-shadow">
                         <img src="assets/images/healthcare/icon/Group.png" alt="" />
                     </div>
                     <h4 className="heading-4">02</h4>
@@ -256,9 +256,9 @@ const page = () => {
             </div>
 
             {/* BOX 03 */}
-            <div className="framework-box relative">
+            <div className="framework-box relative service-card">
                 <div className="framwork-icon-box flex items-center justify-between mb-4">
-                    <div className="f-icon">
+                    <div className="f-icon  service-inner-shadow">
                         <img src="assets/images/healthcare/icon/mingcute_code-fill.png" alt="" />
                     </div>
                     <h4 className="heading-4">03</h4>
@@ -285,9 +285,9 @@ const page = () => {
             </div>
 
             {/* BOX 04 */}
-            <div className="framework-box relative">
+            <div className="framework-box relative service-card">
                 <div className="framwork-icon-box flex items-center justify-between mb-4">
-                    <div className="f-icon">
+                    <div className="f-icon  service-inner-shadow" >
                         <img src="assets/images/healthcare/icon/Vector2.png" alt="" />
                     </div>
                     <h4 className="heading-4">04</h4>
@@ -313,9 +313,9 @@ const page = () => {
             </div>
 
             {/* BOX 05 */}
-            <div className="framework-box">
+            <div className="framework-box service-card">
                 <div className="framwork-icon-box flex items-center justify-between mb-4">
-                    <div className="f-icon">
+                    <div className="f-icon  service-inner-shadow">
                         <img
                             src="assets/images/healthcare/icon/material-symbols_analytics.png"
                             alt=""
@@ -511,7 +511,7 @@ const page = () => {
         {/* Right Content */}
         <div className="space-y-4">
             <div className="icon-heading flex items-start gap-4">
-                <div className="icon">
+                <div className="icon service-inner-shadow">
                     <img src="assets/images/healthcare/icon/bxs_badge-check.png" alt="" />
                 </div>
                 <p class="heading-7 font-lustria ">
@@ -520,7 +520,7 @@ const page = () => {
             </div>
 
             <div className="icon-heading flex items-start gap-4">
-                <div className="icon">
+                <div className="icon service-inner-shadow">
                     <img src="assets/images/healthcare/icon/Vector-9.png" alt="" />
                 </div>
                  <p class="heading-7 font-lustria ">
@@ -529,7 +529,7 @@ const page = () => {
             </div>
 
             <div className="icon-heading flex items-start gap-4">
-                <div className="icon">
+                <div className="icon service-inner-shadow">
                     <img src="assets/images/healthcare/icon/material-symbols_check-circle.png" alt="" />
                 </div>
                  <p class="heading-7 font-lustria ">
@@ -538,7 +538,7 @@ const page = () => {
             </div>
 
             <div className="icon-heading flex items-start gap-4">
-                <div className="icon">
+                <div className="icon service-inner-shadow">
                     <img src="assets/images/healthcare/icon/material-symbols_shield.png" alt="" />
                 </div>
               <p class="heading-7 font-lustria ">
@@ -547,7 +547,7 @@ const page = () => {
             </div>
 
             <div className="icon-heading flex items-start gap-4">
-                <div className="icon">
+                <div className="icon service-inner-shadow">
                     <img src="assets/images/healthcare/icon/Vector (1).png" alt="" />
                 </div>
                <p class="heading-7 font-lustria ">

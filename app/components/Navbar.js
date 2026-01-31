@@ -547,6 +547,8 @@ import { getServiceCategoryServ } from "@/services/serviceCategory.service";
 import { getServiceSubCategoryServ } from "@/services/serviceSubcategory.service";
 import React from "react";
 import { useState  , useEffect} from "react";
+import BookingForm from "./BookingForm";
+
 
 const navItems = [
   { name: "Home", link: "/" },
@@ -563,7 +565,7 @@ const navItems = [
         name: "Pricing",
         description: "Streamlined pricing",
         image: "/assets/pricing_link.png",
-        link: "/careers",
+        link: "/packages",
       },
       {
         name: "Careers ",
@@ -692,7 +694,7 @@ const Navbar = () => {
 
   const[serviceCategories , setServicecategories] = useState([]);
   const[serviceSubCategories , setServiceSubcategories] = useState([]);
-
+const [showGetStarted, setShowGetStarted] = useState(false);
   
 
   const fetchCategories = async () => {
@@ -795,17 +797,23 @@ const getCurrentItems = () => {
               className="relative nav-item flex items-center heading-7 group"
             >
               {/* Menu Title */}
-              <span className="flex items-center cursor-pointer heading-8">
-                {item.name}
-                {item.subLinks && (
-                  <span className="pl-3">
-                    <img
-                    src="/assets/dropdownIcon.png"
-                    className="transition-transform duration-300 group-hover:rotate-180"
-                  />
-                    </span>
-                )}
-              </span>
+             {item.link ? (
+  <a href={item.link} className="flex items-center cursor-pointer heading-8">
+    {item.name}
+  </a>
+) : (
+  <span className="flex items-center cursor-pointer heading-8">
+    {item.name}
+    {item.subLinks && (
+      <span className="pl-3">
+        <img
+          src="/assets/dropdownIcon.png"
+          className="transition-transform duration-300 group-hover:rotate-180"
+        />
+      </span>
+    )}
+  </span>
+)}
 
               {/*  Company Submenu */}
               {item.name === "Company" && (
@@ -1009,7 +1017,7 @@ const getCurrentItems = () => {
 
       {/* HEADER */}
       <div className="flex items-center justify-between p-4 bg-white">
-        <img src="/assets/new-log.svg" className="h-14" />
+        <img src="/assets/new-logo.svg" className="h-14" />
         <img
           src="/assets/nav_close.png"
           className="h-6 cursor-pointer"
@@ -1143,7 +1151,7 @@ const getCurrentItems = () => {
         </div>
 
         {/* CTA */}
-        <button className="button rounded-full mt-6 flex items-center">
+        <button className="button rounded-full mt-6 flex items-center"  onClick={() => setShowGetStarted(true)}>
           Get Started
           <img src="/assets/button_arrow.png" className="ml-2" />
         </button>
@@ -1155,11 +1163,17 @@ const getCurrentItems = () => {
 
 
 
-        <button className="button rounded-full   hidden lg:flex items-center B-1">
+        <button className="button rounded-full   hidden lg:flex items-center B-1"  onClick={() => setShowGetStarted(true)}>
           Get Started
           <img src="/assets/button_arrow.png" className="ml-2"></img>
         </button>
       </div>
+
+ 
+<BookingForm
+isOpen={showGetStarted}
+  onClose={() => setShowGetStarted(false)}
+  />
     </>
   );
 };
