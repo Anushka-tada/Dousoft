@@ -443,7 +443,7 @@ inset 4px 4px 8px 0px #0000006c;
   /* background: RGB(16 , 34, 23);
 background: linear-gradient(88deg, rgba(16, 34, 23, 1) 0%, rgba(21, 43, 30, 1) 100%); */
 background-color: var(--primary-color);
-border-radius: 16px;
+border-radius: 17px;
 /* box-shadow: 
 inset 5px 5px 10px 1px #0B1710,
 inset -5px -5px 10px 1px #162F22; */
