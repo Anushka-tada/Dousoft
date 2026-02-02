@@ -45,7 +45,7 @@
   --text-dark: #1f2937;
 } */
 
-:root {
+/* :root {
   --primary-color: #0B6F1E;
   --primary-light: #0B6F1E;
   --primary-light2:rgb(255 , 146 ,86);
@@ -66,7 +66,7 @@
   --light-text4: rgb(142, 142 , 142);
   --light-text5: rgb(197 , 197 , 197);
 
-   /* font family */
+   
 
   --font-lustria: 'Lustria';
   --font-notosans: 'Noto Sans';
@@ -74,7 +74,56 @@
 --font-konexy: var(--font-konexy);
 
   
-    /* roadmap css */
+    
+    --color-blue-dark: #3b82f6;
+  --color-blue-light: #60a5fa;
+  --color-yellow-dark: #d97706;
+  --color-yellow-light: #fbbf24;
+  --color-green-dark: #059669;
+  --color-green-light: #34d399;
+  --color-red-dark: #dc2626;
+  --color-red-light: #f87171;
+  --color-purple-dark: #7c3aed;
+  --color-purple-light: #a78bfa;
+  --line-gray: #9ca3af;
+  --text-dark: #1f2937;
+              --border-speed: 4s;
+} */
+
+
+:root {
+  --primary-color: #0B6F1E;
+  --primary-light: #0B6F1E;
+  --primary-light2:rgb(255 , 146 ,86);
+  --primary-light3: #FFC9AB;
+  --secondary-color: rgb(21, 43 , 30);
+  --secondary-dark: rgb(21, 43 , 30);
+  --green-dark: rgb(16 , 34 , 23);
+  --green-light: rgb(25 ,51 , 36);
+  --secondary-light: rgb(43, 238 , 121);
+  --secondary-light2: rgba(31, 193, 107, 0.100);
+  --paragraph-color: rgb(96 , 96 ,96);
+  --third-color: rgb(232 , 232 , 232);
+  --third-light: rgb(248 , 252 , 250);
+  --dark-text: rgb(51 , 51 , 51);
+  --light-text: rgb(210 , 210 , 210);
+  --light-text2: rgb(187 , 187 , 187);
+  --light-text3: rgb(203 , 215 , 225);
+  --light-text4: rgb(142, 142 , 142);
+  --light-text5: rgb(197 , 197 , 197);
+  --bg-color: #F0F8F0;
+  --bg-color2: #F2FAF2;
+  --dark-nuetral: #3A3A3A;
+
+   
+
+  --font-lustria: 'Lustria';
+  --font-notosans: 'Noto Sans';
+  --font-inter: 'Inter', sans-serif;
+--font-konexy: var(--font-konexy);
+
+  
+    
     --color-blue-dark: #3b82f6;
   --color-blue-light: #60a5fa;
   --color-yellow-dark: #d97706;
@@ -173,6 +222,10 @@ html {
   color:  var(--primary-color);
 }
 
+.dark-text{
+    color: var(--dark-nuetral);
+}
+
 .button{
   background-color: var(--primary-color) !important;
   color: white !important;
@@ -187,6 +240,10 @@ html {
   background-color: var(--third-color);
 }
 
+.light-green-shadow{
+    box-shadow: -6px -6px 12px 0 #ffffffd0,
+    6px 6px 12px 0 #00000021;
+}
 .navbar{
     background-color: var(--third-color);
   
@@ -365,13 +422,15 @@ html {
 /* Future ready section{ */
 
 .future-ready  {
-  background-color: var(--primary-color)
+  background-color: var(--bg-color);
 }
 .technology-section{
  background-color: var(--secondary-color);
 }
 .futute_ready_btn{
   color: var(--secondary-light);
+  background-color: var(--primary-color);
+  color: white;
   /* box-shadow: 
   5px 5px 10px 0 #0B1710,
   -5px -5px 10px 0 #152D1E;
@@ -395,33 +454,25 @@ html {
   color: rgba(43, 238, 121, 1);
 }
 
-.future-ready .B-1 , .technology-section .B-1 , .service-page .light-text{
+ .technology-section .B-1 , .service-page .light-text{
   font-family: var(--font-notosans);
   color: var(--light-text);
 }
 .service_card{
-  /* box-shadow: 10px 10px 20px 0 #0B1710,
-  -10px -10px 20px 0 #162F22; */
-  /* background: #112419;
-background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 100%); */
-background-color: var(--primary-color);
-  box-shadow: 6px 6px 12px 0 #00000037,
+background-color: var(--bg-color);
+  /* box-shadow: 6px 6px 12px 0 #00000037,
   -6px -6px 12px 0 rgba(255, 255, 255, 0.1)
-;
+; */
 }
 
 .service-end-card{
   border: 3px solid var(--secondary-light);
-   /* background: #112419;
-background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 100%); */
   
 }
 .service_card .heading-7{
   /* font-family: var(--font-lustria); */
 }
-.service_card .B-3{
- color: var(--light-text);
-}
+
 .service_card .B-1{
  font-family: var(--font-notosans);
 }
@@ -433,12 +484,9 @@ background: linear-gradient(88deg, rgba(17, 36, 25, 1) 0%, rgba(21, 43, 30, 1) 1
  1px 1px 2px 0px #00000022,
 inset -4px -4px 8px 0px #ffffff1c,
 inset 4px 4px 8px 0px #0000006c;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
 }
-.card_no{
-  color: var(--secondary-light2);
-  /* font-family: var(--font-lustria); */
-}
+
 .card_icon{
   /* background: RGB(16 , 34, 23);
 background: linear-gradient(88deg, rgba(16, 34, 23, 1) 0%, rgba(21, 43, 30, 1) 100%); */
@@ -458,7 +506,7 @@ inset 4px 4px 8px 0px #0000006c;
 }
 
 .service-end-card button{
-  background-color: white;
+  background-color: var(--primary-color);
   box-shadow: 0 0 15px 0 #2bee7930;
   font-family: var(--font-notosans);
 }
@@ -467,6 +515,7 @@ inset 4px 4px 8px 0px #0000006c;
  1px 1px 2px 0px #00000022,
 inset -4px -4px 8px 0px #ffffff1c,
 inset 4px 4px 8px 0px #0000006c;
+background-color: var(--primary-color);
 }
 
 /* number_section */
@@ -801,7 +850,7 @@ font-size: 56px;
 /* why choose us  */
 
 .why-choose-us{
-  background-color: var(--third-light);
+  background-color: var(--bg-color);
 }
 .why-choose-us .B-1{
   color: var(--paragraph-color);
@@ -812,6 +861,8 @@ font-size: 56px;
   8px 8px 16px 0 #DBECE2,
   -8px -8px  16px 0 #FFFFFF;
   width: -webkit-fill-available;
+      border-bottom: 1px solid #ffffff;
+    border-right: 1px solid white;
 }
 .why-choose-us .card-1{
   background-color: rgba(11, 111, 30, 0.1);
@@ -1342,8 +1393,8 @@ color: var(--paragraph-color);
 /* roadmap section */
 /* ROADMAP WRAPPER */
 
-.agile-section{
-  background-color: var(--third-light);
+.agile-section , .testimonial{
+  background-color: var(--bg-color2);
 }
 .roadmap-section {
   position: relative;

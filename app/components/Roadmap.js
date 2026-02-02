@@ -294,7 +294,7 @@ const nodeRefs = useRef([]);
                 </span>
               </div>
 
-              <h3 className="font-bold text-gray-800 whitespace-nowrap fonto-notosans">
+              <h3 className="font-bold text-gray-800 whitespace-nowrap fonto-notosans font-lustria">
                 {node.title}
               </h3>
 

@@ -365,25 +365,25 @@ const page = () => {
 
       <div className="future-ready sm:py-20 py-8 px-3 sm:px-6 md:px-10 lg:px-14">
         <div className="flex justify-center items-center mb-5">
-          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3">
-            <img src="/assets/green_dot.svg" className="me-2"></img>
+          <div className="flex futute_ready_btn rounded-full py-3 px-5 heading-8 service-inner-shadow font-lustria items-center">
+            <img src="/assets/white_dot.png" className="me-2 h-fit" ></img>
             Future Ready
           </div>
         </div>
 
         <div className=" text-center">
-          <h3 className="heading-3 text-white mb-7">
+          <h3 className="heading-3 text-white mb-7 dark-text">
             Accelerating Growth with <br></br>
-            <span className="green">Intelligent Solutions</span>
+            <span className="primary-text">Intelligent Solutions</span>
           </h3>
 
-          <p className="B-1 max-w-[650px] flex justify-self-center md:mb-14 mb-5">We blend AI innovation with robust engineering to deliver scalable digital
+          <p className="B-1 max-w-[650px] flex justify-self-center md:mb-14 mb-5 dark-text">We blend AI innovation with robust engineering to deliver scalable digital
 solutions that redefine whats possible for your business.</p>
         </div>
 
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-10 gap-3">
          {futureCards.map((card , i) => (
-  <div key={i} className="service_card sm:p-8 p-6 rounded-3xl">
+  <div key={i} className="service_card sm:p-8 p-6 rounded-3xl light-green-shadow">
     <div className="flex justify-between items-center">
         <div>
           <img src="/assets/future_point.svg" className="card_icon p-4"></img>
@@ -392,23 +392,23 @@ solutions that redefine whats possible for your business.</p>
           <span className="card_no heading-4">{`0${i + 1}`}</span>
       </div>
 
-      <p className="heading-7 text-white my-3">{card.name}</p>
-      <p className="B-3"> {card.para}</p>
-      <p className="B-1 my-3"> {card.subtitle}</p>
+      <p className="heading-7 text-white my-3 dark-text font-lustria">{card.name}</p>
+      <p className="B-3 dark-text"> {card.para}</p>
+      <p className="B-1 my-3 dark-text"> {card.subtitle}</p>
 
      <div className=" pb-4 mb-5" style={{borderBottom:"1px solid #21452f"}}>
        {
         card.points.map((point , i) => (
-          <p key={i} className="B-3" style={{color:"#2BEE79"}}>{point}</p>
+          <p key={i} className="B-3 primary-text" >{point}</p>
         ))
       }
       </div>
 
        <div className="flex justify-between items-center learn-more">
-        <p className="B-1">Learn More</p>
+        <p className="B-1 dark-text">Learn More</p>
 
         <div className=" ">
-          <img src="/assets/up_white_arrow.svg" className="arrow rounded-full py-2.5 px-3"></img>
+          <img src="/assets/black_top_arrow.png" className="arrow rounded-full py-2.5 px-3"></img>
           </div>
         </div>
        
@@ -419,10 +419,10 @@ solutions that redefine whats possible for your business.</p>
             <div>
               <img src="/assets/service_icon.svg" className="mb-5 rounded-full p-3 px-4" ></img>
             </div>
-            <p className="heading-7 text-white mb-5"> Need a Custom Solution?</p>
-             <p className="B-3 text-white mb-5">Lets discuss your specific requirements.</p>
+            <p className="heading-5 text-white mb-5 primary-text font-lustria"> Need a Custom Solution?</p>
+             <p className="B-3 text-white mb-5 dark-text">Lets discuss your specific requirements.</p>
 
-             <button className="py-3 px-5 rounded-full B-1 " style={{color:"black"}}>
+             <button className="py-3 px-5 rounded-full B-1 text-white" >
               Book Consultaion
              </button>
           </div>
@@ -462,8 +462,8 @@ solutions that redefine whats possible for your business.</p>
       <div className="sm:py-16 py-8 px-3 sm:px-6 md:px-10 lg:px-14 industries-section">
          
           <div className="flex justify-center items-center mb-5">
-          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow">
-            <img src="/assets/green_dot.svg" className="me-2"></img>
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria">
+            <img src="/assets/white_dot.png" className="me-2"></img>
             INDUSTRY WE SERVE
           </div>
         </div>
@@ -474,7 +474,7 @@ solutions that redefine whats possible for your business.</p>
             <span className="red pb-2">Key business sectors</span>
           </h3>
 
-          <p className="B-1 max-w-[650px] flex justify-self-center mb-14">We provide tailored digital and marketing solutions for diverse industries ensuring measurable growth and scalability</p>
+          <p className="B-1 flex justify-self-center mb-14">We provide tailored digital and marketing solutions for diverse industries ensuring measurable growth and scalability</p>
         </div>
 
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-3 ">
@@ -482,7 +482,7 @@ solutions that redefine whats possible for your business.</p>
           industryCards.map((card , i) => (
             <div key={i} className="industry-card p-4">
               <img src={card.img} className="mb-4" style={{width:"-webkit-fill-available"}}></img>
-              <p className="mb-4 heading-7 font-lustria green-text " style={{fontWeight:"600"}}>{card.name}</p>
+              <p className="mb-4 heading-7 font-lustria  " style={{fontWeight:"500"}}>{card.name}</p>
               <p className="B-3 pb-4 mb-2  ">{card.para}</p>
 
               <div className="flex gap-1 mb-3">
@@ -631,9 +631,9 @@ business.</p>
 
      <div className="agile-section pt-8 px-3 sm:px-6 md:px-10 lg:px-14">
        <div className="flex justify-center items-center mb-5">
-          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow ">
-            <img src="/assets/green_dot.svg" className="me-2"></img>
-            Agile Process
+          <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria">
+            <img src="/assets/white_dot.png" className="me-2"></img>
+            AGILE Process
           </div>
         </div>
 
@@ -717,14 +717,15 @@ business.</p>
         </button>
      </div> */}
 
-     <section className="py-16 bg-white">
+     <section className="py-16 testimonial-section">
   <div className="max-w-7xl mx-auto px-4">
     {/* Header */}
     <div className="text-center mb-12">
-      <span className="text-sm uppercase tracking-widest text-gray-500">
-        Testimonials
-      </span>
-      <h2 className="text-3xl md:text-4xl font-bold mt-2">
+      <div className="flex industry_btn items-center justify-self-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria w-fit ">
+            <img src="/assets/white_dot.png" className="me-2"></img>
+           TESTIMONIALS
+          </div>
+      <h2 className="text-3xl md:text-4xl  mt-4 font-lustria" >
         What Our Clients Say
       </h2>
     </div>
@@ -791,7 +792,7 @@ business.</p>
             <div className="swiper-slide">
               <div className="bg-gray-50 rounded-xl p-6 shadow-md">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold">Reviews</h3>
+                  <h3 className="text-lg font-semibold font-lustria">Reviews</h3>
                   <span className="text-green-600 text-sm font-medium">
                     ✓ Verified
                   </span>
@@ -799,7 +800,7 @@ business.</p>
 
                 <div className="mb-4">
                   <div className="text-yellow-500 text-lg mb-2">★★★★★</div>
-                  <strong className="block mb-2">Exceptional Delivery</strong>
+                  <strong className="block mb-2 font-lustria">Exceptional Delivery</strong>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     Working with Dousoft has truly been a game-changer for our
                     business. Their depth of knowledge, professionalism, and
@@ -872,10 +873,10 @@ business.</p>
 
           {/* Question Row */}
           <div className="faq sm:p-6 sm:py-7  p-4 flex justify-between items-center">
-            <h3 className="heading-6">
+            <h3 className="heading-6 font-lustria">
               <span className="font-lustria me-4">
                 {"0"}{index + 1}_
-              </span>{" "}
+              </span >{" "}
               {faq.que}
             </h3>
 
