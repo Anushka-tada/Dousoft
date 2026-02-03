@@ -251,8 +251,7 @@ background: linear-gradient(128deg, rgba(244, 255, 247, 1) 0%, rgba(233, 250, 23
     6px 6px 12px 0 #00000021;
 }
 .navbar{
-    background-color: var(--third-color);
-  
+    background-color: var(--bg-color); 
 }
 
 @media (max-width: 900px) {
@@ -371,7 +370,7 @@ background: linear-gradient(128deg, rgba(244, 255, 247, 1) 0%, rgba(233, 250, 23
 
 /* navbar css */
 .nav-links{
-  background-color: var(--third-color);
+  background-color: var(--bg-color2);
   border-radius: 35px;
   color: var(--paragraph-color);
   /* font-family: var(--font-lustria); */
@@ -1676,7 +1675,7 @@ inset 4px 4px 8px 0px #0000006c;
        inset -5px -5px 10px 1px #FFFFFF;
  }
  .growth-btn2{
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
  }

@@ -488,12 +488,12 @@ loopFillGroupWithBlank={true}
         </Swiper>
       </div>
 
-           <div className='flex justify-center justify-self-center items-center growth-btn2 px-2'>
+           <div className='flex justify-center justify-self-center items-center growth-btn2 px-2 light-green-shadow'>
          <div className="px-2 sm:ps-6 ps-3 sm:pe-4 pe-3 py-2 side-btn" style={{borderRight:"1px solid white"}}  onClick={() => swiperRef.current.slidePrev()}>
             <img src='/assets/white_prev.png'></img>
          </div>
          <div className="sm:px-8 px-3 py-2">
-            <h4 className='heading-5 font-lustria text-white '>Our Story in Motion</h4>
+            <h4 className='heading-5 font-lustria text-gray-500'>Our Story in Motion</h4>
          </div>
           <div className="px-2 sm:pe-6 pe-3 sm:ps-4 ps-3 py-2 side-btn" style={{borderLeft:"1px solid white"}} onClick={() => swiperRef.current.slideNext()}>
             <img src='/assets/white_next.png'></img>

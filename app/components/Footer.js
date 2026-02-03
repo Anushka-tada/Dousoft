@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer px-3 sm:px-6 md:px-10 lg:px-14 md:pt-14 sm:pt-10  pt-3">
-      <div className="service-card footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
+    <div className="footer px-3 sm:px-6 md:px-10 lg:px-14 md:pt-14 sm:pt-10  pt-3 relative ">
+      <div className="service-card footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8 absolute " style={{top:"-25%" , width: "92%"}}>
         <div>
           <div className="flex gap-2 sm:mb-8 mb-4 service-inner-shadow future-ready-btn w-fit p-2 px-4 rounded-full">
             <img src="/assets/white_bulb.png"></img>
@@ -46,13 +46,21 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7">
+      <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7 pt-36">
         <div>
           <img src="/assets/footer-new-logo.png" className="mb-4"></img>
           <p className="B-3 text-white max-w-[327] ">
             Engineered for growth. We build the digital infrastructure that
             powers the next generation of AI-driven businesses.
           </p>
+
+          <div className="flex gap-4 mt-5">
+          <img src="/assets/social_1.png"></img>
+           <img src="/assets/social_2.png"></img>
+            <img src="/assets/social_3.png"></img>
+             <img src="/assets/social_4.png"></img>
+              <img src="/assets/social_5.png"></img>
+          </div>
         </div>
         <div className="flex md:justify-center justify-between xl:gap-30  lg:gap-18  md:gap-18 gap-8">
         <div className="flex flex-col items-center">

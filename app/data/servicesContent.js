@@ -45,7 +45,7 @@ export const servicesContent = {
             "Powerful applications built to grow alongside your business and handle increasing traffic",
         },
         {
-          img: "/assets/web_dev_card_3.png",
+          img: "/assets/webdev_card_3.png",
           name: "Secure Backend Architecture",
           para:
             "Robust and safe backend structures using secure coding standards to protect sensitive data.",

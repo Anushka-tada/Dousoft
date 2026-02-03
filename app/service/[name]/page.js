@@ -16,8 +16,10 @@ export default function page() {
   if (!data) return null;
 
   return (
-   <div className="service-page">
-      <Navbar />
+    <>
+     <Navbar />
+
+   <div className="service-page about-page">
 
       {/* HERO */}
       <HeroSection
@@ -236,8 +238,9 @@ export default function page() {
         </div>
       </div>
 
-      <FooterTop />
-      <Footer />
     </div>
+     <FooterTop />
+      <Footer />
+    </>
   );
 }
