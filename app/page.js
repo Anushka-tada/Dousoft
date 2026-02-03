@@ -531,19 +531,19 @@ business.</p>
   </div>
 </div>
           <div className="flex justify-center items-center mb-5">
-          <div className="flex futute_ready_btn rounded-full py-3 px-5 B-3 lg:mt-0 mt-5 service-card">
-            <img src="/assets/green_dot.svg" className="me-2"></img>
-            Technologies
+           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria">
+            <img src="/assets/white_dot.png" className="me-2"></img>
+            TECHNOLOGY
           </div>
         </div>
 
         <div className=" text-center md:px-0 sm:px-7 px-3">
-          <h3 className="heading-3 text-white sm:mb-7 mb-4 font-lustria">
+          <h3 className="heading-3 dark-text sm:mb-7 mb-4 font-lustria">
             Accelerating Growth with <br></br>
-            <span className="green">Cutting-Edge Technologies</span>
+        Cutting-Edge Technologies
           </h3>
 
-          <p className="B-1  flex justify-self-center md:mb-14 mb-5">We leverage modern frameworks, tools, and platforms to build scalable, secure, and high-performance digital solutions.</p>
+          <p className="B-1  flex justify-self-center md:mb-14 mb-5" style={{color:"#4B5563"}}>We leverage modern frameworks, tools, and platforms to build scalable, secure, and high-performance digital solutions.</p>
         </div>
 
       <div className="flex md:flex-nowrap flex-wrap md:gap-7 gap-4 justify-center md:pt-0 pt-5 md:pb-20 pb-8 md:px-0 sm:px-7 px-3">
@@ -643,7 +643,7 @@ business.</p>
             <span className="red pb-2">at Dousoft IT</span>
           </h3>
 
-          <p className="B-1 flex justify-self-center mb-14 font-notosans">A Proven, Agile Driven Delivery Model for Scalable Solutions</p>
+          <p className="B-1 flex justify-self-center mb-3 font-notosans">A Proven, Agile Driven Delivery Model for Scalable Solutions</p>
         </div>
 
         <Roadmap/>
@@ -790,15 +790,15 @@ business.</p>
 
             {/* Review 1 */}
             <div className="swiper-slide">
-              <div className="bg-gray-50 rounded-xl p-6 shadow-md">
+              <div className="bg-white rounded-xl p-6 ">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold font-lustria">Reviews</h3>
-                  <span className="text-green-600 text-sm font-medium">
+                  <span className="text-green-600 text-sm font-medium verified py-2 px-4">
                     ✓ Verified
                   </span>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 testi-inner inner-shadow p-6 pb-10" style={{backgroundColor:"#eef1ee"}}>
                   <div className="text-yellow-500 text-lg mb-2">★★★★★</div>
                   <strong className="block mb-2 font-lustria">Exceptional Delivery</strong>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -809,8 +809,8 @@ business.</p>
                   </p>
                 </div>
 
-                <p className="text-gray-500 italic text-xs">
-                  “A true partnership that delivered beyond expectations.”
+                <p className="primary-text B-1">
+                  A true partnership that delivered beyond expectations.
                 </p>
               </div>
             </div>
@@ -867,12 +867,12 @@ business.</p>
           </h3>
           </div>
 
-          <div className="faq-outer">
+          <div className="faq-outer light-green-shadow">
       {faqs.map((faq, index) => (
         <div key={index} className="">
 
           {/* Question Row */}
-          <div className="faq sm:p-6 sm:py-7  p-4 flex justify-between items-center">
+          <div className="faq sm:p-6 sm:py-7  p-4 flex justify-between items-center " style={{boxShadow:"-6px -6px 12px 0 #ffffffd0"}}>
             <h3 className="heading-6 font-lustria">
               <span className="font-lustria me-4">
                 {"0"}{index + 1}_
@@ -926,20 +926,20 @@ business.</p>
 
      <div className="journey-section sm:py-12 py-8 px-3 sm:px-6 md:px-10 lg:px-14">
 
-      <div className="journey-inner service-card flex flex-col justify-center items-center md:py-1 py-4" style={{border:"1px solid #264f3663"}}>
+      <div className="journey-inner linear-back service-card flex flex-col justify-center items-center md:py-1 py-4" >
         <div className="">
           <img src="/assets/rocket-green.png" className="icon sm:mb-12 mb-8 rounded-full p-4 px-4.5 service-inner-shadow"></img>
         </div>
        <div className="text-center">
-         <h2 className="heading-3 text-white mb-7 font-lustria text-center">Start Your Digital Journey with <br></br> <span className="green"> Dousoft IT</span></h2>
+         <h2 className="heading-3 dark-text mb-7 font-lustria text-center">Start Your Digital Journey with <br></br> <span className="primary-text"> Dousoft IT</span></h2>
 
-          <p className="max-w-[700px] B-1 text-center sm:mb-14 mb-8 para">Looking for a 
-            <span className="green-para"> reliable software development company </span>
+          <p className="max-w-[700px] B-1 text-center sm:mb-14 mb-8 dark-text">Looking for a 
+            <span className="primary-text"> reliable software development company </span>
              to bring your idea to life? Dousoft IT is here to help you build future-ready digital solutions</p>
              </div>
 
              <div className="flex justify-center items-center sm:gap-12 gap-7 md:mb-18 sm:mb-8 mb-6 sm:flex-nowrap flex-wrap">
-                  <button className="py-3 px-5 rounded-full B- btn-1  flex gap-2 font-notosans" style={{color:"black"}}>
+                  <button className="py-3 px-5 rounded-full B- btn-1  flex gap-2 font-notosans service-card" style={{color:"black"}}>
               Launch Your Project
               <img src="/assets/next_black.png"></img>
              </button>
@@ -955,15 +955,15 @@ business.</p>
              <div className="flex gap-5 justify-center w-fit px-16 sm:pt-12 pt-4 sm:flex-nowrap flex-wrap" style={{borderTop:"1px solid #264f3663"}}>
               <div className="flex gap-2 items-center">
                 <img src="\assets\check.svg"></img>
-                <p className="B-3 text-white">AI-Driven Strategy</p>
+                <p className="B-3 ">AI-Driven Strategy</p>
               </div>
                <div className="flex gap-2 items-center">
                 <img src="\assets\check.svg"></img>
-                <p className="B-3 text-white">Scalable Architecture</p>
+                <p className="B-3 ">Scalable Architecture</p>
               </div>
                <div className="flex gap-2 items-center">
                 <img src="\assets\check.svg"></img>
-                <p className="B-3 text-white">24/7 Support</p>
+                <p className="B-3">24/7 Support</p>
               </div>
              </div>
 

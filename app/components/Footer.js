@@ -5,15 +5,15 @@ const Footer = () => {
     <div className="footer px-3 sm:px-6 md:px-10 lg:px-14 md:pt-14 sm:pt-10  pt-3">
       <div className="service-card footer-main grid md:grid-cols-2 grid-cols-1 items-center justify-between px-8 gap-8 sm:py-10 py-6 sm:pb-14 pb-6 md:mb-14 mb-8">
         <div>
-          <div className="flex gap-2 sm:mb-8 mb-4">
-            <img src="/assets/green_bulb.png"></img>
-            <p className="B-1 font-notosans" style={{color:"#C8A23D"}}>Future Ready</p>
+          <div className="flex gap-2 sm:mb-8 mb-4 service-inner-shadow future-ready-btn w-fit p-2 px-4 rounded-full">
+            <img src="/assets/white_bulb.png"></img>
+            <p className="B-1 font-notosans text-white">Future Ready</p>
           </div>
 
-          <h3 className="heading-3 font-lustria text-white footer-heading mb-3 ">
+          <h3 className="heading-3 font-lustria  dark-text footer-heading mb-3 ">
             Stay ahead of the curve
           </h3>
-          <p className="B-1 font-notosans text-white">
+          <p className="B-1 font-notosans text-white dark-text">
             Join our newsletter for the latest in AI trends, digital
             transformation insights, and growth strategies delivered straight to
             your inbox.
@@ -30,17 +30,17 @@ const Footer = () => {
   <input
     type="email"
     placeholder="Enter your work email..."
-    className="py-3 pl-12 pr-5 rounded-full border input w-full B-3 font-notosans text-gray-500 bg-white"
+    className="py-3 pl-12 pr-5 rounded-full input w-full B-3 font-notosans text-gray-500 bg-white service-inner-shadow"
   />
 </div>
 
 
-          <button className="py-3 px-5 rounded-full B-1 btn  flex justify-between gap-2 font-notosans mb-4  service-card">
+          <button className="py-3 px-5 rounded-full B-1 footer-btn  flex justify-between gap-2 font-notosans mb-4  service-card">
             Subscribe Now
             <img src="/assets/button_arrow.png" className="mr-2"></img>
           </button>
 
-          <p className="B-3 lg:text-end text-center lg:me-16 text-white">
+          <p className="B-3 lg:text-end text-center lg:me-16 ">
             No spam. Unsubscribe anytime.
           </p>
         </div>

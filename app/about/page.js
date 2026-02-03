@@ -207,8 +207,10 @@ const prevSlide = () => {
 
 
   return (
-    <div >
-        <Navbar/>
+    <>
+      <Navbar/>
+     <div className='about-page'>
+      
 
         {/* herosection */}
 
@@ -238,11 +240,11 @@ const prevSlide = () => {
 
             <div className=" who-we-are min-w-full" style={{minWidth: "100%"}}>
            <button className="flex gap-2 B-3 py-3 px-5 rounded-4xl items-center mb-4">
-            <img src="/assets/green_dot.svg" className="h-fit" ></img>
+            <img src="/assets/dark_green_dot.png" className="h-fit" ></img>
             Who We Are
            </button>
 
-            <h2 className="heading-who-we font-lustria mb-5">
+            <h2 className="heading-3 font-lustria mb-5">
               Your <span className="primary-text">Reliable Partner</span> in
               Digital Transformation
             </h2>
@@ -261,7 +263,7 @@ const prevSlide = () => {
 
 
             <div className="flex gap-4 mb-7 overflow-y-scroll" >
-                     <button className="btn rounded-full flex items-center p-2 px-3 gap-2" style={{ width: "fit-content" }}>
+                     <button className="btn rounded-full flex items-center p-2 px-3 gap-2 flex-wrap-nowrap" style={{ width: "fit-content" }}>
                       <img src="/assets/ai_red.svg" className="ml-2" />
                    AI Solutions
 
@@ -503,11 +505,14 @@ loopFillGroupWithBlank={true}
       
       
        
-        <FooterTop/>
-
-        <Footer/>
+      
       
     </div>
+      <FooterTop/>
+
+        <Footer/>
+    </>
+   
   )
 }
 

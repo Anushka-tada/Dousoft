@@ -197,12 +197,15 @@ import React from 'react'
 const WhoWeAre = () => {
   return (
     <div>
-      <div className="main-container py-16 bg-white">
-        <div className="hero-card">
-          <div className="badge">Who We Are</div>
+      <div className="who-we-are-container main-container py-16 ">
+        <div className="hero-card py-10">
+           <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria w-fit justify-self-center my-4">
+            <img src="/assets/white_dot.png" className="me-2"></img>
+            Who We Are
+          </div>
 
-          <h3 className="heading-3">
-            Your Reliable Partner in <br /> Digital Transformation
+          <h3 className="heading-3 dark-text">
+            Your Reliable Partner in <br /> <span className='primary-text' >Digital Transformation</span>
           </h3>
 
           <p className="B-1">
@@ -218,7 +221,7 @@ const WhoWeAre = () => {
                   <i data-lucide="brain-circuit"></i>
                 </div>
                 <div className="text">
-                  <h6 className="heading-7">AI Solutions</h6>
+                  <h6 className="heading-8 font-lustria">AI Solutions</h6>
                   <p className="B-3">Intelligent automation & predictive analytics.</p>
                 </div>
               </div>
@@ -230,7 +233,7 @@ const WhoWeAre = () => {
                   <i data-lucide="compass"></i>
                 </div>
                 <div className="text">
-                  <h6 className="heading-7">Digital Strategy</h6>
+                  <h6 className="heading-8 font-lustria">Digital Strategy</h6>
                   <p className="B-3">Future-focused roadmaps & innovation.</p>
                 </div>
               </div>
@@ -242,14 +245,14 @@ const WhoWeAre = () => {
                   <i data-lucide="trending-up"></i>
                 </div>
                 <div className="text">
-                  <h6 className="heading-7">Business Growth</h6>
+                  <h6 className="heading-8 font-lustria">Business Growth</h6>
                   <p className="B-3">Scalable models & market expansion.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <button className="cta-button">Explore Our Mission</button>
+          <button className="cta-button mb-4">Explore Our Mission</button>
         </div>
       </div>
     </div>
