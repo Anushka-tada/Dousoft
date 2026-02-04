@@ -1,13 +1,14 @@
 
 "use client";
-import Footer from "@/app/components/Footer";
-import FooterTop from "@/app/components/FooterTop";
+
 import Navbar from "@/app/components/Navbar";
-import HeroSection from "@/app/components/Herosection2";
 // import Navbar from "@/app/components/Navbar";
 import React from "react";
 import { servicesContent } from "@/app/data/servicesContent";
 import { useParams } from "next/navigation";
+import HeroSection from "@/app/components/Herosection2";
+import FooterTop from "@/app/components/FooterTop";
+import Footer from "@/app/components/Footer";
 
 export default function Page() {
   // const params = useParams();
@@ -30,6 +31,11 @@ const data = name ? servicesContent[name] : null;
    <div className="service-page about-page">
 
       {/* HERO */}
+      {/* <HeroSection
+        title={data?.hero.title}
+        description={data?.hero.description}
+        breadcrumb={data?.hero.breadcrumb}
+      /> */}
       <HeroSection
         title={data?.hero.title}
         description={data?.hero.description}
@@ -247,8 +253,9 @@ style={{ ["--bg-img"]: `url(${card.img})` }}
       </div>
 
     </div>
-     <FooterTop />
-      <Footer />
+
+    <FooterTop/>
+    <Footer/>
     </>
   );
 }
