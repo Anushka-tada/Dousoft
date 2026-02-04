@@ -1,14 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import Footer from "@/app/components/Footer";
-import FooterTop from "@/app/components/FooterTop";
-import HeroSection from "@/app/components/Herosection2";
-import Navbar from "@/app/components/Navbar";
+import Footer from "../../app/components/Footer";
+import FooterTop from "../../app/components/FooterTop";
+import HeroSection from "../../app/components/Herosection2";
+// import Navbar from "@/app/components/Navbar";
 import React from "react";
-import { servicesContent } from "@/app/data/servicesContent";
+import { servicesContent } from "../../../app/data/servicesContent";
 import { useParams } from "next/navigation";
+import Navbar from "../../app/components/Navbar";
 
-export default function page() {
+export default function Page() {
   const params = useParams();
   const name = params.name;
   const data = servicesContent[name];
@@ -17,7 +18,7 @@ export default function page() {
 
   return (
     <>
-     <Navbar />
+    <Navbar/>
 
    <div className="service-page about-page">
 
