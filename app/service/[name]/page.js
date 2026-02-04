@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import Footer from "../../app/components/Footer";
-import FooterTop from "../../app/components/FooterTop";
-import HeroSection from "../../app/components/Herosection2";
+import Footer from "@/app/components/Footer";
+import FooterTop from "@/app/components/FooterTop";
+import Navbar from "@/app/components/Navbar";
+import HeroSection from "@/app/components/Herosection2";
 // import Navbar from "@/app/components/Navbar";
 import React from "react";
 import { servicesContent } from "../../../app/data/servicesContent";
 import { useParams } from "next/navigation";
-import Navbar from "../../app/components/Navbar";
 
 export default function Page() {
   const params = useParams();
