@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeroSection = ({
+const Herosection2  = ({
   title,
   description,
   breadcrumb,
@@ -32,4 +32,4 @@ const HeroSection = ({
   );
 };
 
-export default HeroSection;
+export default Herosection2 ;

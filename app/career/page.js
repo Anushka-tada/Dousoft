@@ -4,7 +4,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import FooterTop from '../components/FooterTop'
 import Footer from '../components/Footer'
-import HeroSection from '../components/Herosection2'
+import Herosection2 from "@/app/components/Herosection2";
 import { useState } from "react";
 import CareerFaq from '../components/CareerFaq'
 
@@ -95,7 +95,7 @@ const page = () => {
   return (
     <div className='career-page'>
       <Navbar/>
-      <HeroSection
+      <Herosection2
        title="Careers at Dousoft IT"
         description="Building robust automated testing solutions to improve speed, stability, and software reliability."
         breadcrumb="Home > Careers"

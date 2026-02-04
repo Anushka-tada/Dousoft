@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FooterTop from "../components/FooterTop";
-import HeroSection from "../components/Herosection2";
+import Herosection2 from "@/app/components/Herosection2";
 
 const SolutionLayout = ({
   hero,
@@ -18,7 +18,7 @@ const SolutionLayout = ({
     <div>
       <Navbar />
 
-      <HeroSection
+      <Herosection2
         title={hero.title}
         description={hero.description}
         breadcrumb={hero.breadcrumb}

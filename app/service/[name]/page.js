@@ -6,7 +6,7 @@
 import React from "react";
 import { servicesContent } from "@/app/data/servicesContent";
 import { useParams } from "next/navigation";
-import HeroSection from "@/app/components/Herosection2";
+import Herosection2 from "@/app/components/Herosection2";
 import FooterTop from "@/app/components/FooterTop";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
@@ -37,7 +37,7 @@ const data = name ? servicesContent[name] : null;
         description={data?.hero.description}
         breadcrumb={data?.hero.breadcrumb}
       /> */}
-      <HeroSection
+      <Herosection2 
         title={data?.hero.title}
         description={data?.hero.description}
         breadcrumb={data?.hero.breadcrumb}

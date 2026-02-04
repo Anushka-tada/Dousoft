@@ -9,7 +9,7 @@ import { useState , useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
-import HeroSection from '../components/Herosection2'
+import Herosection2 from "@/app/components/Herosection2";
 import FooterTop from '../components/FooterTop'
 
 const missions = [
@@ -230,7 +230,7 @@ const prevSlide = () => {
   </div>
          </div>
         </div> */}
-        <HeroSection
+        <Herosection2
          title="About Us"
         description="Read more about us. Our mission, our vision, our success and many other you might love"
         breadcrumb="Home > About"
