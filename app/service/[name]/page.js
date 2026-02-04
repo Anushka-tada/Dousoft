@@ -6,13 +6,20 @@ import Navbar from "@/app/components/Navbar";
 import HeroSection from "@/app/components/Herosection2";
 // import Navbar from "@/app/components/Navbar";
 import React from "react";
-import { servicesContent } from "../../../app/data/servicesContent";
+import { servicesContent } from "@/app/data/servicesContent";
 import { useParams } from "next/navigation";
 
 export default function Page() {
+  // const params = useParams();
+  // const name = params.name;
+  // const data = servicesContent[name];
   const params = useParams();
-  const name = params.name;
-  const data = servicesContent[name];
+
+const name = Array.isArray(params?.name)
+  ? params.name[0]
+  : params?.name;
+
+const data = name ? servicesContent[name] : null;
 
   if (!data) return null;
 
@@ -222,7 +229,7 @@ export default function Page() {
             <div
               key={i}
               className="process-card service-card p-4 flex flex-col justify-between"
-              style={{ "--bg-img": `url(${card.img})` }}
+style={{ ["--bg-img"]: `url(${card.img})` }}
             >
               <div className="flex justify-end">
                 <h1 className="heading-1 font-bold index-no">
