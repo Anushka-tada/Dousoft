@@ -190,12 +190,12 @@
 // };
 
 
-import Footer from "@/app/components/Footer";
-import FooterTop from "@/app/components/FooterTop";
-import HeroSection from "@/app/components/Herosection2";
-import Navbar from "@/app/components/Navbar";
+import Footer from "../../components/Footer";
+import FooterTop from "../../components/FooterTop";
+import HeroSection from "../../app/components/Herosection2";
+import Navbar from "../../app/components/Navbar";
 import React from "react";
-import { servicesContent } from "@/app/data/servicesContent";
+import { servicesContent } from "../../data/servicesContent";
 // import { notFound } from "next/navigation";
 
 export default function page({ params }) {
