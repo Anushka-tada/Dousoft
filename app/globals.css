@@ -116,6 +116,7 @@
   --dark-nuetral: #3A3A3A;
   --secondary-green: #2DBE60;
   --secondary-green-light: #EEF9F1;
+--third-green: #12B76A;
    
 
   --font-lustria: 'Lustria';
@@ -251,7 +252,7 @@ background: linear-gradient(128deg, rgba(244, 255, 247, 1) 0%, rgba(233, 250, 23
     6px 6px 12px 0 #00000021;
 }
 .navbar{
-    background-color: var(--bg-color); 
+    background-color: var(--bg-color2); 
 }
 
 @media (max-width: 900px) {
@@ -421,7 +422,7 @@ background: linear-gradient(128deg, rgba(244, 255, 247, 1) 0%, rgba(233, 250, 23
 }
 
 .mobile-navbar{
-  background-color: var(--third-color);
+  background-color: var(--bg-color2);
 }
 
 /* Future ready section{ */
@@ -1391,7 +1392,64 @@ background: linear-gradient(128deg, rgba(244, 255, 247, 1) 0%, rgba(233, 250, 23
 }
 .footer-top{
   background-color: var(--bg-color2);
+  padding-bottom: 12%;
 }
+
+.footer-columns{
+  padding-top: 11%;
+}
+
+@media (max-width:1176px) {
+    .footer-top{
+  background-color: var(--bg-color2);
+  padding-bottom: 18%;
+}
+.footer-columns{
+  padding-top: 18%;
+}
+
+@media (max-width:900px) {
+    .footer-columns{
+  padding-top: 23%;
+}
+}
+
+}
+@media (max-width:768px) {
+    .footer-top{
+  padding-bottom: 38%;
+}
+  .footer-columns{
+  padding-top: 30%;
+}
+}
+
+@media (max-width:607px) {
+    .footer-top{
+  padding-bottom: 50%;
+}
+.footer-btn{
+min-width:  -webkit-fill-available;
+}
+}
+
+@media (max-width:530px) {
+   .footer-columns{
+  padding-top: 45%;
+}
+}
+@media (max-width:420px) {
+   .footer-columns{
+  padding-top: 58%;
+}
+}
+@media (max-width:352px) {
+   .footer-columns{
+  padding-top: 70%;
+}
+}
+
+
 
 /* roadmap section */
 /* ROADMAP WRAPPER */
@@ -5633,4 +5691,33 @@ background-color: var(--third-color);
  }
  .about-page{
     background-color: var(--bg-color);
+ }
+
+ .tech-active{
+background-color: var(--third-green);
+color: white;
+ box-shadow: 
+ 1px 1px 2px 0px #00000022,
+inset -4px -4px 8px 0px #ffffff1c,
+inset 4px 4px 8px 0px #0000006c;
+ }
+
+ .tech-btn{
+    color: var(--third-green);
+    background-color: white;
+    box-shadow: -6px -6px 12px 0 #ffffffd0,
+    6px 6px 12px 0 #00000021;
+    border: 1px solid rgb(204, 250, 229);
+ }
+
+ .tech-orbit{
+   background: #A6FFD5;
+background: radial-gradient(circle, rgba(166, 255, 213, 1) 0%, rgba(242, 250, 242, 1) 38%);
+ }
+
+ @media (max-width:578px) {
+    .hero-card{
+        padding: 10px 10px;
+        margin: 10px;
+    }
  }

@@ -252,7 +252,11 @@ const WhoWeAre = () => {
             </div>
           </div>
 
-          <button className="cta-button mb-4">Explore Our Mission</button>
+         
+                             <button className="button rounded-full flex items-center justify-self-center" >
+          Explore Our Mission
+          <img src="/assets/button_arrow.png" className="ml-2" />
+        </button>
         </div>
       </div>
     </div>

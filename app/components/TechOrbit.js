@@ -1,0 +1,180 @@
+"use client";
+
+import React, { useState, useMemo, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// --- Types ---
+// interface TechIcon {
+//   id: number;
+//   rx: number;
+//   ry: number;
+//   duration: number;
+//   logo: string;
+//   category: string;
+//   name: string;
+// }
+
+const techIcons = [
+  { id: 1, rx: 240, ry: 100, duration: 40, logo: "https://cdn.simpleicons.org/react", name: "React", category: "Front End" },
+  { id: 2, rx: 240, ry: 100, duration: 40, logo: "https://cdn.simpleicons.org/typescript", name: "TypeScript", category: "Languages" },
+  { id: 3, rx: 240, ry: 100, duration: 40, logo: "https://cdn.simpleicons.org/nextdotjs/000000", name: "Next.js", category: "Front End" },
+  { id: 4, rx: 380, ry: 150, duration: 60, logo: "https://cdn.simpleicons.org/nodedotjs", name: "Node.js", category: "Back End" },
+  { id: 5, rx: 380, ry: 150, duration: 60, logo: "https://cdn.simpleicons.org/tailwindcss", name: "Tailwind CSS", category: "Front End" },
+  { id: 6, rx: 380, ry: 150, duration: 60, logo: "https://cdn.simpleicons.org/postgresql", name: "PostgreSQL", category: "Database" },
+  { id: 7, rx: 380, ry: 150, duration: 60, logo: "https://cdn.simpleicons.org/docker", name: "Docker", category: "Cloud & DevOps" },
+  { id: 8, rx: 380, ry: 150, duration: 60, logo: "https://cdn.simpleicons.org/redis", name: "Redis", category: "Database" },
+  { id: 10, rx: 560, ry: 210, duration: 80, logo: "https://cdn.simpleicons.org/python", name: "Python", category: "Back End" },
+  { id: 11, rx: 560, ry: 210, duration: 80, logo: "https://cdn.simpleicons.org/mongodb", name: "MongoDB", category: "Database" },
+  { id: 12, rx: 560, ry: 210, duration: 80, logo: "https://cdn.simpleicons.org/kubernetes", name: "Kubernetes", category: "Cloud & DevOps" },
+  { id: 16, rx: 560, ry: 210, duration: 80, logo: "https://cdn.simpleicons.org/aws", name: "AWS", category: "Cloud & DevOps" },
+  { id: 18, rx: 560, ry: 210, duration: 80, logo: "https://cdn.simpleicons.org/git", name: "Git", category: "Cloud & DevOps" },
+];
+
+const categories = ["All Technologies", "Front End", "Back End", "Database", "Cloud & DevOps"];
+
+const TechStack = () => {
+  const [activeTab, setActiveTab] = useState("All Technologies");
+  const [scale, setScale] = useState(1);
+
+  // --- Perfect Responsive Scaling Logic ---
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      if (w < 380) setScale(0.20);      // Very Small phones
+      else if (w < 480) setScale(0.25); // Standard phones
+      else if (w < 640) setScale(0.35); // Large phones
+      else if (w < 768) setScale(0.45); // Tablets
+      else if (w < 1024) setScale(0.60); // Laptops
+      else if (w < 1280) setScale(0.80); // Desktop
+      else setScale(1);                  // Large Monitors
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // --- Intelligent Icon Positioning (Fixed on Rings) ---
+  const displayIcons = useMemo(() => {
+    const filtered = techIcons.filter((i) => activeTab === "All Technologies" || i.category === activeTab);
+    
+    return filtered.map((icon) => {
+      const iconsInThisRing = filtered.filter(i => i.rx === icon.rx);
+      const positionIndex = iconsInThisRing.findIndex(i => i.id === icon.id);
+      
+      // Calculate delay to spread icons evenly on the orbit path
+      const spreadDelay = (icon.duration / (iconsInThisRing.length || 1)) * positionIndex;
+      
+      return { ...icon, spreadDelay };
+    });
+  }, [activeTab]);
+
+  return (
+    <section className="tech-orbit relative w-full min-h-[750px] md:min-h-screen flex flex-col items-center justify-start overflow-hidden pt-12 pb-20 font-sans">
+      
+      {/* Background Blueprint Grid */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: `linear-gradient(#000 1.2px, transparent 1.2px), linear-gradient(90deg, #000 1.2px, transparent 1.2px)`, backgroundSize: '50px 50px' }} />
+
+      {/* Header Section (Fixed - No Switching) */}
+      <div className="relative z-[110] text-center px-6 max-w-4xl mb-6">
+        <div className="flex industry_btn items-center rounded-full py-3 px-5 B-3 service-inner-shadow font-lustria w-fit  justify-self-center">
+            <img src="/assets/white_dot.png" className="me-2"></img>
+            TECHNOLOGY
+          </div>
+        <h2 className="text-4xl md:text-7xl font-lustria heading-3  tracking-tighter leading-[1.1] mb-5 mt-4">
+          Accelerating Growth with <br/>
+          <span className="primary-text">Cutting-Edge Tech</span>
+        </h2>
+        <p className="text-slate-500 text-sm md:text-lg max-w-2xl mx-auto font-medium opacity-80 leading-relaxed">
+          Dousoft delivers high-performance solutions using a world-class technology stack, 
+          ensuring scalability and innovation for your business in 2026.
+        </p>
+      </div>
+
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap justify-center gap-3 z-[110] px-3 mb-4 backdrop-blur-xl p-2 rounded-full  max-w-[95%]">
+        {categories.map((cat) => (
+          <button
+  key={cat}
+  onClick={() => setActiveTab(cat)}
+  className={activeTab === cat ? "tech-active rounded-full py-2 px-4" : "tech-btn rounded-full py-2 px-4"}
+>
+  {cat}
+</button>
+        ))}
+      </div>
+
+      {/* Orbit Visualization Container */}
+      <div className="relative w-full flex-grow flex items-center justify-center mt-[-40px]">
+        <div 
+          style={{ 
+            transform: `scale(${scale})`, 
+            transition: 'transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)' 
+          }} 
+          className="relative w-[1200px] h-[600px] flex items-center justify-center"
+        >
+          
+          {/* Static Background Rings */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible opacity-[0.1]" viewBox="0 0 1200 600">
+            {[240, 380, 560].map((r, i) => {
+              const ry = i === 0 ? 100 : i === 1 ? 150 : 210;
+              return (
+                <ellipse 
+                  key={i} cx="600" cy="300" rx={r} ry={ry} 
+                  fill="none" stroke="#000" strokeWidth="2.5" 
+                />
+              );
+            })}
+          </svg>
+
+          {/* Central Brand Logo */}
+          <div className="relative z-50 w-28 h-28 md:w-40 md:h-40 bg-white rounded-full shadow-[0_25px_60px_-15px_rgba(0,0,0,0.12)] flex items-center justify-center p-8 border border-slate-50">
+            <img src="/assets/new-logo.svg" alt="Logo" className="w-full h-full object-contain" />
+          </div>
+
+          {/* Orbiting Tech Icons */}
+          <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
+            <AnimatePresence mode="popLayout">
+              {displayIcons.map((icon) => (
+                <motion.div
+                  key={icon.id}
+                  // Pop from their current orbital position, not from the center
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute pointer-events-auto"
+                  style={{
+                    width: '90px', height: '90px',
+                    offsetPath: `ellipse(${icon.rx}px ${icon.ry}px at center)`,
+                    animation: `orbit ${icon.duration}s linear infinite`,
+                    animationDelay: `-${icon.spreadDelay}s`,
+                    willChange: 'offset-distance',
+                  }}
+                >
+                  <div className="group relative w-14 h-14 md:w-20 md:h-20 bg-white rounded-3xl shadow-md border border-slate-50 flex items-center justify-center p-4 hover:scale-125 hover:shadow-2xl transition-all duration-500 cursor-pointer">
+                    <img src={icon.logo} alt={icon.name} className="w-full h-full object-contain" />
+                    
+                    {/* Tooltip */}
+                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-slate-900 text-white text-[10px] py-1.5 px-3 rounded-xl font-bold whitespace-nowrap z-[120]">
+                      {icon.name}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes orbit { 
+          from { offset-distance: 0%; } 
+          to { offset-distance: 100%; } 
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default TechStack;

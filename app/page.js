@@ -12,6 +12,7 @@ import Counter from "./components/Counter"
 import { motion } from "framer-motion";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FooterTop from "./components/FooterTop";
+import TechOrbit from "./components/TechOrbit";
 
 const futureCards = [
   {
@@ -514,7 +515,7 @@ business.</p>
 
       {/* technology section */}
 
-     <div className=" lg:pt-20 pt-5 lg:pb-0 pb-5 px-0 lg:px-4  technology-section">
+     {/* <div className=" lg:pt-20 pt-5 lg:pb-0 pb-5 px-0 lg:px-4  technology-section">
 
       <div className="mobile-orbit-wrapper bg-white p-3 overflow-hidden lg:hidden block">
   <div className="mobile-orbit-track flex gap-4">
@@ -579,27 +580,7 @@ business.</p>
 <div className="circle-wrapper pt-32 pb-5">
   <div className="circle-1">
 
-    {/* <div className="orbit">
-  <div className="orbit-item" style={{ "--i": 0 }}>
-    <img src="/assets/react.png" alt="React" />
-  </div>
-
-  <div className="orbit-item" style={{ "--i": 1 }}>
-    <img src="/assets/javascript.png" alt="JavaScript" />
-  </div>
-
-  <div className="orbit-item" style={{ "--i": 2 }}>
-    <img src="/assets/angular.png" alt="Angular" />
-  </div>
-
-  <div className="orbit-item" style={{ "--i": 3 }}>
-    <img src="/assets/jquery.png" alt="jQuery" />
-  </div>
-
-  <div className="orbit-item" style={{ "--i": 4 }}>
-    <img src="/assets/vue.png" alt="Vue" />
-  </div>
-</div> */}
+   
 
 <div className="orbit">
             {technologies[activeTab].map((tech, index) => (
@@ -625,7 +606,9 @@ business.</p>
 </div>
 
 
-     </div>
+     </div> */}
+
+     <TechOrbit/>
 
      {/* agile process section */}
 

@@ -48,7 +48,7 @@ const footerlinks = [
 const FooterTop = () => {
   return (
     <div>
-         <div className="footer-top lg:p-14 p-10" style={{paddingBottom:"19%"}}>
+         <div className="footer-top lg:p-14 p-10" >
      <div className="grid lg:grid-cols-4 sm:grid-cols-2  md:gap-12 sm:gap-10 gap-9">
        {footerlinks.map((section, index) => (
   <div key={index} >

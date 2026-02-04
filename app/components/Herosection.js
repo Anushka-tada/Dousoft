@@ -175,8 +175,11 @@ const herosection = () => {
                 </div>
 
                 <div className="hero-buttons">
-                    <a href="#" className="btn primary">Start a Project</a>
-                    <a href="#" className="btn outline">View Portfolio</a>
+                   <button className="button rounded-full flex items-center" >
+           Start a Project
+          <img src="/assets/button_arrow.png" className="ml-2" />
+        </button>
+                    <a href="#" className="btn rounded-full outline">View Portfolio</a>
                 </div>
                 <div className="trust-badge">✔ Trusted by 500+ businesses worldwide</div>
             </div>

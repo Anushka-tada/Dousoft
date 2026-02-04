@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7 pt-36">
+      <div className="grid md:grid-cols-3 grid-cols-1 md:px-9 p-1 pb-5 gap-7 footer-columns">
         <div>
           <img src="/assets/footer-new-logo.png" className="mb-4"></img>
           <p className="B-3 text-white max-w-[327] ">

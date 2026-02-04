@@ -543,8 +543,8 @@
 
 
 "use client"
-import { getServiceCategoryServ } from "@/services/serviceCategory.service";
-import { getServiceSubCategoryServ } from "@/services/serviceSubcategory.service";
+import { getServiceCategoryServ } from "../../services/serviceCategory.service";
+import { getServiceSubCategoryServ } from "../../services/serviceSubcategory.service";
 import React from "react";
 import { useState  , useEffect} from "react";
 import BookingForm from "./BookingForm";
@@ -1104,11 +1104,11 @@ const getCurrentItems = () => {
                   const isOpen = openServiceCategory === cat._id;
 
                   return (
-                    <div key={cat._id} className=" pb-2">
+                    <div key={cat._id} className=" pb-2 mb-0">
 
                       {/* CATEGORY */}
                       <div
-                        className="flex justify-between items-center cursor-pointer"
+                        className="flex justify-between items-center cursor-pointer light-green-shadow p-3" style={{borderRadius:"4px"}}
                         onClick={() =>
                           setOpenServiceCategory(isOpen ? null : cat._id)
                         }
