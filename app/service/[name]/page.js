@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+
 "use client";
 import Footer from "@/app/components/Footer";
 import FooterTop from "@/app/components/FooterTop";
